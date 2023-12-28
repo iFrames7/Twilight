@@ -33,5 +33,5 @@ label playtest:
             "Cap 1 Sides":
                 jump cap1_sideselection
 
-            # "Cap 2 True":
-            #     jump cap2true
+            "Cap 2 True":
+                jump cap2true
