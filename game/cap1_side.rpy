@@ -5,6 +5,9 @@ label cap1_evan:
 
     #show evan
 
+    show evan normal at center with dissolve:
+        zoom sprite_size
+
     a "Hola."
 
     e "¿Qué haces aquí?"
@@ -15,17 +18,25 @@ label cap1_evan:
 
     "Estaba curioso, e intenté ver lo que Evan guardó pero éste solo se movió un poco para ocultarlo más."
 
+    show evan pensando with dissolve
+
     e "Ya veo, así que decidiste venir a husmear por acá."
 
     a "Ah, bueno, si es que no te molesta, claro."
 
+    show evan normal with dissolve
+
     e "No, para nada, solo pensé que sería la última persona que querrías acompañar."
 
     a "¿Por qué dices eso?"
+    
+    show evan despair with dissolve
 
     e "Bueno, Freya por allá no es muy fan de mi forma de ser."
 
     a "¿Tú y Freya se conocían?"
+
+    show evan normal with dissolve
 
     e "Sí, pero no nos llevamos del todo bien."
 
@@ -33,23 +44,35 @@ label cap1_evan:
 
     a "¿Metodología?"
 
+    show evan pensando with dissolve
+
     e "Decía que mi ética era incorrecta, inclusive intentó llevarme a una de sus clases para comprender su \"justicia\""
 
     a "Oh... ya veo... Pero, ¿tú qué piensas de ella?"
+
+    show evan ceja with dissolve
 
     e "¿Ella? Bueno, es solo una molestia, personas como esas no llegaran muy lejos si siguen acertando sus creencias sobre otros sin importar lo que el otro piense."
 
     menu:
         "Supongo que tienes razón.":
+            show evan normal with dissolve
+
             e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
 
         "No lo sé...":
+            show evan normal with dissolve
+
             e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
 
         "Suena complicado.":
+            show evan normal with dissolve
+
             e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
 
     a "Sí... Bueno, sería cuestión de conocerla para saber por qué actúa así."
+
+    show evan ceja with dissolve
 
     e "Eso es raro..."
 
@@ -61,9 +84,13 @@ label cap1_evan:
     
     "Confundido, éste los observó."
 
+    show evan normal with dissolve
+
     e "Se ven como símbolos y palabras extrañas."
 
     a "Tienes razón, pero es casi lo mismo que pasó con mi libro..."
+
+    show evan pensando with dissolve
 
     e "Bueno, tampoco puedo leerlo así que... no tiene sentido verlo más..."
 
@@ -80,6 +107,9 @@ label cap1_freya:
 
     #show freya
 
+    show freya normal at center with dissolve:
+        zoom sprite_size
+
     fr "Cuando dije \"algo de provecho\", me imagine que irías con alguien más..."
 
     "Estaba un poco helado, ¿qué se supone que debo decir en estas situaciones?"
@@ -90,6 +120,8 @@ label cap1_freya:
 
     "La chica bufó y me dio la espalda lanzando su cabello hacia atrás en forma de molestia."
 
+    show freya ladohabla2 with dissolve
+
     fr "Bien, pero no te pongas en mi camino."
 
     "Freya comenzó a buscar entre los estantes principales de la cocina sacando varias cosas empaquetadas y revisando que estuviesen cerradas."
@@ -97,6 +129,8 @@ label cap1_freya:
     "Descartaba cualquier alimento que estuviese al aire como frutas o verduras al igual que carne o cosas que tuvieran que prepararse."
 
     #hide freya
+
+    hide freya with dissolve
 
     "A decir verdad, no sé mucho de supervivencia pero he leído uno que otro libro de apocalipsis zombie, así que de algo tenía que servir."
 
@@ -108,6 +142,9 @@ label cap1_freya:
 
             #show freya
 
+            show freya lado at center with dissolve:
+                zoom sprite_size
+
             "Baje lentamente para no caerme y por un segundo vi a Freya quien pareció rodar los ojos con decepción."
 
         "Checar estantes inferiores":
@@ -116,6 +153,9 @@ label cap1_freya:
             "Intenté tomar un cuchillo del cual salió una cucaracha corriendo, o quizás una rata, no pude ver con claridad pues asustado lo tiré y cubrí mi boca para no gritar."
 
             #show freya
+
+            show freya lado at center with dissolve:
+                zoom sprite_size
 
             "Freya bufó molesta al escuchar aquella acción."
 
@@ -126,11 +166,16 @@ label cap1_freya:
 
             #show freya
 
+            show freya preocupada at center with dissolve:
+                zoom sprite_size
+
             "Tomé un par y se las llevé a Freya, quien sonrió."
 
             fr "Vaya, no eres tan inútil."
 
-            "Quizás no le agrado un 100% pero al menos se veía satisfecha."
+            "Quizás no le agrado del todo, pero al menos se veía satisfecha."
+
+    show freya normalhabla with dissolve
 
     fr "Bueno, parece que ya buscamos aqui suficiente, ¿no lo crees?"
 
@@ -140,19 +185,27 @@ label cap1_freya:
 
     a "Sí, eso creo."
 
+    show freya ladohabla2 with dissolve
+
     fr "Bueno Arden, agradezco mucho tu cooperación, aunque claro, no la necesitaba desde un inicio."
 
     a "Ah... claro..."
 
+    show freya normalhabla with dissolve
+
     fr "Te recomiendo que levantes la cabeza cuando hables con alguien, si no te veran como su presa."
 
     a "¿Cómo?"
+
+    show freya pensarhabla with dissolve
 
     fr "Levanta el mentón, echa los hombros hacia atrás. Si hablas tan bajo nunca te veran, y no creo que el mundo entero quiera a alguien más que de lástima mientras camina."
 
     a "Oh..."
 
     "Eche mis hombros hacia atrás y alcé el rostro para poder verla con un poco más de seguridad, hubo una sonrisa de satisfacción en el rostro de Freya."
+
+    show freya normalhabla with dissolve
 
     fr "Mucho mejor. No es tan difícil, ¿vez?" 
     
@@ -167,13 +220,20 @@ label cap1_hanna:
 
     #show hanna
 
+    show hanna sonrisa at center with dissolve:
+        zoom sprite_size
+
     h "Oh, hola..."
 
     a "Hey... Hanna, ¿cierto?"
 
+    show hanna emocionadahabla with dissolve
+
     h "Sí, esa soy yo."
 
     a "¿Te molesta si te acompaño?"
+
+    show hanna emocionada with dissolve
 
     h "No, para nada."
 
@@ -181,9 +241,13 @@ label cap1_hanna:
     
     "Hanna se acerco para tocarlos y observarlos."
 
+    show hanna normal with dissolve
+
     h "No creo que esto nos sirva."
 
     a "¿Por qué no?"
+
+    show hanna explicando with dissolve
 
     h "Bueno, yo no puedo leerlos, ¿tú puedes?"
 
@@ -201,9 +265,13 @@ label cap1_hanna:
 
             a "Creo que dice... ah... ¿Bestia?"
 
+            show hanna emocionada with dissolve
+
             h "¿Bestia? ¿Como la bella y la bestia?"
 
             "Una pequeña risa salió de Hanna como si intentase hacer el ambiente más ameno, yo solo pude sonreirle de una pequeña forma sincera."
+
+            show hanna miedohabla with dissolve
 
             h "Perdón, no debería estar bromeando... mejor sigamos buscando."
 
@@ -214,17 +282,23 @@ label cap1_hanna:
 
             "Hanna me vio con incredulidad, quizás fulminándome un poco con la mirada, luego asintió con la cabeza un par de veces."
 
+            show hanna normal with dissolve
+
             h "Bueno, supongo que no tienen por qué tener sentido, ¿cierto?"
 
             a "No... supongo que no."
 
             "¿Acaso me había salido con la mía diciendo una estupidez?"
 
+            show hanna explicando with dissolve
+
             h "Tal vez podrías traducir todo, así se completa por completo, ¿no lo crees?"
 
             "Hanna volteó a verme con sus ojos retadores, como si esperase algo de mí."
 
             a "Claro..."
+
+            show hanna emocionadahabla with dissolve
 
             h "¡AJÁ! Esa es la cara de un mentiroso."
 
@@ -234,18 +308,27 @@ label cap1_hanna:
 
             "Quizás sonaba excesivamente confiada ahora."
 
+            show hanna sonrisa with dissolve
+
             h "Mejor sigamos investigando."
 
         "Negarlo":
             "Negué con la cabeza un par de veces admitiendo que no podía leer lo que decía en aquel folleto."
 
+            show hanna normal with dissolve
+
             h "Bueno, sería muy bueno para ser verdad, mejor sigamos buscando."
 
     #bg cafeteria (algun fade)
 
+    scene bg black with Fade(0.2, 0.1, 0.2)
+
     "Después de un buen rato de búsqueda no parecimos encontrar nada, Hanna volteaba a verme constantemente como si quisiese asegurarse de que estuviera bien."
 
     #show hanna
+
+    show hanna miedohabla at center with dissolve:
+        zoom sprite_size
 
     h "Hey... Arden... Ese... collar... ah..."
 
@@ -257,19 +340,27 @@ label cap1_hanna:
 
     a "¿Lo crees?"
 
+    show hanna sonrisa with dissolve
+
     h "Sí... me gusta mucho, quizás cuando salga le consiga uno a Freya. No le gusta admitirlo pero le facina la joyería, aunque casi no la use."
 
     a "¿Por qué no la usa?"
 
+    show hanna explicando with dissolve
+
     h "Dice que la hace verla menos seria... Pero, a mí me gustaría que la usara más seguido, se ve linda con ella."
 
     a "Oh... bueno... seguro si se lo dices la usará más."
+
+    show hanna emocionada with dissolve
 
     h "¿Tú crees?"
 
     a "Vale la pena intentarlo, supongo..."
 
     "Hanna pensó por un momento y luego asintió con la cabeza de forma decidida."
+
+    show hanna emocionadahabla with dissolve
 
     h "Cuando salgamos de aquí, le compraré un collar y unos aretes... y... le diré que se los ponga diario, o... ¡dejaré de ser su amiga!"
 
@@ -283,6 +374,9 @@ label cap1_felix:
     "Nadie parecía tan confiable como Felix."
 
     #show felix
+
+    show felix sonrisahabla at center with dissolve:
+        zoom sprite_size
     
     "Tenía una gran sonrisa en su rostro mientras se alejaba del grupo y, al ver que me quedé parado viendo a los demás, se acercó a mí."
 
@@ -292,6 +386,8 @@ label cap1_felix:
 
     #bg cafeteria
 
+    scene bg black with Fade(0.2, 0.1, 0.2)
+
     "Felix y yo caminamos en dirección contraria al resto, viendo por la ventana los jardines por donde merodeaba la criatura."
 
     "Su mandíbula cubierta de sangre mientras olfateaba, sus filosas garras que golpeaban el piso mientras caminaba..."
@@ -299,6 +395,9 @@ label cap1_felix:
     "Ambos nos alejamos y escondimos debajo de la misma ventana."
 
     #show felix
+
+    show felix preocupado at center with dissolve:
+        zoom sprite_size
 
     "Felix cubrió su boca un segundo antes de voltear a verme."
 
@@ -311,6 +410,8 @@ label cap1_felix:
     "¿Quizás estaba intentando ignorar que estaba asustado?"
 
     a "S...Sí, realmente lo es..."
+
+    show felix normal with dissolve
 
     f "No puedo imaginar el miedo que pasó Katherine cuando fue devorada..."
 
@@ -326,6 +427,8 @@ label cap1_felix:
 
             a "¿A ti no?"
 
+            show felix ceja with dissolve
+
             f "Supongo... pero si tuviese a alguien tan cercano a mí sin duda tomaría su lugar."
 
             a "Regreso al momento en el que ocurrió y..."
@@ -334,6 +437,8 @@ label cap1_felix:
 
             a "Creo que aunque pudiese hacerlo mi cuerpo se detendría, no es algo que yo pueda elegir."
 
+            show felix normal with dissolve
+
             f "Hmmm, interesante..."
 
         "Sí, lo haría si tuviese la oportunidad.":
@@ -341,16 +446,22 @@ label cap1_felix:
 
             a "Éramos... muy cercanos."
 
+            show felix sonrisa with dissolve
+
             f "Sí, creo que entiendo, también tomaría su lugar si tuviese la oportunidad."
 
         "No lo sé...":
-            f "Indeciso, ¿eh? ...Bueno, tampoco es lago que puedas tomar a la ligera... supongo... perder la vida..."
+            f "Indeciso, ¿eh? ...Bueno, tampoco es algo que puedas tomar a la ligera... supongo... perder la vida..."
 
             a "Pareces muy cómodo hablando de eso."
+
+            show felix ceja with dissolve
 
             f "Bueno, no sé si me aterra morir realmente, quizás solo no de esa manera."
 
     a "Tú eras su novio, ¿cierto?"
+
+    show felix sonrisahabla with dissolve
 
     f "¿Lo era? ¡Ah! Sí."
 
@@ -366,9 +477,13 @@ label cap1_felix:
 
     "¿Quizás dos meses eran una eternidad para Felix?"
 
+    show felix sonrisa with dissolve
+
     f "Sí, ya sabes cómo son las chicas. Como sea, no te habrá contado cosas malas de mí, ¿cierto?"
 
     a "Ah... no, no que yo recuerde..."
+
+    show felix caderashabla with dissolve
 
     f "¿Ves? Soy una buenas persona."
 

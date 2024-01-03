@@ -5,27 +5,44 @@ label cap2true:
 
     #show freya
 
+    show freya normalhabla at center with dissolve:
+        zoom sprite_size
+
     fr "Genial, ¿y ahora qué?"
 
     "Freya se veía poco satisfecha con el resultado obtenido, inclusive me miraba de forma molesta, como si tuviese culpa de que aquello hubiese funcionado."
 
     a "N... no lo sé."
 
+    show freya ladohabla with dissolve
+
     fr "Bueno, esta fue tu elección, quizás tú deberías guiarnos, ¿no crees?"
 
     #show hanna
 
+    show hanna miedohabla at left with dissolve:
+        zoom sprite_size
+
     h "F...Freya, creo que estás siendo un poco dura..."
 
+    show freya normalhabla with dissolve
+
     fr "¿Dura? Pudimos haber muerto por su indecisión."
+
+    show hanna normal with dissolve
 
     h "Pero no estamos muertos, ¿o sí?"
 
     "El hecho de que fue su amiga hablando hizo que la chica de cabello negro respirase profundamente para calmar su enojo."
 
+    show hanna explicano with dissolve
+
     h "Quizás deberíamos decidir qué haremos ahora..."
 
     #show evan
+
+    show evan at left with dissolve:
+        zoom sprite_size
 
     e "Eso si es que Freya quiere cooperar."
 

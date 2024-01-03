@@ -2,6 +2,8 @@ label cap1:
 
     #show bg negro
 
+    scene bg black with fade
+
     "Negro..."
 
     "Así es cuando empieza el sueño..."
@@ -22,6 +24,8 @@ label cap1:
 
     #bg salon
 
+    scene bg black with fade
+
     "Mis ojos se abrieron lentamente, acostumbrándome al brillo del salón, ahí fue cuando pude ver la escena que se desenvolvía frente a mí."
 
     "Atemorizados dentro de aquel salón, todos parecían pasar por un duelo distinto."
@@ -31,6 +35,9 @@ label cap1:
     "Por otro lado se encontraba Evan, el chico de cabellos blancos quien se encontraba tosiendo fuertemente en la esquina intentando recuperar el aire."
 
     #show felix (cambiar las expresiones depeniendo del diálogo, you already know)
+
+    show felix sonrisahabla at center with dissolve:
+        zoom sprite_size
 
     f "Hey, ¿estás bien?"
 
@@ -42,11 +49,15 @@ label cap1:
 
     "Literalmente acababan de matar a alguien frente a sus ojos, y aquella persona solo estaba parada frente a él como si nada."
 
+    show felix ceja with dissolve
+
     f "Hey."
 
     a "Perdón... ¿Quién eres?"
 
     "Mentí, yo obviamente conocía a todos los que estaban en aquella habitación pero estaba seguro de que ellos no me reconocían."
+
+    show felix sonrisahabla with dissolve
 
     f "Felix, soy... compañero de Katherine, su ex novio de hecho."
 
@@ -60,13 +71,19 @@ label cap1:
 
     "Mentí ignorando mi verdadero sentimiento una vez más apartando la vista, no recuerdo el momento en el que llegué al salón para encerrarme."
 
+    show felix normal with dissolve
+
     f "Hmmm..."
 
     "Felix respondió de una forma no satisfactoria, como si aquella respuesta no fuese suficiente para él, aun así, lo ignoré."
 
+    show felix sonrisahabla with dissolve
+
     f "¿Y tú eres...?"
 
     a "Arden."
+
+    show felix caderashabla with dissolve
 
     f "Arden... es un nombre curioso, no creo haberlo escuchado antes."
 
@@ -76,6 +93,8 @@ label cap1:
 
     a "¿El siguiente paso?"
 
+    show felix sonrisahabla with dissolve
+
     f "Sí, mientras estabas en trance los demás empezaron a discutir cómo salir de aquí."
 
     a "¿Salir...?"
@@ -84,21 +103,31 @@ label cap1:
 
     a "No... No hay que salir..."
 
+    show felix normal with dissolve
+
     f "¿Piensas quedarte aquí?"
 
     a "¿Qué? ¡¿No viste lo que le ocurrió a Katherine?!"
 
     #show evan
 
+    show evan despair at left with dissolve:
+        zoom sprite_size
+
     e " Sí... bueno..."
 
     "Evan, el chico alto de cabellos blancos se acercó interrumpiendo."
 
-    e "“¿Cómo planeas sobrevivir? Si nos quedamos aquí acabaremos también como ella."
+    show evan normal with dissolve
+
+    e "¿Cómo planeas sobrevivir? Si nos quedamos aquí acabaremos también como ella."
 
     "Mi corazón se sintió pequeño en aquel momento, muy pequeño, como si se hubiese hecho chicharrón."
 
     #show freya
+
+    show freya normalhabla at right with dissolve:
+        zoom sprite_size
 
     fr "¿No ves que lo asustas, animal?"
 
@@ -110,39 +139,60 @@ label cap1:
 
     a "Creo que... sé dónde podríamos encontrar una pista..."
 
-    f "¿Dónde?"
+    show freya preocupada with dissolve
+
+    fr "¿Dónde?"
 
     a "La biblioteca...cuando esto ocurrió los libros cambiaron, las letras y las portadas también."
     
     a "Quizás podríamos encontrar algo ahí."
 
-    f "No, definitivamente no."
+    show freya normalhabla with dissolve
+
+    fr "No, definitivamente no."
 
     a "¿Huh?"
 
-    f "El monstruo estaba dentro de la biblioteca, ¿recuerdas? Es muy riesgoso, tenemos que encontrar otro lugar."
+    show freya pensarhabla with dissolve
+
+    fr "El monstruo estaba dentro de la biblioteca, ¿recuerdas? Es muy riesgoso, tenemos que encontrar otro lugar."
 
     menu:
         "S...sí, tienes razón.":
+            show freya normalhabla with dissolve
+
             fr "Siempre la tengo."
 
         "N...no creo que sea bueno evitarlo, podría ayudarnos.":
+            show freya ladohabla with dissolve
+
             fr "¿No? ¿Quieres correr a la boca del lobo y caer en su trampa? ¿Eres tan ingenuo?"
 
         "(Guardar silencio)":
+            show freya normal with dissolve
+
             "Freya sonrió con satisfacción por mi silencio. Se veía burlona, como si hubiera ganado una pequeña batalla sin sentido."
 
     #hide evan
 
+    hide evan with dissolve
+
     #show hanna
+
+    show hanna normal at left with dissolve:
+        zoom sprite_size
 
     h "Bien, ¿a dónde vamos en ese caso?"
 
     "Hanna preguntó de forma nerviosa mientras sostenía la mano de Freya con fuerza, como si fuese lo último que tuviese para mantenerse en pie."
 
+    show freya pensarhabla with dissolve
+
     fr "Podríamos empezar por la cafetería, es un lugar bastante amplio, seguro encontraremos algo ahí."
 
     "Freya concluyó con seguridad aunque viendo el rostro de Evan se notaba poco convencido de la decisión."
+
+    show freya normalhabla with dissolve
 
     fr " Cafetería, sí, sería bueno para ver también las provisiones que hay, tampoco me gustaría morirme de hambre."
 
@@ -158,6 +208,8 @@ label cap1:
 
         #bg cafeteria
 
+        scene bg black with Fade(0.5, 0.5, 0.5)
+
         "Caminamos por los pasillos hasta encontrar el lugar, todos entraron, uno detrás del otro."
 
         "Las luces estaban encendidas como era costumbre y por las ventanas se podía aún visualizar el rojo carmesí del cielo."
@@ -166,11 +218,20 @@ label cap1:
 
         #show freya
 
+        show freya pensarhabla at center with dissolve:
+            zoom sprite_size
+
         fr "Bien, hay que asegurar el perímetro."
+
+        show freya normalhabla with dissolve
 
         fr "Iré a revisar las provisiones."
 
+        show freya ladohabla2 with dissolve
+
         fr "Evan, quédate en la entrada para checar que nadie venga."
+
+        show freya lado with dissolve
 
         fr "Felix y Hanna revisaran los alrededores."
 
@@ -178,9 +239,13 @@ label cap1:
 
         a "¿Y yo?"
 
+        show freya normalhabla with dissolve
+
         fr "Oh, chico despistado, haz algo de provecho supongo."
 
         #hide freya
+
+        hide freya with dissolve
 
         "Freya se encogió de hombros como si no le importase del todo mi presencia y se retiró."
 
@@ -199,7 +264,12 @@ label cap1:
 
     #bg cafeteria (con algun fade para desaparecer a los demás)
 
+    scene bg black with Fade(0.3, 0.0, 0.3)
+
     #show freya
+
+    show freya normalhabla at center with dissolve:
+        zoom sprite_size
 
     fr "Bien, acérquense todos, repartiré las cosas equivalentemente."
 
@@ -211,7 +281,12 @@ label cap1:
 
     #show hanna
 
+    show hanna miedohabla at left with dissolve:
+        zoom sprite_size
+
     h "No realmente, solo un par de papeles tirados y posters alternados, había muchos papeles pero solo un par de ellos eran completamente ilegibles."
+
+    show freya pensarhabla with dissolve
 
     fr "¿Ilegibles? Bueno, tiene sentido que sea así, es lo que pasó con el libro según nos contó... ah..."
 
@@ -221,31 +296,58 @@ label cap1:
 
     "Quizás la vez pasada no había escuchado mi nombre por lo que lo dejé pasar por alto."
 
+    show freya normalhabla with dissolve
+
     fr "Arden, sí."
 
     "Freya se volteó una vez más para ver a los demás ignorándome por completo."
+
+    show freya ladohabla2 with dissolve
 
     fr "¿Tienen ideas sobre este lugar? Me gustaría escuchar qué es lo que piensan."
 
     #show evan
 
+    show hanna normal with dissolve
+
+    show evan pensando at right with dissolve:
+        zoom sprite_size
+
     e "Creo que estamos en una especie de mundo alterno..."
+
+    show freya normalhabla with dissolve
 
     fr "Mundo alterno, esas solo son fantasías."
 
+    show evan normal with dissolve
+
     e "Bueno, creo que es la única forma razonable de explicar lo que está ocurriendo, ¿no lo crees? A no ser que tengas otra hipótesis."
+
+    show freya pensarhabla with dissolve
 
     fr "Mi hipótesis, la cual puede ser la correcta, es que estamos dentro de una máquina experimental."
 
-    e "Oh, sí, tiene sentido." 
+    show evan pensando with dissolve
+
+    e "Oh, sí, tiene sentido."
+
+    show evan normal with dissolve
     
     e "Sobre todo la parte en la que nadie recuerda haber sido sometido a una máquina, y si fuera un experimento Katherine no hubiera muerto."
 
+    show freya normal with dissolve
+
     fr "Los experimentos tienen casualidades."
+
+    show evan pensando with dissolve
 
     e "En ese caso, ¿por qué nosotros?"
 
+    show hanna miedohabla with dissolve
+
     h "C...chicos no creo que lleguemos a nada."
+
+    show freya normalhabla with dissolve
 
     fr "¿Qué piensas tú?"
 
@@ -253,20 +355,28 @@ label cap1:
         "Darle la razón a Evan":
             a "Bueno, el universo tiene sentido, ¿quizás quedamos todos dentro por estar en la biblioteca al mismo tiempo?"
 
+            show freya ladohabla with dissolve
+
             fr "Tsk..."
 
             "La lengua de Freya chasqueó con fuerza y claramente se veía molesta con aquella respuesta."
+
+            show evan feliz with dissolve
 
             "Sus ojos se voltearon un poco para ignorar a Arden una vez más mientras que Evan parecía sonreír debajo del cubrebocas satisfactoriamente."
 
         "Darle la razón a Freya":
             a "Bueno, el experimento tiene sentido, eso explicaría el por que solo somos nosotros, un grupo selectivo de personas ¿no?"
 
-            f "¿Lo ves? Ah..."
+            show freya normal with dissolve
+
+            fr "¿Lo ves? Ah..."
 
             "Freya me observó una vez más como si esperase algo."
 
             a "Arden."
+
+            show freya normalhabla with dissolve
 
             fr "Sí, Arden sabe que es lo correcto. Tal vez podrías aprender de gente como yo."
 
@@ -274,13 +384,20 @@ label cap1:
 
     #hide hanna
 
+    hide hanna with dissolve
+
     #show felix
+
+    show felix sonrisahabla at left with dissolve:
+        zoom sprite_size
 
     f "Sea como sea, debemos tener cuidado de aquí en adelante, se siente el ambiente tenso, ¿no lo crees?"
 
     "Felix volvió a verme aunque ni siquiera sabía si se refería al monstruo o a mis compañeros que ahora mismo no paraban de mirarse de forma amenazadora."
 
     a "S...sí, tienes razón, quizás deberíamos seguir buscando pistas."
+
+    show freya pensarhabla with dissolve
 
     fr "Aquí no hay nada, creo que deberíamos de irnos."
 
@@ -290,6 +407,8 @@ label cap1:
 
     #bg bestiacafeteria ?
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Ni siquiera pude pensar, se escuchó el gruñido de la bestia afuera, mis ojos se engrandecieron y observaron a Freya inmediatamente buscando su ayuda."
 
     a "Una barricada..."
@@ -298,7 +417,12 @@ label cap1:
 
     #bg cafateria
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     #show freya
+
+    show freya normal at center with dissolve:
+        zoom sprite_size
 
     "Freya tomó una de las mesas para arrastrarla, el resto hizo lo mismo, tomando muebles y objetos que pudiesen utilizar para bloquear la entrada de donde se escuchaba el monstruo."
 
@@ -308,13 +432,20 @@ label cap1:
 
     #show evan
 
+    show evan normal at right with dissolve:
+        zoom sprite_size
+
     "A pesar de que todos movían cosas Evan solo los miraba a la distancia como si no pudiese hacer nada y fue cuando Freya lo vio con odio."
+
+    show freya ladohabla with dissolve
 
     fr "MUÉVETE, ¿O QUIERES MORIR?"
 
+    show evan despair with dissolve
+
     e "Sería mejor irnos..."
 
-    "Para sorpresa de todos , el pequeño conejo que habían estado persiguiendo hace horas saltó del bolsillo de Evan y aterrado por el ruido salió corriendo por una de las puertas traseras."
+    "Para sorpresa de todos, el pequeño conejo que habían estado persiguiendo hace horas saltó del bolsillo de Evan y aterrado por el ruido salió corriendo por una de las puertas traseras."
 
     "Fue evidente, y el corazón de todos quizás se frenó un par de segundos al ver la escena."
 
@@ -324,15 +455,27 @@ label cap1:
 
     #hide evan
 
+    hide evan with dissolve
+
     #show felix
+
+    show felix preocupado at right with dissolve:
+        zoom sprite_size
     
     f "Fuck..."
 
+    show hanna muyasustadahabla at left with dissolve:
+        zoom sprite_size
+
     h "¿Estamos... encerrados?"
+
+    show freya preocupada with dissolve
 
     fr "No... nononono."
 
     "Freya susurraba a un lado de Hanna intentando consolarla aunque se veía que la esperanza de la chica poco a poco iba disminuyendo."
+
+    show hanna despair with dissolve
 
     h "¡¿Qué hacemos!? ¡NO QUIERO MORIR!"
 
@@ -342,17 +485,33 @@ label cap1:
 
     #hide hanna
 
+    hide hanna with dissolve
+
     #show evan
+
+    show evan despair at left with dissolve:
+        zoom sprite_size
 
     e "Mierda..."
 
     #hide evan, freya, felix
+
+    hide evan
+
+    hide freya
+
+    hide felix
+
+    with dissolve
 
     "Corrí con desesperación a la puerta y me dieron la bienvenida millones de posters con símbolos distintos que recorrían cada uno de los papeles y ninguno hacía sentido."
 
     a "¡Debe haber algo, debe haber algo!"
 
     #show felix
+
+    show felix normal at center with dissolve:
+        zoom sprite_size
 
     f "No hay nada, no hay salida."
 
@@ -361,6 +520,9 @@ label cap1:
     "Mis manos temblaban de miedo, me consumía, poco a poco me volvía victima de aquella sombra, tengo miedo, mucho miedo, pero tampoco quiero morir, ¡NO QUIERO MORIR!"
 
     #show freya
+
+    show freya ladohabla at left with dissolve:
+        zoom sprite_size
 
     fr "¡¿Qué hacen?! ¡Van a morir!"
 
@@ -372,15 +534,19 @@ label cap1:
 
     "Y uno... uno en particular que parecía una nota golpeó mi pie, era pesada pues estaba doblada quizás unas cinco veces."
 
+    show felix ceja with dissolve
+
     f "¿Qué es eso?"
 
     "Tomé la nota y comencé a desdoblarla, mis manos temblaban mucho."
 
     #bg pistaanubis
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Era una ilustración, una especie de jeroglíficos, hombres ofreciendo algo a una especie de puerta."
 
-    a "¿Qué...?¿Qué es esto?"
+    a "¿Qué...? ¿Qué es esto?"
 
     "Evan se acercó y me arrebató la hoja de las manos, quizás en un momento pensó que solo estaba exagerando pero al visualizarlo su cabeza se ladeó ligeramente de forma confundida."
 
@@ -388,19 +554,29 @@ label cap1:
 
     #bg cafeteria
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Los rasguños y golpeteos se volvieron mucho más insistentes, inclusive la garra del monstruo ya estaba buscando escurrirse entre la pequeña abertura de las puertas."
 
     #show freya
 
+    show freya preocupada at center with dissolve:
+        zoom sprite_size
+
     fr "¿Qué ocurre?"
 
     "Freya se acercó quizás un poco más preocupada viendo la imagen."
+
+    show freya normal with dissolve
 
     fr "¿Jeroglíficos?"
 
     a "Estaba detrás de un poster, como si estuviese escondido."
 
     #show hanna
+
+    show hanna miedohabla at right with dissolve:
+        zoom sprite_size
 
     h "¿Escondido? ¿Como si alguien lo hubiese escondido? Da igual da igual, ¡¿qué dice?!"
 
@@ -409,6 +585,8 @@ label cap1:
     "Freya se acercó a tomar el papel y lo extendió."
 
     #bg pistaanubis
+
+    scene bg black with Fade(0.3, 0.1, 0.3)
 
     fr "Es Anubis… la balanza está desequilibrada…"
 
@@ -420,17 +598,34 @@ label cap1:
 
     #bg cafeteria
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     #show freya
+
+    show freya normalhabla at center with dissolve:
+        zoom sprite_size
 
     fr "Hay que equilibrar la balanza, un sacrificio, ¡tenemos que hacer un sacrificio!"
 
+    #show evan
+
+    show evan defensivo at right with dissolve:
+        zoom sprite_size
+
     e "¡¿QUÉ?! ¡¿Piensas matar a alguien?!"
+    
+    show freya ladohabla with dissolve
 
     fr "¡Si pudiera lo haría! Pero no... No creo que sea así..."
+
+    show freya pensarhabla with dissolve
 
     fr "Debe de ser un sacrificio distinto, no siempre son personas... puede ser un objeto o algo íntimo..."
 
     #show felix
+
+    show felix normal at left with dissolve:
+        zoom sprite_size
 
     f "Sangre, podríamos cortarnos y ofrecer eso para salir."
 
@@ -438,7 +633,7 @@ label cap1:
 
     a "Si es un sacrificio de algo importante, ¿no sería un objeto? Algo… importante para ti, tiene más sentido en mi cabeza."
 
-    #show evan
+    show evan pensando with dissolve
 
     e "Eso también tiene sentido..."
 
@@ -446,7 +641,12 @@ label cap1:
 
     #hide freya
 
+    hide freya with dissolve
+
     #show hanna
+
+    show hanna llorar at center with vpunch:
+        zoom sprite_size
 
     h "¡BUENO DECIDAN ENTONCES!"
 
@@ -467,6 +667,8 @@ label cap1:
 
 label cap1true:
     #bg cafeteria
+
+    scene bg black with Fade(0.3, 0.1, 0.3)
     
     "Mi mano buscó el collar que Katherine me había dado."
 
@@ -479,6 +681,8 @@ label cap1true:
     a "¡CORRAN!"
 
     #fade to black
+
+    scene bg black with Fade(1.0, 1.0, 1.0)
 
     jump cap2true
 
