@@ -35,3 +35,6 @@ label playtest:
 
             "Cap 2 True":
                 jump cap2true
+
+            "Cap 2 True Sides":
+                jump cap2true_sideselection

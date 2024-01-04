@@ -132,7 +132,7 @@ label cap2true:
                 "Vigilar a Evan":
                     call cap2true_evan from _call_cap2true_evan
                 
-                "Ayudar a Freya":
+                "Hablar con Freya":
                     call cap2true_freya from _call_cap2true_freya
 
                 "Acompañar a Hanna":
