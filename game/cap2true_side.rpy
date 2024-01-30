@@ -1,4 +1,6 @@
 label cap2true_evan:
+    $ evan_counter += 1
+
     #bg bibliotecatwilight
 
     "No confiaba en Evan, de hecho, era la última persona con la que iría, pero, teniendo en cuenta que no confío en él, tal vez es la mejor razón para seguirlo."
@@ -92,6 +94,8 @@ label cap2true_evan:
     return
 
 label cap2true_freya:
+    $ freya_counter += 1
+
     #bg bibliotecatwilight
 
     "Claro que la chica se veía molesta, ¿tal vez deberia ir a disculparme?"

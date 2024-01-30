@@ -270,7 +270,7 @@ label prologo:
 
     show freya ladohabla2 with dissolve
 
-    fr "Tsk... Seguro los locos de biología tienen que ver con esto, no me digas, ¿otro experimento fallido?"
+    fr "Tsk... Seguro los locos de biología tienen que ver con esto. No me digas, ¿otro experimento fallido?"
 
     show katherine dedohabla with dissolve
 
@@ -297,7 +297,7 @@ label prologo:
 
     #show felix
 
-    show felix normal at left with dissolve:
+    show felix manofrentepreocupadohabla2 at left with dissolve:
         zoom sprite_size
 
     "{color=#ffffff}???{/color}" "¡ÁBRELA, ÁBRELA!"
@@ -350,7 +350,7 @@ label prologo:
     show katherine preocupadahabla at left with dissolve:
         zoom sprite_size
 
-    show felix normal at right with dissolve:
+    show felix manofrentepreocupado at right with dissolve:
         zoom sprite_size
 
     k "¿Estás bien Felix?"
@@ -426,7 +426,7 @@ label prologo:
 
     #show felix
 
-    show felix normal at left with dissolve:
+    show felix manofrentepreocupado at left with dissolve:
         zoom sprite_size
 
     f "No no, puedo caminar solo. Es solo un pequeño tirón."
@@ -473,7 +473,9 @@ label prologo:
 
     show katherine dedohabla with dissolve
 
-    k "¡Si! Es mejor que vayamos juntos, así también nos aseguraremos de que estemos todos. Felix, déjame ayudarte."
+    k "¡Si! Es mejor que vayamos juntos, así también nos aseguraremos de que estemos todos."
+    
+    k "Felix, déjame ayudarte."
 
     #hide freya
 
@@ -481,7 +483,7 @@ label prologo:
 
     #show felix
 
-    show felix normal at right with dissolve:
+    show felix sonrisahabla at right with dissolve:
         zoom sprite_size
 
     "Katherine suplicó pero éste nuevamente se negó apartándola."
@@ -490,7 +492,7 @@ label prologo:
 
     "Felix se levantó como si nada hubiera ocurrido."
 
-    show felix sonrisahabla with dissolve
+    show felix caderashabla with dissolve
 
     f "¿Lo ves? Solo podríamos ir por un medicamento para el dolor, y todo estará bien."
 
@@ -617,7 +619,7 @@ label prologo:
 
             k "Me alegra que estés bien, creo que es normal estar asustado, sobre todo si son cosas a las que no estamos acostumbrados, ¿cierto?"
 
-            show kaherine dedohabla with dissolve
+            show katherine dedohabla with dissolve
 
             k "Yo creo que es mucho mejor tener miedo porque eso significa que nuestro cuerpo sabe cómo reaccionar a situaciones riesgosas."
 
@@ -692,7 +694,7 @@ label prologo:
 
     #show freya
 
-    show freya preocupada at center with dissolve:
+    show freya angustiadahabla at center with dissolve:
         zoom sprite_size
 
     fr "Algo no está bien. Puedo sentirlo."
@@ -741,6 +743,6 @@ label prologo:
 
     "Alguien gritó detrás de mí, no pude reconocer la voz pero aquello fue lo único que necesité para salir despavorido detrás de el resto encerrándose en un salón."
 
-    scene bg black with Fade(1.0, 1.0, 1.0)
+    #scene bg black with Fade(1.0, 1.0, 1.0)
 
     jump cap1

@@ -2,7 +2,9 @@ label cap1:
 
     #show bg negro
 
-    scene bg black with fade
+    # scene bg black with fade
+
+    scene bg black with Fade(1.0, 1.0, 1.0)
 
     "Negro..."
 
@@ -71,7 +73,7 @@ label cap1:
 
     "Mentí ignorando mi verdadero sentimiento una vez más apartando la vista, no recuerdo el momento en el que llegué al salón para encerrarme."
 
-    show felix normal with dissolve
+    show felix pensandoceja with dissolve
 
     f "Hmmm..."
 
@@ -118,7 +120,7 @@ label cap1:
 
     "Evan, el chico alto de cabellos blancos se acercó interrumpiendo."
 
-    show evan normal with dissolve
+    show evan ladobrazo with dissolve
 
     e "¿Cómo planeas sobrevivir? Si nos quedamos aquí acabaremos también como ella."
 
@@ -126,7 +128,7 @@ label cap1:
 
     #show freya
 
-    show freya normalhabla at right with dissolve:
+    show freya angustiada at right with dissolve:
         zoom sprite_size
 
     fr "¿No ves que lo asustas, animal?"
@@ -159,7 +161,7 @@ label cap1:
 
     menu:
         "S...sí, tienes razón.":
-            show freya normalhabla with dissolve
+            show freya caderassonrisa with dissolve
 
             fr "Siempre la tengo."
 
@@ -169,7 +171,7 @@ label cap1:
             fr "¿No? ¿Quieres correr a la boca del lobo y caer en su trampa? ¿Eres tan ingenuo?"
 
         "(Guardar silencio)":
-            show freya normal with dissolve
+            show freya sonrisa with dissolve
 
             "Freya sonrió con satisfacción por mi silencio. Se veía burlona, como si hubiera ganado una pequeña batalla sin sentido."
 
@@ -286,7 +288,7 @@ label cap1:
 
     h "No realmente, solo un par de papeles tirados y posters alternados, había muchos papeles pero solo un par de ellos eran completamente ilegibles."
 
-    show freya pensarhabla with dissolve
+    show freya caderaspreocupada2 with dissolve
 
     fr "¿Ilegibles? Bueno, tiene sentido que sea así, es lo que pasó con el libro según nos contó... ah..."
 
@@ -315,7 +317,7 @@ label cap1:
 
     e "Creo que estamos en una especie de mundo alterno..."
 
-    show freya normalhabla with dissolve
+    show freya sonrisahabla with dissolve
 
     fr "Mundo alterno, esas solo son fantasías."
 
@@ -339,7 +341,7 @@ label cap1:
 
     fr "Los experimentos tienen casualidades."
 
-    show evan pensando with dissolve
+    show evan ladobrazo with dissolve
 
     e "En ese caso, ¿por qué nosotros?"
 
@@ -355,7 +357,7 @@ label cap1:
         "Darle la razón a Evan":
             a "Bueno, el universo tiene sentido, ¿quizás quedamos todos dentro por estar en la biblioteca al mismo tiempo?"
 
-            show freya ladohabla with dissolve
+            show freya ladohabla2 with dissolve
 
             fr "Tsk..."
 
@@ -368,7 +370,7 @@ label cap1:
         "Darle la razón a Freya":
             a "Bueno, el experimento tiene sentido, eso explicaría el por que solo somos nosotros, un grupo selectivo de personas ¿no?"
 
-            show freya normal with dissolve
+            show freya caderaspreocupada2 with dissolve
 
             fr "¿Lo ves? Ah..."
 
@@ -376,7 +378,7 @@ label cap1:
 
             a "Arden."
 
-            show freya normalhabla with dissolve
+            show freya sonrisahabla with dissolve
 
             fr "Sí, Arden sabe que es lo correcto. Tal vez podrías aprender de gente como yo."
 
@@ -421,7 +423,7 @@ label cap1:
 
     #show freya
 
-    show freya normal at center with dissolve:
+    show freya angustiada at center with dissolve:
         zoom sprite_size
 
     "Freya tomó una de las mesas para arrastrarla, el resto hizo lo mismo, tomando muebles y objetos que pudiesen utilizar para bloquear la entrada de donde se escuchaba el monstruo."
@@ -437,7 +439,7 @@ label cap1:
 
     "A pesar de que todos movían cosas Evan solo los miraba a la distancia como si no pudiese hacer nada y fue cuando Freya lo vio con odio."
 
-    show freya ladohabla with dissolve
+    show freya angustiadahabla with dissolve
 
     fr "MUÉVETE, ¿O QUIERES MORIR?"
 
@@ -510,18 +512,18 @@ label cap1:
 
     #show felix
 
-    show felix normal at center with dissolve:
+    show felix manofrentepreocupadohabla at center with dissolve:
         zoom sprite_size
 
     f "No hay nada, no hay salida."
 
-    a "¿Ves si hay alguna trampa? ¿Algo que podamos saltar si cruzamos?"
+    a "¿Ves si hay alguna salida? ¿Algo que podamos saltar si cruzamos?"
 
     "Mis manos temblaban de miedo, me consumía, poco a poco me volvía victima de aquella sombra, tengo miedo, mucho miedo, pero tampoco quiero morir, ¡NO QUIERO MORIR!"
 
     #show freya
 
-    show freya ladohabla at left with dissolve:
+    show freya caderaspreocupada2 at left with dissolve:
         zoom sprite_size
 
     fr "¡¿Qué hacen?! ¡Van a morir!"
@@ -614,7 +616,7 @@ label cap1:
 
     e "¡¿QUÉ?! ¡¿Piensas matar a alguien?!"
     
-    show freya ladohabla with dissolve
+    show freya angustiadahabla with dissolve
 
     fr "¡Si pudiera lo haría! Pero no... No creo que sea así..."
 
@@ -624,7 +626,7 @@ label cap1:
 
     #show felix
 
-    show felix normal at left with dissolve:
+    show felix pensando2 at left with dissolve:
         zoom sprite_size
 
     f "Sangre, podríamos cortarnos y ofrecer eso para salir."

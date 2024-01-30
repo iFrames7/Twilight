@@ -11,6 +11,9 @@ default timer_jump = 0
 default sprite_size = 0.5
 default sprite_handout_size = 0
 
+default freya_counter = 0
+default evan_counter = 0
+
 label start:
 
     jump playtest

@@ -1,11 +1,13 @@
 label cap1_evan:
+    $ evan_counter += 1
+
     "Caminé hacia Evan de forma tímida" 
     
     "Yo no tenía una misión asignada, pero de quienes conocía Evan era quien me daba un poco de confianza a pesar de su aspecto y su forma seria de actuar."
 
     #show evan
 
-    show evan normal at center with dissolve:
+    show evan lado2 at center with dissolve:
         zoom sprite_size
 
     a "Hola."
@@ -36,7 +38,7 @@ label cap1_evan:
 
     a "¿Tú y Freya se conocían?"
 
-    show evan normal with dissolve
+    show evan ladobrazoenojado with dissolve
 
     e "Sí, pero no nos llevamos del todo bien."
 
@@ -52,7 +54,7 @@ label cap1_evan:
 
     show evan ceja with dissolve
 
-    e "¿Ella? Bueno, es solo una molestia, personas como esas no llegaran muy lejos si siguen acertando sus creencias sobre otros sin importar lo que el otro piense."
+    e "¿Ella? Bueno, es solo una molestia, personas como esas no llegarán muy lejos si siguen acertando sus creencias sobre otros sin importar lo que el otro piense."
 
     menu:
         "Supongo que tienes razón.":
@@ -78,13 +80,15 @@ label cap1_evan:
 
     a "¿Qué cosa?"
 
+    show evan lado with dissolve
+
     e "Esos posters, no estaban así antes."
 
     "Evan caminó hacia la puerta donde varios posters estaban colocados sobre la pared."
     
     "Confundido, éste los observó."
 
-    show evan normal with dissolve
+    show evan ladobrazo with dissolve
 
     e "Se ven como símbolos y palabras extrañas."
 
@@ -99,6 +103,8 @@ label cap1_evan:
     return
 
 label cap1_freya:
+    $ freya_counter += 1
+
     "Claro que mi cuerpo entero temblaba, de hecho, la simple idea de acercarme a Freya aun no me agradaba del todo."
 
     "Aun así, tomando algo de valor de mi interior, caminé detrás de ella."
@@ -154,7 +160,7 @@ label cap1_freya:
 
             #show freya
 
-            show freya lado at center with dissolve:
+            show freya caderaspreocupada at center with dissolve:
                 zoom sprite_size
 
             "Freya bufó molesta al escuchar aquella acción."
@@ -166,7 +172,7 @@ label cap1_freya:
 
             #show freya
 
-            show freya preocupada at center with dissolve:
+            show freya sonrisahabla at center with dissolve:
                 zoom sprite_size
 
             "Tomé un par y se las llevé a Freya, quien sonrió."
@@ -185,7 +191,7 @@ label cap1_freya:
 
     a "Sí, eso creo."
 
-    show freya ladohabla2 with dissolve
+    show freya caderassonrisa with dissolve
 
     fr "Bueno Arden, agradezco mucho tu cooperación, aunque claro, no la necesitaba desde un inicio."
 
@@ -205,7 +211,7 @@ label cap1_freya:
 
     "Eche mis hombros hacia atrás y alcé el rostro para poder verla con un poco más de seguridad, hubo una sonrisa de satisfacción en el rostro de Freya."
 
-    show freya normalhabla with dissolve
+    show freya sonrisa with dissolve
 
     fr "Mucho mejor. No es tan difícil, ¿vez?" 
     
@@ -411,13 +417,15 @@ label cap1_felix:
 
     a "S...Sí, realmente lo es..."
 
-    show felix normal with dissolve
+    show felix manofrentepreocupadohabla2 with dissolve
 
     f "No puedo imaginar el miedo que pasó Katherine cuando fue devorada..."
 
     "Me detuve un segundo a pensarlo..."
 
     "Mis manos se escondieron en los bolsos de mi pantalón buscando algo de confort en el cual podría distraerme, pero no encontré nada."
+
+    show felix pensando with dissolve
 
     f "Si hubieras podido tomar su lugar, ¿lo hubieras hecho?"
 
@@ -437,7 +445,7 @@ label cap1_felix:
 
             a "Creo que aunque pudiese hacerlo mi cuerpo se detendría, no es algo que yo pueda elegir."
 
-            show felix normal with dissolve
+            show felix pensando2 with dissolve
 
             f "Hmmm, interesante..."
 
@@ -455,7 +463,7 @@ label cap1_felix:
 
             a "Pareces muy cómodo hablando de eso."
 
-            show felix ceja with dissolve
+            show felix pensandoceja with dissolve
 
             f "Bueno, no sé si me aterra morir realmente, quizás solo no de esa manera."
 
