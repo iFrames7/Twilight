@@ -8,7 +8,7 @@ define fr = Character("Freya", color="#9a201b")
 default timer_range = 0
 default timer_jump = 0
 
-default sprite_size = 0.5
+default sprite_size = 1
 default sprite_handout_size = 0
 
 default freya_counter = 0

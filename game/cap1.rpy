@@ -684,7 +684,7 @@ label cap1true:
 
     #fade to black
 
-    scene bg black with Fade(1.0, 1.0, 1.0)
+    # scene bg black with Fade(1.0, 1.0, 1.0)
 
     jump cap2true
 

@@ -1,4 +1,6 @@
 label cap2true:
+    scene bg black with Fade(1.0, 1.0, 1.0)
+
     #bg salonclasestrue?
 
     "Desplazándonos para salir de la cafetería se sentía como si todos me siguieran, fui corriendo directo a un salón lejos de aquel lugar, entre todos bloqueamos la puerta una vez más."
@@ -35,13 +37,13 @@ label cap2true:
 
     "El hecho de que fue su amiga hablando hizo que la chica de cabello negro respirase profundamente para calmar su enojo."
 
-    show hanna explicano with dissolve
+    show hanna explicando with dissolve
 
     h "Quizás deberíamos decidir qué haremos ahora..."
 
     #show evan
 
-    show evan at left with dissolve:
+    show evan ladobrazoenojado at left with dissolve:
         zoom sprite_size
 
     e "Eso si es que Freya quiere cooperar."
@@ -52,15 +54,28 @@ label cap2true:
 
     h "Freya..."
 
+    show evan despair with dissolve
+
     e "No, déjala Hanna, tiene razón."
 
     #hide evan
+
+    hide evan with dissolve
 
     "Evan se apartó del resto recostándose sobre una pared al otro extremo."
 
     #hide hanna, freya
 
+    hide hanna
+
+    hide freya
+
+    with dissolve
+
     #show felix
+
+    show felix pensandoceja at center with dissolve:
+        zoom sprite_size
 
     f "Es algo raro, ¿no crees?"
 
@@ -69,6 +84,9 @@ label cap2true:
     a "Debe tener sus razones."
 
     #show freya
+
+    show freya caderashabla at right with dissolve:
+        zoom sprite_size
 
     fr "Como sea, ¿qué hacemos ahora?"
 
@@ -82,15 +100,24 @@ label cap2true:
 
     #show hanna
 
+    show hanna normal at left with dissolve:
+        zoom sprite_size
+
     h "De hecho tiene un buen punto."
 
     "Hanna intentó interrumpir a Freya haciendo que la chica la mirara desconcertada."
 
+    show freya preocupada with dissolve
+
     fr "¿Lo crees?"
 
-    f "Sí, tiene sentido, si queremos saber más sobre el lugar, quizás deberíamos regresar a donde todo empezó."
+    show felix sonrisahabla with dissolve
+
+    f "Sí, tiene sentido. Si queremos saber más sobre el lugar, quizás deberíamos regresar a donde todo empezó."
 
     "Freya se veía muy poco convencida pero no le presté atención, mis ojos voltearon a Hanna quien se veía esperanzada por la idea."
+
+    show freya caderaspreocupada2 with dissolve
 
     fr "Sí... supongo que tienen razón, pero, quiero que sepas que te advertí sobre esto."
 
@@ -98,11 +125,22 @@ label cap2true:
 
         #bg bibliotecatwilight
 
+        scene bg black with Fade(0.3, 0.1, 0.3)
+
         "Todos me siguieron en silencio hasta la biblioteca, Evan nos seguía desde atrás, quizás muy atrás, eso me preocupaba ligeramente pero tampoco podía obligarlo a que me siguiese."
 
         "Al llegar a la biblioteca todos miramos a nuestro alrededor de forma curiosa y expectante, quizás algunos con más miedo que otros pero no había forma de averiguarlo."
 
         #show freya, evan, felix
+
+        show freya normal at center with dissolve:
+            zoom sprite_size
+
+        show evan normal at right with dissolve:
+            zoom sprite_size
+
+        show felix pensando at left with dissolve:
+            zoom sprite_size
 
         f "¿Qué estamos buscando?"
 
@@ -112,19 +150,33 @@ label cap2true:
 
         "Quizás me vi un poco alterado por aquella sugerencia pero viendo que no íbamos a poder cubrir tanto espacio estando juntos asentí con la cabeza."
 
+        show evan lado with dissolve
+
         e "Yo iré solo."
 
         #hide evan
+
+        hide evan with dissolve
 
         "Evan declaró antes de que pudiéramos decir algo y se dio la vuelta para meterse a algún pasillo."
 
         "Algo me dio un poco de nerviosismo, no sé si debería confiar en él, sobre todo con lo que acaba de ocurrir con la barricada."
 
+        show felix pensandohabla with dissolve
+
         f "Podríamos separarnos todos y hacer una señal en caso de necesitar algo en particular, ¿quizás un silbido?"
+
+        show freya angustiadahabla with dissolve
 
         fr "Creo que si escuchamos un grito será suficiente."
 
         #hide freya, felix
+
+        hide freya
+
+        hide felix
+
+        with dissolve
 
         "Freya respondió de forma molesta dándose la vuelta para ir a investigar por su cuenta. Hanna y Felix asintieron con la cabeza dejándome solo."
 
@@ -143,6 +195,8 @@ label cap2true:
 
     #bg bibliotecatwilight
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Yo continué buscando entre los libros, quizás ya solo estaba moviéndolos entre ellos para ver si entendía alguno, pero nada, ninguno de los que movía parecía tener sentido alguno."
 
     "Pareciera magia, pero en uno de los libros tiré un papel doblado en múltiples partes, tal como el que estaba detrás de los posters de la cafetería."
@@ -151,15 +205,21 @@ label cap2true:
 
     #bg pistaloki
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Era una ilustración de Loki, el dios nordico, encerrado por varios círculos y siendo apuntado por varias flechas."
 
     "No entendía lo que quería decir..."
 
     #bg bibliotecatwilight w vpunch
 
+    scene bg black with vpunch
+
     "Y como si fuese algo extremadamente importante, los chirridos de las ventanas comenzaron afuera, justo donde lo había visto la primera vez..."
     
-    #bg bestiabiblioteca ?
+    #bg bestia
+    
+    scene bg black with Fade(0.3, 0.1, 0.3)
 
     "Estaba el monstruo caminando con lentitud arañando las ventanas mirándome fijamente."
 
@@ -171,7 +231,15 @@ label cap2true:
 
     "Sin pensarlo dos veces corrí hacia donde estaban los demás reunidos."
 
+    #bg bibliotecatwilight
+
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     #show freya, hanna
+
+    show freya angustiadahabla at center with dissolve
+
+    show hanna despair at right with dissolve
 
     fr "¡Hay que irnos!"
 
@@ -179,9 +247,19 @@ label cap2true:
 
     #show felix
 
+    show felix manofrentepreocupadohabla at left with dissolve
+
     f "¡La puerta!"
 
     #hide freya, felix, hanna
+
+    hide freya
+
+    hide hanna
+
+    hide felix
+
+    with dissolve
 
     "¿Cómo sabrían que no había una trampa? Por alguna razón mi corazón me decía que estaría bien, ¿era solo intuición, o el miedo inminente por la presencia del monstruo que ahora nos estaba acechando?"
 
@@ -189,25 +267,43 @@ label cap2true:
 
     #show hanna, freya
 
+    show freya angustiada at left with dissolve
+
     fr "¿¡Qué esperas Hanna!?"
+
+    show hanna miedohabla at right with dissolve
 
     h "Los libros... ¡debo ir por ellos!"
 
+    show freya angustiadahabla with dissolve
+
     fr "¡¿QUÉ?! ¡NO!"
+
+    show hanna muyasustadahabla with dissolve
 
     h "¡¡Debo ir!! ¡Encontré algo, algo que tienen que ver!"
 
     #hide hanna
 
+    hide hanna with dissolve
+
     "Hanna se dio la vuelta y corrió de regreso."
+
+    show freya angustiadahablallora2 with dissolve
 
     fr "¡¡HANNA!!"
 
     #move freya to center
 
+    show freya at center with move
+
     #show evan
 
+    show evan gimmeenojado at left with dissolve
+
     "Su amiga intentó ir detrás de ella pero fue detenida por el agarre de Evan quien parecía estar temblando."
+
+    show freya angustiadahablallora
 
     fr "¡SUÉLTAME! ¡¡¡SUÉLTAME INUTIL!!!"
 
@@ -219,17 +315,26 @@ label cap2true:
     
     #show hanna (small)
 
+    show hanna muyasustadahabla at right with dissolve:
+        zoom 0.5
+
     "Y fue cuando vio a Hanna corriendo con los libros en sus manos."
 
     #hide hanna
 
+    hide hanna with dissolve
+
     #show felix
+
+    show felix manofrentepreocupadohabla at right with dissolve
 
     "Felix caminó dentro de la biblioteca extendiendo sus manos para que los lanzase."
 
     "Hanna no vio más opción y los lanzo haciendo que cayeran cerca de Felix, el cual comenzó a tomarlos"
 
     "Pero uno, uno que Hanna agarraba con fuerza entre sus manos, quizás aquel objeto material la había cegado por completo, tanto que tropezó con un par de libros que estaban tirados por el suelo."
+
+    show freya angustiadahablallora3 with vpunch
 
     fr "¡¡HANNA!!"
 
@@ -249,6 +354,8 @@ label cap2true:
 
     #bg hannamuertetrue
 
+    scene bg black with Fade(0.3, 0.1, 0.3)
+
     "Era tarde, el monstruo tomó el pie de Hanna y la arrastró por la librería."
 
     "Sus gritos y su miedo no pudieron despertar mi cuerpo paralizado, nada, nada de lo que intentaba estaba funcionando en absoluto."
@@ -262,7 +369,5 @@ label cap2true:
     "Todo se volvió negro..."
 
     "No pude ver más..."
-
-    #fade to black
 
     jump cap3true
