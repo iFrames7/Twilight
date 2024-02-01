@@ -16,7 +16,8 @@ default evan_counter = 0
 
 label start:
 
-    jump playtest
+    #jump playtest
+    #Reenablea este jump cuando no sea la version demo y ocupes playtestear escenas
 
     jump prologo
 

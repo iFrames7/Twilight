@@ -2,7 +2,9 @@ label prologo:
     
     #bg prologo
 
-    scene bg prologo with fade
+    scene bg dream with Fade(1.0, 1.0, 1.0)
+
+    play music "audio/nightmare.mp3" fadein 1.0 volume 0.25
 
     "Desde que recuerdo he tenido estos sueños extraños, sueños... sobre personas que vienen a visitarme, muchos me dan consejos de vida."
 
@@ -14,11 +16,17 @@ label prologo:
 
     "Ellos solo aparecen cuando tengo un sueño muy pesado o cuando me desmayo, pero, no comprendo el por qué soy el único que tiene estos sueños..."
 
-    "...Desearía que no existieran..."
+    "..."
+
+    extend "Desearía que no existieran..."
 
     #bg entradaescuela (debe tener un fade de ciertos segundos)
 
-    scene bg black with Fade(0.5, 0.3, 1.0)
+    stop music fadeout 0.5
+
+    scene bg entradaescuela with Fade(1.0, 1.0, 1.0)
+
+    play music "audio/everyday.mp3" fadein 1.0 volume 0.25
 
     "Soy un estudiante de una universidad cercana, no tengo muchos amigos, mi única compañera es Katherine."
 
@@ -29,6 +37,9 @@ label prologo:
     "Es como si el frío hubiese aumentado hoy, o quizás es solo mi suposición."
 
     #bg entradaclose
+
+    show bg entradaescuela with dissolve:
+        zoom 1.25
 
     #show katherine (luego me encargo de cambiar las expresiones)
 
@@ -53,8 +64,6 @@ label prologo:
 
     k "¡Genial! Debería invitar a alguien más ¿Qué tal a Evan?"
 
-    #katherine riendo/sonriendo
-
     show katherine sonrisa2 with dissolve
 
     "Quizás Katherine notó mi entusiasmo pues comenzo a reir ligeramente"
@@ -73,9 +82,15 @@ label prologo:
 
     #bg salondeclases
 
-    scene bg black with Dissolve(1.0)
+    stop music fadeout 1.5
 
-    "Durante clases aquella incomodidad continua, es una sensación de incertidumbre, como si un muerto estuviese pasando detrás de mí todo el tiempo."
+    scene bg salonclasesdia with Fade(0.5, 0.1, 0.5)
+
+    play music "audio/sad.mp3" fadein 1.0 volume 0.25
+
+    "Durante clases seguía aquella incomodidad continua, es una sensación de incertidumbre, como si un muerto estuviese pasando detrás de mí todo el tiempo."
+
+    scene bg pasillo with dissolve
 
     "Me centré en las tareas y en la voz del profesor y eso me ayudó a distraerme, pero una vez acabaron las clases aquella inconformidad volvió."
 
@@ -85,9 +100,13 @@ label prologo:
 
     #bg biblioteca
 
-    scene bg black with Dissolve(1.0)
+    scene bg biblioteca with dissolve
 
     "Mientras camino a la biblioteca, un pequeño conejo corre debajo de mis pies y se mete a la habitación antes que yo."
+
+    stop music fadeout 2.0
+
+    scene bg biblioteca with vpunch
 
     a "¡AH!"
 
@@ -107,6 +126,8 @@ label prologo:
 
     show katherine sonrisa at center with vpunch:
         zoom sprite_size
+
+    play music "audio/everyday.mp3" fadein 1.0 volume 0.25
 
     k "¡ARDEN!"
 
@@ -140,19 +161,31 @@ label prologo:
 
     "Todo es normal, bueno, casi todo, aquella inquietud no parece querer irse de mi pecho, es como si me advirtiera de algo."
 
-    "Debo concentrarme, concentrate, concentrate."
+    "Debo concentrarme, "
+
+    stop music fadeout 2.0
+    
+    extend "concentrate, "
+
+    scene bg bibliotecaazul with dissolve
+    
+    extend "concentrate."
 
     "Y pronto, todo se volvió letras, mi cerebro se concentró tanto en las páginas de aquel libro que todo a mi alrededor desapareció por completo."
 
-    #bg black
+    play music "audio/doortootherworld.mp3" fadein 1.5 volume 0.15
 
     "No vi el tiempo que pasó ni la hora a la que comencé, y pronto, las palabras dejaron de tener sentido, símbolos extraños que comenzaron a aparecer sobre las páginas de mi libro."
 
     #bg letras
 
+    scene bg bibliotecatwilight with squares
+
     "Mi cabeza duele, todo me duele, aquellos escalofríos y la incomodidad regresa, los músculos de mi cuerpo se vuelven piedras como si aquello de lo que me estaban advirtiendo estuviera pasando en aquel momento."
 
     #bg bibliotecatwilight
+
+    play sound "sfx/heartbeat.mp3" loop volume 0.25
 
     "La biblioteca, ha cambiado, todo, ha cambiado... es un escenario grotesco."
 
@@ -182,6 +215,10 @@ label prologo:
 
     #show katherine
 
+    stop music
+
+    stop sound
+
     show katherine preocupadahabla at center with vpunch:
         zoom sprite_size
 
@@ -198,6 +235,8 @@ label prologo:
     "En sus manos sostiene al pequeño conejo blanco que estaba buscando."
 
     #cambio de sprite de kat para reflejar sus emociones
+
+    play music "audio/longtwilight.mp3" fadein 1.0 volume 0.25
 
     show katherine lado with dissolve
 
@@ -252,6 +291,8 @@ label prologo:
 
     with dissolve
 
+    scene bg bibliotecatwilight2 with dissolve
+
     "Asentí con la cabeza y todos nos dirigimos a donde estaban el resto de las personas. Una chica de cabellos negros, una de cabello azul y junto a ellas un chico de cabello rosado."
 
     #show freya
@@ -276,24 +317,36 @@ label prologo:
 
     k "Nop, solo perdimos a este pequeño y vinimos a buscarlo, lo bueno es que lo encontramos antes de que toda esta neblina comienza a..."
 
+    stop music
+
+    play sound "sfx/scratch.mp3" volume 0.25
+
+    #play scratch sfx
+
     "Ese ruido hizo que todos nos detuvieramos en seco, un chirrido horrible como si estuvieran arañando las ventanas."
 
     #bg bestiabiblioteca
 
-    scene bg black with Dissolve(1.0)
+    scene bg beast2 with Dissolve(1.5)
+
+    play music "audio/beast.mp3" fadein 1.0 volume 0.25
 
     "Mis ojos pudieron verlo, un terrible destino, amenazante, un destino que definitivamente podría acabar con mi vida."
+
+    scene bg beastfrente with Dissolve(1.5)
 
     "Ojos negros con un destello rojo observanome como si yo fuera su presa."
 
     #show hanna
 
-    show hanna despair at right with dissolve:
+    scene bg bibliotecatwilight with dissolve
+
+    show hanna despair at right with vpunch:
         zoom sprite_size
 
     "{color=#ffffff}???{/color}" "Ah…¡¡AAAAH!!"
 
-    "La chica de cabello azul corrió hacia la puerta que había intentado abrir hacía unos momentos. Imposible, estaba atascada y mi cuerpo inmovil no podía creer lo que había justo frente a él."
+    "La chica de cabello azul corrió hacia la puerta que había intentado abrir hacía unos momentos. Imposible, estaba atascada y mi cuerpo inmóvil no podía creer lo que había justo frente a él."
 
     #show felix
 
@@ -315,9 +368,13 @@ label prologo:
 
     "Katherine ya corría hacia el otro lado de la biblioteca y siendo así el resto de nosotros la seguimos, la puerta se abrió con rapidez y todos nos escabullimos entre ella corriendo por el pasillo hasta llegar a la entrada principal."
 
+    stop music fadeout 0.75
+
     #bg entradaprincipaltwilight
 
-    scene bg black with Dissolve(1.0)
+    scene bg pasillo2twilight with Dissolve(1.0)
+
+    play music "audio/longtwilight.mp3" fadein 1.0 volume 0.25
 
     #show hanna
 
@@ -401,6 +458,8 @@ label prologo:
 
     e "No hay gente..."
 
+    stop music fadeout 1.25
+
     #hide freya, evan
 
     hide freya
@@ -408,6 +467,10 @@ label prologo:
     hide evan
 
     with dissolve
+
+    scene bg pasillo3twilight with dissolve
+
+    play music "audio/dark.mp3" fadein 1.0 volume 0.25
 
     "Todos volteamos alrededor y fue imposible encontrar a una persona al menos, una persona fuera de los cinco que estábamos en el pasillo."
 
@@ -502,7 +565,7 @@ label prologo:
 
     #bg pasillo
 
-    scene bg black with Dissolve(1.0)
+    scene bg casilleros with Dissolve(1.0)
 
     "Todos caminamos hacia la enfermería, Katherine intentó abrir la puerta, y justo como la de la biblioteca se encontraba estancada."
 
@@ -595,7 +658,13 @@ label prologo:
 
     with dissolve
 
+    stop music fadeout 1.0
+
+    scene bg pasillotwilight with dissolve
+
     "Todos comenzamos a caminar alejándonos de la enfermería. Quedé atrás del grupo solo para poder observar el escenario pero aún así Katherine se acercó a hablarme."
+
+    play music "audio/everyday.mp3" fadein 1.0 volume 0.25
 
     #show kat
 
@@ -606,6 +675,8 @@ label prologo:
 
     menu: #adaptar sprites de kat para reflejar sus sentimientos
         "Tengo algo de miedo.":
+            a "Tengo algo de miedo."
+
             show katherine dedohabla with dissolve
 
             k "Es normal tener miedo, sobre todo si son cosas a las que no estamos acostumbrados, ¿cierto?"
@@ -615,6 +686,8 @@ label prologo:
             k "Yo creo que es mucho mejor tener miedo porque eso significa que nuestro cuerpo sabe cómo reaccionar a situaciones riesgosas."
 
         "Estoy bien, solo un poco asustado.":
+            a "Estoy bien, solo un poco asustado."
+
             show katherine sonrisa2 with dissolve
 
             k "Me alegra que estés bien, creo que es normal estar asustado, sobre todo si son cosas a las que no estamos acostumbrados, ¿cierto?"
@@ -624,6 +697,8 @@ label prologo:
             k "Yo creo que es mucho mejor tener miedo porque eso significa que nuestro cuerpo sabe cómo reaccionar a situaciones riesgosas."
 
         "Estoy bien, nada fuera de lo normal.":
+            a "Estoy bien, nada fuera de lo normal."
+
             show katherine sonrisa2 with dissolve
 
             k "¿¡Nada fuera de lo normal?! ¿Acaso vives estas situaciones a diario?"
@@ -672,7 +747,15 @@ label prologo:
 
     hide katherine with dissolve
 
-    "Cuando la pequeña platica acabó, todos llegamos a la salida pero por alguna razón nos detuvimos en seco, como si algo cerca estuviera acercándose."
+    stop music fadeout 1.0
+
+    scene bg casilleros with dissolve
+
+    "Cuando la pequeña platica acabó, todos llegamos a la salida pero por alguna razón nos detuvimos en seco..."
+    
+    play sound "sfx/heartbeat.mp3" loop volume 0.25
+
+    extend " como si algo estuviera acercándose."
     
     "Algo que me ponía la piel china y me causaba escalofríos, un aura obscura que definitivamente nos detuvo justo al marco de la puerta."
 
@@ -713,6 +796,8 @@ label prologo:
 
     show katherine at center with move
 
+    play music "audio/doortootherworld.mp3" fadein 3.0 volume 0.15
+
     "Encogiéndose de hombros caminó hacia el marco de la puerta."
 
     "Mi mano fue hacia la muñeca de Katherine y la tomé con fuerza, no quería soltarla, un miedo inminente se acercaba y mi corazón lo sabía, mi cuerpo entero lo sabía."
@@ -721,15 +806,27 @@ label prologo:
 
     k "Recuerda lo que te dije, tener miedo no es malo, es solo por que es algo nuevo."
 
+    stop music fadeout 1.5
+
     #hide kat, o bg katmuerte
 
     scene bg black with Dissolve(1.0)
 
-    "Mi mano le dió un apretón con fuerza, mi corazón palpitando con fuerza haciendo que me detuviese y soltase su mano, y pronto… todo se volvió rojo."
+    "Mi mano le dió un apretón con fuerza, mi corazón palpitando con fuerza haciendo que me detuviese y soltase su mano, y pronto… "
+    
+    stop sound
+
+    extend "todo se volvió rojo."
+    
+    scene bg katmuerte with Dissolve(1.0) #este es bg katmuerte
 
     "Los ojos dilatados de mi amiga pronto se tornaron grises al ser abatida con gran fuerza contra aquel monstruo quien ahora la tenía en su hocico, su cuerpo intentando reaccionar y moviéndose en forma de convulsiones."
 
-    "La sangre comenzaba a chorrear y lo único que el protagonista podía hacer era mirarla atentamente. Sí, se veía débil, su cuerpo paralizado desde el cuello y lo último que soltó fue un escupitajo de sangre que llegó a empapar mis zapatos."
+    scene bg katmuerte with Dissolve(2.0)
+
+    "La sangre comenzaba a chorrear y lo único que podía hacer era mirarla atentamente. Sí, se veía débil, su cuerpo paralizado desde el cuello y lo último que soltó fue un escupitajo de sangre que llegó a empapar mis zapatos."
+
+    scene bg katmuerte with Dissolve(5.0)
 
     h "¡¡AAAAAAAAAAAAAAAAAAAH!!"
 
@@ -744,5 +841,7 @@ label prologo:
     "Alguien gritó detrás de mí, no pude reconocer la voz pero aquello fue lo único que necesité para salir despavorido detrás de el resto encerrándose en un salón."
 
     #scene bg black with Fade(1.0, 1.0, 1.0)
+
+    return #borra este return cuando no sea la versión demo
 
     jump cap1
