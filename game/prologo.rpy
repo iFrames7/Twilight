@@ -28,7 +28,7 @@ label prologo:
 
     play music "audio/everyday.mp3" fadein 1.0 volume 0.25
 
-    "Soy un estudiante de una universidad cercana, no tengo muchos amigos, mi única compañera es Katherine."
+    "Soy Arden, un estudiante de una universidad cercana, no tengo muchos amigos, mi única compañera es Katherine."
 
     "Todo está muy tranquilo, hay mucho tiempo aún para ir a clase..."
 
@@ -50,7 +50,9 @@ label prologo:
 
     show katherine sonrisa with dissolve
 
-    "Oh, ella es Katherine, quizás notó que hoy desperté más temprano de lo usual."
+    "Oh, ella es Katherine."
+
+    a "Buenos días."
 
     show katherine dedohabla with dissolve
 
@@ -94,7 +96,7 @@ label prologo:
 
     "Me centré en las tareas y en la voz del profesor y eso me ayudó a distraerme, pero una vez acabaron las clases aquella inconformidad volvió."
 
-    "Estaba un poco mareado, sentía que mi estómago se revolvía como si quisiera vomitar pero no pasaba de más."
+    "Estaba un poco mareado, sentía que mi estómago se revolvía como si quisiera vomitar."
 
     "Bueno, ya acabaron las clases, pero debo ir a la biblioteca antes de regresar a casa, hay unos apuntes que debo completar con libros que pueden estar ahí."
 
