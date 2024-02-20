@@ -1,6 +1,8 @@
 label cap2true:
     scene bg black with Fade(1.0, 1.0, 1.0)
 
+    return #borrar cuando no sea versión demo
+
     #bg salonclasestrue?
 
     "Desplazándonos para salir de la cafetería se sentía como si todos me siguieran, fui corriendo directo a un salón lejos de aquel lugar, entre todos bloqueamos la puerta una vez más."

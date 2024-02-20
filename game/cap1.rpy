@@ -6,11 +6,15 @@ label cap1:
 
     scene bg black with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/nightmare.mp3" fadein 1.5 volume 0.25
+
     "Negro..."
 
     "Así es cuando empieza el sueño..."
 
     "Un sueño profundo del cual no puedo despertar aunque grite..."
+
+    scene bg dream2 with fade
 
     "Debería haber alguien esperándome aquí pero, estoy solo, solo en este vacío inmenso de inmensa profundidad..."
 
@@ -26,7 +30,11 @@ label cap1:
 
     #bg salon
 
-    scene bg black with fade
+    stop music fadeout 1.5
+
+    scene bg salonclases2 with Fade(1.0, 1.0, 1.0)
+
+    play music "audio/longtwilight.mp3" volume 0.25
 
     "Mis ojos se abrieron lentamente, acostumbrándome al brillo del salón, ahí fue cuando pude ver la escena que se desenvolvía frente a mí."
 
@@ -99,6 +107,8 @@ label cap1:
 
     f "Sí, mientras estabas en trance los demás empezaron a discutir cómo salir de aquí."
 
+    stop music
+
     a "¿Salir...?"
 
     "La palabra solo me recordó a Katherine frente a mi, un miedo que me hizo añicos el alma."
@@ -106,6 +116,8 @@ label cap1:
     a "No... No hay que salir..."
 
     show felix normal with dissolve
+
+    play music "audio/dark.mp3" volume 0.25
 
     f "¿Piensas quedarte aquí?"
 
@@ -161,11 +173,15 @@ label cap1:
 
     menu:
         "S...sí, tienes razón.":
+            a "S...sí, tienes razón."
+
             show freya caderassonrisa with dissolve
 
             fr "Siempre la tengo."
 
         "N...no creo que sea bueno evitarlo, podría ayudarnos.":
+            a "N...no creo que sea bueno evitarlo, podría ayudarnos."
+
             show freya ladohabla with dissolve
 
             fr "¿No? ¿Quieres correr a la boca del lobo y caer en su trampa? ¿Eres tan ingenuo?"
@@ -175,13 +191,13 @@ label cap1:
 
             "Freya sonrió con satisfacción por mi silencio. Se veía burlona, como si hubiera ganado una pequeña batalla sin sentido."
 
-    #hide evan
+    #hide felix
 
-    hide evan with dissolve
+    hide felix with dissolve
 
     #show hanna
 
-    show hanna normal at left with dissolve:
+    show hanna miedohabla at center with dissolve:
         zoom sprite_size
 
     h "Bien, ¿a dónde vamos en ese caso?"
@@ -192,7 +208,9 @@ label cap1:
 
     fr "Podríamos empezar por la cafetería, es un lugar bastante amplio, seguro encontraremos algo ahí."
 
-    "Freya concluyó con seguridad aunque viendo el rostro de Evan se notaba poco convencido de la decisión."
+    show evan ladobrazoenojado with dissolve
+
+    "Freya concluyó con seguridad, aunque viendo el rostro de Evan se notaba poco convencido de la decisión."
 
     show freya normalhabla with dissolve
 
@@ -206,11 +224,13 @@ label cap1:
 
     "Todos estuvieron de acuerdo por lo que marchamos a la cafetería."
 
+    stop music fadeout 1.5
+
     label cap1_sideselection:
 
         #bg cafeteria
 
-        scene bg black with Fade(0.5, 0.5, 0.5)
+        scene bg cafeteria with Fade(0.5, 0.5, 0.5)
 
         "Caminamos por los pasillos hasta encontrar el lugar, todos entraron, uno detrás del otro."
 
@@ -235,7 +255,7 @@ label cap1:
 
         show freya lado with dissolve
 
-        fr "Felix y Hanna revisaran los alrededores."
+        fr "Felix y Hanna revisarán los alrededores."
 
         "Freya se dio la vuelta ignorando mi presencia por completo."
 
@@ -266,7 +286,9 @@ label cap1:
 
     #bg cafeteria (con algun fade para desaparecer a los demás)
 
-    scene bg black with Fade(0.3, 0.0, 0.3)
+    scene bg cafeteria with Fade(0.3, 0.0, 0.3)
+
+    play music "audio/dark.mp3" volume 0.25
 
     #show freya
 
@@ -390,8 +412,10 @@ label cap1:
 
     #show felix
 
-    show felix sonrisahabla at left with dissolve:
+    show felix manofrentepreocupado at left with dissolve:
         zoom sprite_size
+
+    stop music fadeout 1.5
 
     f "Sea como sea, debemos tener cuidado de aquí en adelante, se siente el ambiente tenso, ¿no lo crees?"
 
@@ -409,7 +433,9 @@ label cap1:
 
     #bg bestiacafeteria ?
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg beast2 with Fade(0.3, 0.1, 0.3)
+
+    play music "<from 4>audio/chase.mp3" volume 0.25
 
     "Ni siquiera pude pensar, se escuchó el gruñido de la bestia afuera, mis ojos se engrandecieron y observaron a Freya inmediatamente buscando su ayuda."
 
@@ -419,7 +445,7 @@ label cap1:
 
     #bg cafateria
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3)
 
     #show freya
 
@@ -556,7 +582,7 @@ label cap1:
 
     #bg cafeteria
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3)
 
     "Los rasguños y golpeteos se volvieron mucho más insistentes, inclusive la garra del monstruo ya estaba buscando escurrirse entre la pequeña abertura de las puertas."
 
@@ -600,7 +626,7 @@ label cap1:
 
     #bg cafeteria
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3)
 
     #show freya
 
@@ -657,10 +683,10 @@ label cap1:
     "Me concentré, muy dentro debía tener la respuesta, debía estar oculta, definitivamente estaba escondida y pronto, todo hizo sentido."
 
     menu:
-        "Sacrificar un secreto":
+        "Sacrificar un secreto" if not demo:
             jump cap1normal
 
-        "Ofrecer sangre":
+        "Ofrecer sangre" if not demo:
             jump cap1bad
 
         "Sacrificar objeto":
@@ -681,6 +707,8 @@ label cap1true:
     "En ese instante la puerta de la barricada se rompió liberando al monstruo."
 
     a "¡CORRAN!"
+
+    stop music fadeout 1.5
 
     #fade to black
 

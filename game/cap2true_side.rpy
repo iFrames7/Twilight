@@ -27,6 +27,8 @@ label cap2true_evan:
 
     menu:
         "No puedo confiar en dejarte solo...":
+            a "No puedo confiar en dejarte solo..."
+
             "Evan chasqueo con la lengua al escucharme, quizas mi respuesta fue un poco agresiva, solo volteo los ojos molesto y suspiro."
 
             show evan ladobrazo with dissolve
@@ -36,6 +38,8 @@ label cap2true_evan:
             "¿De que habla? Si el que gritó fue él."
 
         "Creí que podía acompañarte un rato.":
+            a "Creí que podía acompañarte un rato."
+            
             show evan ladobrazoenojado with dissolve
 
             e "No necesito compañía, ¿acaso no entiendes?"
@@ -53,6 +57,8 @@ label cap2true_evan:
             e "Bien... puedes quedarte, solo... no hagas mucho ruido."
 
         "Lo lamento, puedo irme si quieres.":
+            a "Lo lamento, puedo irme si quieres."
+
             show evan despair
 
             "Evan enterneció la mirada, o al menos eso parecía, como si se hubiese arrepentido de lo que dijo."
@@ -168,6 +174,8 @@ label cap2true_freya:
 
     menu:
         "No quiero molestar, solo queria ver si necesitabas ayuda.":
+            a "No quiero molestar, solo queria ver si necesitabas ayuda."
+
             show freya ladohabla2 with dissolve
 
             fr "Bueno, entonces ponte a hacer algo de provecho y no hagas preguntas ridículas, solo vamos a perder el tiempo así."
@@ -177,6 +185,8 @@ label cap2true_freya:
             fr "Ayúdame con los estantes de en frente."
 
         "Fuiste la primera persona con quien me tope...":
+            a "Fuiste la primera persona con quien me tope..."
+
             show freya caderaspreocupada with dissolve
 
             fr "Vaya suerte, supongo que por eso estás aquí sin hacer nada..."
@@ -245,6 +255,8 @@ label cap2true_freya:
     return
 
 label cap2true_hanna:
+    $ talk_hanna = True
+
     #bg bibliotecatwilight
 
     scene bg black with Fade(0.3, 0.1, 0.3)
@@ -277,16 +289,22 @@ label cap2true_hanna:
 
     menu:
         "Creo que es muy directa.":
+            a "Creo que es muy directa."
+
             show hanna normal with dissolve
 
             h "Oh... sí, sí lo es, pero no busca herir a nadie."
 
         "Me asusta un poco su forma de ser.":
+            a "Me asusta un poco su forma de ser."
+
             show hanna normal with dissolve
 
             h "Sí, supongo que su forma de ser causa que la gente se asuste... pero no lo hace con mala intención."
 
         "No la conozco lo suficiente supongo...":
+            a "No la conozco lo suficiente supongo..."
+
             show hanna sonrisa with dissolve
 
             h "Ojalá puedas conocerla algún día, para que comprendas el por qué es así."

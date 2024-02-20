@@ -1,6 +1,11 @@
 label cap1_evan:
     $ evan_counter += 1
 
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
+
+    play music "audio/downtime.mp3" volume 0.25
+
     "Caminé hacia Evan de forma tímida" 
     
     "Yo no tenía una misión asignada, pero de quienes conocía Evan era quien me daba un poco de confianza a pesar de su aspecto y su forma seria de actuar."
@@ -58,19 +63,17 @@ label cap1_evan:
 
     menu:
         "Supongo que tienes razón.":
-            show evan normal with dissolve
-
-            e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
+            a "Supongo que tienes razón."
 
         "No lo sé...":
-            show evan normal with dissolve
-
-            e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
+            a "No lo sé..."
 
         "Suena complicado.":
-            show evan normal with dissolve
+            a "Suena complicado."
 
-            e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
+    show evan normal with dissolve
+
+    e "Pero... no es mala persona, lo sé, solo es bastante selectiva."
 
     a "Sí... Bueno, sería cuestión de conocerla para saber por qué actúa así."
 
@@ -99,11 +102,20 @@ label cap1_evan:
     e "Bueno, tampoco puedo leerlo así que... no tiene sentido verlo más..."
 
     a "S...si tu lo dices... supongo."
+
+    stop music fadeout 0.75
     
     return
 
 label cap1_freya:
     $ freya_counter += 1
+
+    #bg cafateria
+
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Claro que mi cuerpo entero temblaba, de hecho, la simple idea de acercarme a Freya aun no me agradaba del todo."
 
@@ -130,6 +142,10 @@ label cap1_freya:
 
     fr "Bien, pero no te pongas en mi camino."
 
+    #bg cocina
+
+    scene bg cocina with fade
+
     "Freya comenzó a buscar entre los estantes principales de la cocina sacando varias cosas empaquetadas y revisando que estuviesen cerradas."
 
     "Descartaba cualquier alimento que estuviese al aire como frutas o verduras al igual que carne o cosas que tuvieran que prepararse."
@@ -151,12 +167,16 @@ label cap1_freya:
             show freya lado at center with dissolve:
                 zoom sprite_size
 
-            "Baje lentamente para no caerme y por un segundo vi a Freya quien pareció rodar los ojos con decepción."
+            "Bajé lentamente para no caerme y por un segundo vi a Freya quien pareció rodar los ojos con decepción."
 
         "Checar estantes inferiores":
             "Entre los estantes y los cajones que quedaban a la altura de mi cadera solo pude encontrar cubiertos viejos y usados, como si no los hubiesen lavado en años."
 
             "Intenté tomar un cuchillo del cual salió una cucaracha corriendo, o quizás una rata, no pude ver con claridad pues asustado lo tiré y cubrí mi boca para no gritar."
+
+            scene bg cocina with vpunch
+
+            a "¡AHHHH!"
 
             #show freya
 
@@ -181,6 +201,8 @@ label cap1_freya:
 
             "Quizás no le agrado del todo, pero al menos se veía satisfecha."
 
+    scene bg cocina with fade    
+
     show freya normalhabla with dissolve
 
     fr "Bueno, parece que ya buscamos aqui suficiente, ¿no lo crees?"
@@ -203,9 +225,9 @@ label cap1_freya:
 
     a "¿Cómo?"
 
-    show freya pensarhabla with dissolve
+    show freya apunta2 with dissolve
 
-    fr "Levanta el mentón, echa los hombros hacia atrás. Si hablas tan bajo nunca te veran, y no creo que el mundo entero quiera a alguien más que de lástima mientras camina."
+    fr "Levanta el mentón, echa los hombros hacia atrás. Si hablas tan bajo nunca te veran, y no creo que el mundo entero quiera a alguien más que dé lástima mientras camina."
 
     a "Oh..."
 
@@ -219,9 +241,16 @@ label cap1_freya:
 
     "Freya no podrá ser la persona mas amistosa, pero... quizás logré acercarme un poco a ella."
 
+    stop music fadeout 0.75
+
     return
 
 label cap1_hanna:
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
+
+    play music "audio/downtime.mp3" volume 0.25
+
     "Al no saber qué es hacer algo de provecho, seguí a la chica de cabello azul, quien se detuvo al ver que iba detrás de ella."
 
     #show hanna
@@ -327,7 +356,8 @@ label cap1_hanna:
 
     #bg cafeteria (algun fade)
 
-    scene bg black with Fade(0.2, 0.1, 0.2)
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
 
     "Después de un buen rato de búsqueda no parecimos encontrar nada, Hanna volteaba a verme constantemente como si quisiese asegurarse de que estuviera bien."
 
@@ -374,9 +404,14 @@ label cap1_hanna:
 
     "Hanna negó con la cabeza como si esa fuese la única solución y siguió balbuceando sobre el tipo de joyería que le compraría a Freya; sin duda parecian ser muy buenas amigas."
 
+    stop music fadeout 0.75
+
     return
 
 label cap1_felix:
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
+
     "Nadie parecía tan confiable como Felix."
 
     #show felix
@@ -392,13 +427,18 @@ label cap1_felix:
 
     #bg cafeteria
 
-    scene bg black with Fade(0.2, 0.1, 0.2)
+    scene bg beast2 with fade
+
+    play music "audio/flowerbloom.mp3" volume 0.25
 
     "Felix y yo caminamos en dirección contraria al resto, viendo por la ventana los jardines por donde merodeaba la criatura."
 
     "Su mandíbula cubierta de sangre mientras olfateaba, sus filosas garras que golpeaban el piso mientras caminaba..."
     
     "Ambos nos alejamos y escondimos debajo de la misma ventana."
+
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3):
+        zoom 1.5 yalign 0.5 xalign 0.5
 
     #show felix
 
@@ -431,6 +471,8 @@ label cap1_felix:
 
     menu:
         "No creo... poder tomar su lugar.":
+            a "No creo... poder tomar su lugar."
+
             f "¿Por qué no lo crees? ¿Te aterra morir?"
 
             a "¿A ti no?"
@@ -450,6 +492,8 @@ label cap1_felix:
             f "Hmmm, interesante..."
 
         "Sí, lo haría si tuviese la oportunidad.":
+            a "Sí, lo haría si tuviese la oportunidad."
+
             f "Claro, era tu mejor amiga después de todo, o al menos eso parecía."
 
             a "Éramos... muy cercanos."
@@ -459,6 +503,8 @@ label cap1_felix:
             f "Sí, creo que entiendo, también tomaría su lugar si tuviese la oportunidad."
 
         "No lo sé...":
+            a "No lo sé..."
+
             f "Indeciso, ¿eh? ...Bueno, tampoco es algo que puedas tomar a la ligera... supongo... perder la vida..."
 
             a "Pareces muy cómodo hablando de eso."
@@ -510,5 +556,7 @@ label cap1_felix:
     "¿O siendo demasiado optimista?"
 
     "No puedo decifrarlo."
+
+    stop music fadeout 0.75
 
     return
