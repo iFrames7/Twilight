@@ -295,7 +295,7 @@ label cap1_hanna:
     h "¿Y bien? ¿Puedes leerlo?"
 
     menu:
-        "Intentar descifrarlo con lo que se":
+        "Intentar descifrarlo con lo que sé.":
             "Con lo poco que tenía de conocimiento intenté hacer sílabas con las palabras, incusive un balbuceo sería bueno en este momento."
 
             a "Creo que dice... ah... ¿Bestia?"
@@ -310,7 +310,7 @@ label cap1_hanna:
 
             h "Perdón, no debería estar bromeando... mejor sigamos buscando."
 
-        "Inventar algo":
+        "Inventar algo.":
             "Tomé algo de valor y pensando en múltiples libros pude formular algo en mi cabeza, algo que tuviese sentido."
 
             a "Los caminos... de... la vida... llevan aquí..."
@@ -347,7 +347,7 @@ label cap1_hanna:
 
             h "Mejor sigamos investigando."
 
-        "Negarlo":
+        "Negarlo.":
             "Negué con la cabeza un par de veces admitiendo que no podía leer lo que decía en aquel folleto."
 
             show hanna normal with dissolve
@@ -368,6 +368,11 @@ label cap1_hanna:
 
     h "Hey... Arden... Ese... collar... ah..."
 
+    hide hanna with dissolve
+
+    show collar with dissolve:
+        pos (0.5, 0.5) yanchor 0.5 xanchor 500 zoom 0.47
+
     a "Oh... me lo dio Katherine..."
 
     "Respondí de una forma evasiva viendo al suelo."
@@ -375,6 +380,8 @@ label cap1_hanna:
     h "¡Ah! Lo siento... no sabía que ella te lo había dado... quería decirte que... es realmente hermoso."
 
     a "¿Lo crees?"
+
+    hide collar with dissolve
 
     show hanna sonrisa with dissolve
 
@@ -429,7 +436,7 @@ label cap1_felix:
 
     scene bg beast2 with fade
 
-    play music "audio/flowerbloom.mp3" volume 0.25
+    play music "audio/flowerbloom.mp3" volume 0.19
 
     "Felix y yo caminamos en dirección contraria al resto, viendo por la ventana los jardines por donde merodeaba la criatura."
 

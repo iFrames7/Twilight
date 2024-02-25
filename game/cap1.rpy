@@ -428,6 +428,8 @@ label cap1:
     fr "Aquí no hay nada, creo que deberíamos de irnos."
 
     "Freya habló con seguridad."
+
+    play sound "sfx/heartbeat.mp3" volume 0.25
     
     "Aquella sensación de incomodidad invadió nuevamente mi interior, la misma sensación que pude sentir cuando Katherine murió justo frente a mis ojos."
 
@@ -435,7 +437,7 @@ label cap1:
 
     scene bg beast2 with Fade(0.3, 0.1, 0.3)
 
-    play music "<from 4>audio/chase.mp3" volume 0.25
+    play music "<from 4>audio/chase.mp3" volume 0.45
 
     "Ni siquiera pude pensar, se escuchó el gruñido de la bestia afuera, mis ojos se engrandecieron y observaron a Freya inmediatamente buscando su ayuda."
 
@@ -473,17 +475,42 @@ label cap1:
 
     e "Sería mejor irnos..."
 
+    scene bg conejocorre2 with fade
+
+    play sound "sfx/bunny.mp3" volume 0.40
+
     "Para sorpresa de todos, el pequeño conejo que habían estado persiguiendo hace horas saltó del bolsillo de Evan y aterrado por el ruido salió corriendo por una de las puertas traseras."
 
-    "Fue evidente, y el corazón de todos quizás se frenó un par de segundos al ver la escena."
+    "Fue evidente, y el corazón de todos quizás se frenó un par de segundos al ver la escena..."
 
-    "El conejo fue decapitado por una especie de trampa que lo esperaba con ansia afuera."
+    stop music
+    
+    show bg conejomuerte with vpunch:
+        subpixel True zoom 1.02
 
-    "El ruido se detuvo y ahora solo podía escuchar el palpitar de mi corazón con fuerza, miedo, miedo era lo que estaba ahora consumiendo mi corazón."
+    play sound "sfx/guillotine.mp3" volume 0.25
+
+    play audio "sfx/blood.mp3" volume 0.25
+
+    "El conejo fue partido a la mitad por una especie de trampa que lo esperaba con ansia afuera."
+
+    play sound "sfx/heartbeat.mp3" loop volume 0.25
+
+    "El ruido se detuvo y ahora solo podía escuchar el palpitar de mi corazón con fuerza."
+    
+    "Miedo"
+
+    extend ", miedo era lo que estaba ahora consumiendo mi corazón."
 
     #hide evan
 
-    hide evan with dissolve
+    #hide evan with dissolve
+
+    scene bg cafeteria with fade
+
+    stop sound fadeout 2.0
+
+    play music "<from 4>audio/chase.mp3" volume 0.45
 
     #show felix
 
@@ -534,6 +561,8 @@ label cap1:
 
     "Corrí con desesperación a la puerta y me dieron la bienvenida millones de posters con símbolos distintos que recorrían cada uno de los papeles y ninguno hacía sentido."
 
+    play sound "sfx/papers.mp3" volume 0.75
+
     a "¡Debe haber algo, debe haber algo!"
 
     #show felix
@@ -543,7 +572,7 @@ label cap1:
 
     f "No hay nada, no hay salida."
 
-    a "¿Ves si hay alguna salida? ¿Algo que podamos saltar si cruzamos?"
+    a "¿Ves si hay alguna alternativa? ¿Algo que podamos saltar si cruzamos?"
 
     "Mis manos temblaban de miedo, me consumía, poco a poco me volvía victima de aquella sombra, tengo miedo, mucho miedo, pero tampoco quiero morir, ¡NO QUIERO MORIR!"
 
@@ -554,11 +583,23 @@ label cap1:
 
     fr "¡¿Qué hacen?! ¡Van a morir!"
 
+    show freya caderaspreocupada2 with vpunch
+
     a "¡NO QUIERO MORIR!"
 
     "Exclamé entre miedo y desesperación esperando que me ayudasen, los gruñidos y golpeteos de la puerta que tenía la barricada se hicieron mucho mayores, el miedo estaba invadiendo a todos."
 
+    show freya caderaspreocupada2 with vpunch
+
+    play sound "sfx/papers.mp3" volume 0.75
+
+    play audio "sfx/paperrip.wav"
+
     "Entre lágrimas, mis manos comenzaron a moverse con fuerza tirando de papeles y posters que estaban alrededor de la puerta de forma desesperada."
+
+    #sfx papel
+
+    stop music fadeout 1.0
 
     "Y uno... uno en particular que parecía una nota golpeó mi pie, era pesada pues estaba doblada quizás unas cinco veces."
 
@@ -570,9 +611,11 @@ label cap1:
 
     #bg pistaanubis
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaanubis with Fade(0.3, 0.1, 0.3)
 
-    "Era una ilustración, una especie de jeroglíficos, hombres ofreciendo algo a una especie de puerta."
+    play music "audio/clue.mp3" volume 0.25
+
+    "Era una ilustración antigua, una especie de jeroglífico, una balanza con dos objetos."
 
     a "¿Qué...? ¿Qué es esto?"
 
@@ -583,6 +626,10 @@ label cap1:
     #bg cafeteria
 
     scene bg cafeteria with Fade(0.3, 0.1, 0.3)
+
+    play sound "sfx/scratch.mp3" volume 0.25
+
+    scene bg cafeteria with vpunch
 
     "Los rasguños y golpeteos se volvieron mucho más insistentes, inclusive la garra del monstruo ya estaba buscando escurrirse entre la pequeña abertura de las puertas."
 
@@ -608,15 +655,15 @@ label cap1:
 
     h "¿Escondido? ¿Como si alguien lo hubiese escondido? Da igual da igual, ¡¿qué dice?!"
 
-    a "¡¡No lo sé!! ¡No sé leer estas cosas!"
+    a "¡¡No lo sé!! ¡No sé mucho de estas cosas!"
 
     "Freya se acercó a tomar el papel y lo extendió."
 
     #bg pistaanubis
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaanubis with Fade(0.3, 0.1, 0.3)
 
-    fr "Es Anubis… la balanza está desequilibrada…"
+    fr "Es la balanza de Anubis... y está desequilibrada..."
 
     "Parecía estar pensando pero se vio interrumpida por un gruñido y la barricada rompiéndose."
 
@@ -694,9 +741,7 @@ label cap1:
 
 
 label cap1true:
-    #bg cafeteria
-
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg collarfull with Fade(0.3, 0.1, 0.3)
     
     "Mi mano buscó el collar que Katherine me había dado."
 

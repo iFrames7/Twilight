@@ -102,19 +102,21 @@ label prologo:
 
     #bg biblioteca
 
-    scene bg biblioteca with dissolve
+    scene bg conejo with dissolve
 
     "Mientras camino a la biblioteca, un pequeño conejo corre debajo de mis pies y se mete a la habitación antes que yo."
 
     stop music fadeout 2.0
 
-    scene bg biblioteca with vpunch
+    play sound "sfx/bunny.mp3" volume 0.4
 
-    play sound "sfx/bunny.mp3" volume 0.25
+    scene bg conejocorre with vpunch
 
     a "¡AH!"
 
     "¿Desde cuándo hay conejos aquí?"
+
+    scene bg biblioteca with dissolve
 
     "Como sea, necesito buscar el libro."
 
@@ -160,6 +162,8 @@ label prologo:
             #sfx correr
         "No":
             "Negué con la cabeza y regrese a mi cuaderno"
+
+            show katherine uneasy with dissolve
 
             k "Bueno, gracias de todas formas."
 
@@ -788,8 +792,15 @@ label prologo:
     show katherine lado with dissolve
 
     k "Sé que estas nervioso pero, no importa lo que pase siempre estaré para ti, no por nada te di ese collar, ¿cierto?"
+    
+    show collar with dissolve:
+        pos (0.5, 0.5) yanchor 0.5 xanchor 500 zoom 0.47
 
-    "Observe el collar sobre mi pecho, un pequeño dije que Katherine me había dado hace tiempo para recordarla."
+    "Observe el collar sobre mi pecho."
+    
+    "Un pequeño dije que Katherine me había dado hace tiempo para recordarla."
+
+    hide collar with dissolve
 
     a "Sí, gracias..."
 

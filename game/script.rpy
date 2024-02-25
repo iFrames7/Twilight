@@ -30,6 +30,8 @@ default talk_hanna = False
 default demo = True
 
 label start:
+    camera:
+        perspective True
 
     jump playtest
     #Reenablea este jump cuando no sea la version demo y ocupes playtestear escenas
