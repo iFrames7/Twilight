@@ -875,27 +875,51 @@ label prologo:
 
     "Mi mano le dió un apretón con fuerza, mi corazón palpitando con fuerza haciendo que me detuviese y soltase su mano, y de pronto… "
     
-    extend "todo"
-
     stop sound
 
-    scene bg sangre with Dissolve(1.0)
+    extend "todo"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
 
     extend "... se volvió rojo."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg katmuerte with Dissolve(1.0) #este es bg katmuerte
+    scene bg katmuerte with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0) #este es bg katmuerte
 
     "Los ojos dilatados de mi amiga pronto se tornaron grises al ser abatida con gran fuerza contra aquel monstruo quien ahora la tenía en su hocico, su cuerpo intentando reaccionar y moviéndose en forma de convulsiones."
 
-    scene bg katmuerte2 with Dissolve(1.0)
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg katmuerte2 with Fade(0.0, 0.0, 0.25)
 
-    scene bg katmuerte2 with Dissolve(2.0)
+    scene bg black with Fade(0.25, 0.0, 1.0)
 
     "La sangre comenzaba a chorrear y lo único que podía hacer era mirarla atentamente. Sí, se veía débil, su cuerpo paralizado desde el cuello y lo último que soltó fue un escupitajo de sangre que llegó a empapar mis zapatos."
 
-    scene bg katmuerte3 with Dissolve(1.0)
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
 
-    scene bg katmuerte3 with Dissolve(4.0)
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
     
     scene bg katmuerte3 with vpunch
 

@@ -580,6 +580,6 @@ label cap3true_badend1:
     return
 
 label cap3true_binario_fail:
-    "U ded cawn."
+    "Falta escritura aquí."
 
     return
