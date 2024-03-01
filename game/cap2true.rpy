@@ -1,4 +1,6 @@
 label cap2true:
+    $ config.rollback_enabled = True
+
     scene bg black with Fade(1.0, 1.0, 1.0)
 
     return #borrar cuando no sea versión demo
@@ -183,17 +185,17 @@ label cap2true:
         "Freya respondió de forma molesta dándose la vuelta para ir a investigar por su cuenta. Hanna y Felix asintieron con la cabeza dejándome solo."
 
         menu:
-                "Vigilar a Evan":
-                    call cap2true_evan from _call_cap2true_evan
-                
-                "Hablar con Freya":
-                    call cap2true_freya from _call_cap2true_freya
+            "Vigilar a Evan":
+                call cap2true_evan from _call_cap2true_evan
+            
+            "Hablar con Freya":
+                call cap2true_freya from _call_cap2true_freya
 
-                "Acompañar a Hanna":
-                    call cap2true_hanna from _call_cap2true_hanna
+            "Acompañar a Hanna":
+                call cap2true_hanna from _call_cap2true_hanna
 
-                "Ir con Felix":
-                    call cap2true_felix from _call_cap2true_felix
+            "Ir con Felix":
+                call cap2true_felix from _call_cap2true_felix
 
     #bg bibliotecatwilight
 

@@ -214,7 +214,7 @@ label cap1:
 
     show freya normalhabla with dissolve
 
-    fr " Cafetería, sí, sería bueno para ver también las provisiones que hay, tampoco me gustaría morirme de hambre."
+    fr "Cafetería, sí, sería bueno para ver también las provisiones que hay, tampoco me gustaría morirme de hambre."
 
     "Claro, había pasado tanto tiempo que había olvidado la última vez que comí, de hecho, saque mi celular curioso checando la hora."
 
@@ -387,7 +387,7 @@ label cap1:
 
             show evan feliz with dissolve
 
-            "Sus ojos se voltearon un poco para ignorar a Arden una vez más mientras que Evan parecía sonreír debajo del cubrebocas satisfactoriamente."
+            "Sus ojos se voltearon un poco para ignorarme una vez más, mientras que Evan parecía sonreír debajo del cubrebocas satisfactoriamente."
 
         "Darle la razón a Freya":
             a "Bueno, el experimento tiene sentido, eso explicaría el por que solo somos nosotros, un grupo selectivo de personas ¿no?"
@@ -627,7 +627,9 @@ label cap1:
 
     scene bg cafeteria with Fade(0.3, 0.1, 0.3)
 
-    play sound "sfx/scratch.mp3" volume 0.25
+    play audio "sfx/doorbang.mp3" volume 0.75
+
+    play sound "sfx/scratch.mp3" volume 0.15
 
     scene bg cafeteria with vpunch
 
@@ -664,6 +666,8 @@ label cap1:
     scene bg pistaanubis with Fade(0.3, 0.1, 0.3)
 
     fr "Es la balanza de Anubis... y está desequilibrada..."
+
+    fr "Y eso... ¿es una puerta?"
 
     "Parecía estar pensando pero se vio interrumpida por un gruñido y la barricada rompiéndose."
 
@@ -729,14 +733,49 @@ label cap1:
 
     "Me concentré, muy dentro debía tener la respuesta, debía estar oculta, definitivamente estaba escondida y pronto, todo hizo sentido."
 
+    transform alpha_dissolve:
+        alpha 0.0
+        linear 0.5 alpha 1.0
+        on hide:
+            linear 0.5 alpha 0
+        # This is to fade the bar in and out, and is only required once in your script
+
+    screen countdown:
+        timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+        bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 left_bar "#f61313" right_bar "#500808" at alpha_dissolve
+
+    $ time = 7
+    $ timer_range = 7
+    $ timer_jump = "cap1_took_too_long"
+
+    show screen countdown
+
     menu:
         "Sacrificar un secreto" if not demo:
+            $ config.rollback_enabled = False
+
+            hide screen countdown
+            
+            stop music fadeout 0.75
+
             jump cap1normal
 
         "Ofrecer sangre" if not demo:
+            $ config.rollback_enabled = False
+
+            hide screen countdown
+            
+            stop music fadeout 0.75
+
             jump cap1bad
 
         "Sacrificar objeto":
+            $ config.rollback_enabled = False
+
+            hide screen countdown
+            
+            stop music fadeout 0.75
+
             jump cap1true
 
 
@@ -746,6 +785,8 @@ label cap1true:
     "Mi mano buscó el collar que Katherine me había dado."
 
     "Dudando un poco, extendí la mano y lo arrojé a la puerta."
+
+    play sound "sfx/1doorbang.mp3" volume 0.75
 
     "Rápidamente aquella puerta activo la trampa y se destruyó una vez tomó el collar y destruyendo el mismo en el instante."
 
@@ -765,4 +806,181 @@ label cap1bad:
     return
 
 label cap1normal:
+    return
+
+label cap1_took_too_long:
+    $ config.rollback_enabled = False
+
+    stop music fadeout 0.75
+
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3)
+
+    "..."
+
+    "..."
+
+    "..."
+
+    "La indecisión "
+
+    extend "me estaba consumiendo poco a poco."
+
+    "No sabía qué hacer. "
+
+    extend "No sabíamos qué hacer."
+
+    "Antes de que pudieramos decir algo... "
+
+    play sound "sfx/1doorbang.mp3" volume 0.85
+
+    scene bg beast2 with vpunch
+
+    extend "la barricada fue destruida."
+
+    "No."
+
+    "No."
+
+    "No."
+
+    "No."
+
+    "Nononononononononononononononononononononononononono."
+
+    scene bg black with dissolve
+
+    "..."
+
+    "Mi cuerpo"
+
+    extend ", mi mente"
+
+    extend ", mis sentidos... "
+
+    extend "Ninguno de ellos respondía."
+
+    h "¡¡AHHHHHHH, NOO!!"
+
+    fr "¡HANNA!"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "..."
+
+    "..."
+
+    "Solo podía quedarme ahí congelado... "
+    
+    extend "escuchando sus gritos."
+
+    fr "¡¡¡HANNAAAAAAAAAAA!!!"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "..."
+
+    "..."
+
+    "Freya intentaba todo por salvar a su amiga... "
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    fr "¡AAAARGHHHHHHHHHHH!"
+
+    "Pero su destino fue el mismo."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    e "Supongo que es el final..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "Evan no tuvo reacción."
+
+    "Casi como si no pudiera hacer nada."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "Aunque francamente... "
+
+    extend "ninguno podía hacer nada."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    f "Oh, dios..."
+
+    "Felix cubría su boca mientras se alejaba lo más posible de la escena."
+
+    "Lo cual solo me debaja a mí."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastclose with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "..."
+
+    "..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    "..."
+
+    "..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 1.0)
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+
+    scene bg black with Fade(0.25, 0.0, 5.0)
+
+    "Bad end." #reemplazar con bg badend cuando exista
+
+    $ config.rollback_enabled = True
+
     return

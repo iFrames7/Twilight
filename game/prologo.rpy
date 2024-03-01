@@ -124,7 +124,13 @@ label prologo:
 
     "Buscar el libro, necesito buscar el libro." 
     
-    "Una vez me paso entre los pasillos y encuentro el libro me dirijo a una mesa; está casi vacía. Es curioso, suele estar llena de alumnos que quieren acabar temprano sus tareas, pero hoy... Hoy parece ser un día fuera de lo normal."
+    "Una vez me paso entre los pasillos y encuentro el libro me dirijo a una mesa; está casi vacía."
+    
+    "Es curioso, suele estar llena de alumnos que quieren acabar temprano sus tareas."
+    
+    "Pero hoy... "
+    
+    extend "Hoy parece ser un día fuera de lo normal."
 
     # "Hay otra chica a lo lejos pero prefiero quedarme lejos de ella, se ve amenazante..."
 
@@ -207,9 +213,9 @@ label prologo:
 
     "...Mi cabeza duele"
     
-    extend ", todo me duele... "
+    extend ", todo me duele..."
     
-    extend "aquellos escalofríos y la incomodidad regresa... "
+    "Aquellos escalofríos y la incomodidad regresa... "
     
     extend "los músculos de mi cuerpo se vuelven piedras como si aquello de lo que me estaban advirtiendo estuviera pasando en aquel momento."
 
@@ -282,7 +288,7 @@ label prologo:
 
     show katherine uneasy with dissolve
 
-    k "Oh, eres tú"
+    k "Oh, eres tú..."
 
     "Su voz suena mucho más tranquila cuando me habla pero mi cuerpo aún está tenso por todo lo que pasaba."
 
@@ -412,7 +418,9 @@ label prologo:
 
     k "Hay una puerta de salida del otro lado."
 
-    "Katherine ya corría hacia el otro lado de la biblioteca y siendo así el resto de nosotros la seguimos, la puerta se abrió con rapidez y todos nos escabullimos entre ella corriendo por el pasillo hasta llegar a la entrada principal."
+    "Katherine ya corría hacia el otro lado de la biblioteca y siendo así el resto de nosotros la seguimos."
+    
+    "La puerta se abrió con rapidez y todos nos escabullimos entre ella, corriendo por el pasillo hasta llegar a la entrada principal."
 
     stop music fadeout 0.75
 
@@ -553,7 +561,7 @@ label prologo:
     show freya normalhabla at left with dissolve:
         zoom sprite_size
 
-    fr "¿A la enfermería? Deberíamos encontrar una forma de salir de aquí"
+    fr "¿A la enfermería? Deberíamos encontrar una forma de salir de aquí."
 
     show katherine preocupadahabla at center with dissolve:
         xzoom -1.0
@@ -573,7 +581,7 @@ label prologo:
     show hanna miedohabla at right with dissolve:
         zoom sprite_size
 
-    h "Freya, no creo que debamos separarnos, además, Felix también es mi amigo."
+    h "Freya, no creo que debamos separarnos. Además, Felix también es mi amigo."
 
     "Su amiga Hanna intentó calmarla y de aquella manera Freya cedió."
 
@@ -679,7 +687,7 @@ label prologo:
 
     a "Yo tampoco tengo señal..."
 
-    "Todos hicieron lo mismo de forma continua pues era aparente que la curiosidad les había ganado y sus caras se volvieron desesperanzadoras poco a poco."
+    "Todos hicieron lo mismo de forma continua, pues era aparente que la curiosidad les había ganado y sus caras se volvieron desesperanzadoras poco a poco."
 
     #show kat
 
@@ -812,7 +820,7 @@ label prologo:
 
     scene bg puerta with dissolve
 
-    "Cuando la pequeña platica acabó, todos llegamos a la salida pero por alguna razón nos detuvimos en seco..."
+    "Cuando la pequeña plática acabó, todos llegamos a la salida pero por alguna razón nos detuvimos en seco..."
     
     play sound "sfx/heartbeat.mp3" loop volume 0.25
 
