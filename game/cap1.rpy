@@ -4,6 +4,10 @@ label cap1:
 
     # scene bg black with fade
 
+    scene bg cap1screen with Fade(1.0, 1.5, 1.0)
+
+    pause 2.5
+
     scene bg black with Fade(1.0, 1.0, 1.0)
 
     play music "audio/nightmare.mp3" fadein 1.5 volume 0.25
@@ -439,6 +443,8 @@ label cap1:
 
     play music "<from 4>audio/chase.mp3" volume 0.45
 
+    play sound "sfx/beast1.mp3" volume 0.5
+
     "Ni siquiera pude pensar, se escuchó el gruñido de la bestia afuera, mis ojos se engrandecieron y observaron a Freya inmediatamente buscando su ayuda."
 
     a "Una barricada..."
@@ -751,18 +757,14 @@ label cap1:
     show screen countdown
 
     menu:
-        "Sacrificar un secreto" if not demo:
-            $ config.rollback_enabled = False
-
+        "Sacrificar un secreto" if canNormal:
             hide screen countdown
             
             stop music fadeout 0.75
 
             jump cap1normal
 
-        "Ofrecer sangre" if not demo:
-            $ config.rollback_enabled = False
-
+        "Ofrecer sangre" if canBad:
             hide screen countdown
             
             stop music fadeout 0.75
@@ -770,8 +772,6 @@ label cap1:
             jump cap1bad
 
         "Sacrificar objeto":
-            $ config.rollback_enabled = False
-
             hide screen countdown
             
             stop music fadeout 0.75
@@ -809,8 +809,6 @@ label cap1normal:
     return
 
 label cap1_took_too_long:
-    $ config.rollback_enabled = False
-
     stop music fadeout 0.75
 
     scene bg cafeteria with Fade(0.3, 0.1, 0.3)
@@ -834,6 +832,8 @@ label cap1_took_too_long:
     play sound "sfx/1doorbang.mp3" volume 0.85
 
     scene bg beast2 with vpunch
+
+    play sound "sfx/beast2.mp3" volume 0.5
 
     extend "la barricada fue destruida."
 
@@ -865,9 +865,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     "..."
 
@@ -881,9 +881,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     "..."
 
@@ -893,9 +893,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     fr "¡AAAARGHHHHHHHHHHH!"
 
@@ -903,17 +903,17 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     e "Supongo que es el final..."
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     "Evan no tuvo reacción."
 
@@ -921,9 +921,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     "Aunque francamente... "
 
@@ -931,9 +931,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     f "Oh, dios..."
 
@@ -943,19 +943,9 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg beastclose with Fade(0.0, 0.0, 0.25)
+    scene bg beastclose with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
-
-    "..."
-
-    "..."
-
-    play sound "sfx/1heartbeat.mp3" volume 0.5
-    
-    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
-
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
     "..."
 
@@ -963,24 +953,36 @@ label cap1_took_too_long:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+    scene bg beastfrente with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
-    play sound "sfx/1heartbeat.mp3" volume 0.5
-    
-    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+    "..."
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    "..."
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg beastfrente with Fade(0.0, 0.0, 0.25)
+    scene bg beastfrente with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 5.0)
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg beastfrente with Dissolve(0.25)
+
+    scene bg black with Dissolve(1.5)
 
     "Bad end." #reemplazar con bg badend cuando exista
-
-    $ config.rollback_enabled = True
 
     return

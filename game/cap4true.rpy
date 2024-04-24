@@ -1,7 +1,13 @@
 label cap4true:
     #bg oficina
 
-    scene bg black with Fade(1.0, 1.0, 1.0)
+    scene bg cap4screen with Fade(1.0, 1.5, 1.0) 
+
+    pause 2.5
+
+    scene bg oficina with Fade(1.0, 1.0, 1.0)
+
+    play music "audio/mysterious.mp3" volume 0.25
     
     "Algo no estaba bien..."
 
@@ -15,9 +21,13 @@ label cap4true:
 
     #show felix
 
+    show felix ceja at center with dissolve
+
     f "No creo que encontremos nada, van a ser los mismos libros llenos de símbolos raros."
 
     a "Quizás, pero vale la pena investigar."
+
+    hide felix with dissolve
 
     "Con certeza ahora comencé a examinar mis alrededores."
 
@@ -55,13 +65,13 @@ label cap4true:
 
     #bg oficina
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg oficina with Fade(0.3, 0.1, 0.3)
 
     "Después de visitar los libros intenté recordar todo lo que sabíamos: "
 
     #bg pistaanubis
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaanubis with Fade(0.3, 0.1, 0.3)
 
     extend "la balanza de Anubis"
 
@@ -80,7 +90,9 @@ label cap4true:
     label cap4true_sideselection:
         #bg oficina
 
-        scene bg black with Fade(0.3, 0.1, 0.3)
+        scene bg oficina with Fade(0.3, 0.1, 0.3)
+
+        stop music fadeout 0.5
 
         "Todos estos eran dioses de distintas culturas, pero no comprendo por qué."
 
@@ -89,6 +101,8 @@ label cap4true:
         "No son cosas puestas al azar."
 
         "Quizás debería darme un descanso, no creo encontrar algo si tengo la mente distraída."
+
+        # $ evan_cap4_talk = False
 
         menu:
             "Ir con Evan.":
@@ -102,7 +116,9 @@ label cap4true:
 
     #bg oficina
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg oficina with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/mysterious.mp3" volume 0.25
 
     "Después de aquella conversación, regresé a la estantería donde estaba."
 
@@ -112,7 +128,7 @@ label cap4true:
 
     #bg ardenanuario
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg ardenanuario with dissolve
 
     "Comencé a ver las páginas, viendo las fotos de las personas y sus nombres, había un apartado extra para todas las bellas artes y finalmente encontré la de danza donde se encontraba Felix y un par de alumnos más."
 
@@ -142,7 +158,9 @@ label cap4true:
 
     #bg ardenanuario2
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg ardenanuario2 with dissolve
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     extend "Felix."
 
@@ -154,7 +172,9 @@ label cap4true:
     
     #bg ardenanuario3
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg ardenanuario3 with dissolve
+
+    play sound "sfx/1heartbeat.mp3" volume 1.0
     
     extend "pero lo estaba"
 
@@ -165,6 +185,8 @@ label cap4true:
     extend ", estaba ahí... "
     
     extend "con la misma expresión."
+
+    play sound "sfx/heartbeat.mp3" volume 0.75 loop
 
     "No sabía qué hacer, era algo que no comprendía y pronto... todo hizo sentido."
 
@@ -180,13 +202,21 @@ label cap4true:
     
     extend ", FELIX, FELIX, FELIX."
 
+    stop music fadeout 0.5
+
     e "¿Arden?"
+
+    stop sound
 
     #bg oficina 
 
-    scene bg black
+    scene bg oficina
 
     #show evan with vpunch
+
+    show evan normal with vpunch
+
+    play sound "sfx/bookclose.wav" volume 0.5
 
     "¡PAM!"
 
@@ -200,23 +230,33 @@ label cap4true:
     
     extend "¿Él los había traído a esta trampa?"
 
+    play music "audio/beast1.mp3" volume 0.25
+
     "No tenía sentido, no, de hecho sus razones no tenían sentido en absoluto."
 
     "¿Por qué no nos mató antes? Estuvo tan cerca de nosotros, tan cerca que quizás podía simplemente acuchillarme por la espalda."
 
     "Mis ojos se voltearon lentamente hacia quien interrumpió mi investigación, Evan, se veía preocupado."
 
+    show evan ceja at center with dissolve
+
     e "¿Estás bien? Te ves algo..."
 
     #un vpunch
+
+    show evan ceja with vpunch
 
     a "¡Sí!"
 
     "Respondí con velocidad pateando lejos aquel anuario intentando tranquilizarme."
 
+    show evan defensivo with dissolve
+
     e "Oh... ok...tal vez deberías darte un descanso..."
 
     #otro vpunch
+
+    show evan defensivo with vpunch
 
     a "¡NO! "
     
@@ -232,9 +272,15 @@ label cap4true:
 
     #show felix
 
+    show felix sonrisahabla at right with dissolve
+
+    play sound "sfx/heartbeat.mp3" volume 0.5 loop
+
     "Felix, quien estaba detrás de Evan, me veía con ojos serios, ladeaba la cabeza lentamente como si supiese qué hacía."
 
     a "Nada..."
+
+    show felix ceja with dissolve
 
     f "¿Nada? ¿No te molestara que lo tome entonces?"
 
@@ -242,15 +288,19 @@ label cap4true:
     
     "Él... él cambió el contenido de los libros, ¿cierto? "
     
-    extend "¿Podía hacer eso? "
+    extend "¿Podía hacer eso?"
     
     extend "¿Era posible?"
+
+    show evan gimmeceja with dissolve
 
     e "¿Arden?"
 
     a "S...Sí... está todo bien..."
 
     "Balbuceé nervioso arrastrando mi cuerpo ligeramente sin poder ver a Felix."
+
+    show evan pensando with dissolve
 
     e "Te ves muy raro..."
 
@@ -264,17 +314,33 @@ label cap4true:
 
     "Quizás era el miedo, no, debía ser el miedo el que causaba mi sudor, mis ojos delataban cada minúscula emoción de miedo hacia aquel chico."
 
+    show felix normal zorder 1 with dissolve
+
     f "Vamos Arden... ¿por qué no nos dices?"
 
     "Felix fulminó su mirada hacia mí."
 
+    stop music fadeout 0.5
+
     #show freya
+
+    show freya angustiada zorder 0 at right with dissolve
     
     "Freya, quien estaba detrás de Felix, tenía una enorme enciclopedia en sus manos "
+
+    stop sound
     
     #hide felix, hit sfx, vpunch
 
+    play sound "sfx/bookhit.mp3" volume 0.75
+
+    play audio "sfx/fall.ogg" volume 0.75
+
+    hide felix with vpunch
+
     extend "con la cual golpeó con fuerza la cabeza de Felix haciendo que este cayese al suelo."
+
+    show evan defensivo with dissolve
 
     e "¿Qué chingados...?"
 
@@ -284,11 +350,17 @@ label cap4true:
 
     #bg salonclases
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg salonclases with Fade(0.3, 0.1, 0.3)
 
     "Entre el miedo y el nerviosismo, solo logramos encerrarnos en otro salón, cerramos la puerta y finalmente pudimos respirar."
 
     #show evan, freya
+
+    show evan gimmeceja at right
+
+    show freya normal at left
+
+    with dissolve
 
     e "¿Qué fue eso?"
 
@@ -296,13 +368,17 @@ label cap4true:
 
     "Mis ojos se voltearon hacia Freya, era imposible que lo supiese, a no ser de que lo hallase antes que yo."
 
-    fr "Vi el temor en tus ojos cuando lo veías, no sé nada…Solo que… tu miedo hacia él se hizo inminente."
+    fr "Vi el temor en tus ojos cuando lo veías, no sé nada... Solo que... tu miedo hacia él se hizo inminente."
 
     a "Fuck..."
+
+    show evan defensivo with dissolve
 
     e "Explíquenme qué está pasando."
 
     "Evan se veía completamente confundido inclusive más que perdido."
+
+    play music "audio/flowerbloom.mp3" volume 0.19
 
     a "Estaba... estaba viendo los anuarios, son libros que no están alterados, quizás fue suerte, ¿casualidad? No lo sé, pero, ah..."
 
@@ -312,21 +388,35 @@ label cap4true:
 
     "Balbuceaba, mis palabras iban tan rápido que solo podía esperar que los otros dos comprendiesen."
 
+    show evan ceja with dissolve
+
     e "¿En... todos?"
 
     "Evan tomó uno de los anuarios y comenzó a examinarlo junto con Freya."
 
+    show evan normal with dissolve
+
     e "Se ve..."
+
+    show freya caderaspreocupada with dissolve
 
     fr "Igual en todas las fotos..."
 
     "Freya se golpeó la frente con su mano izquierda."
 
+    show freya caderaspreocupada2 with dissolve
+
     fr "¿Cómo pude ser tan ciega...?"
 
     a "Y...Yo, no lo entiendo... No sé... no tengo ni idea."
 
+    show evan ladobrazo2 with dissolve
+
+    stop music fadeout 0.5
+
     e "¿Y qué se supone que haremos ahora? Es un monstruo gigante y un lunático contra nosotros, hemos estado dando vueltas por toda la universidad y no encontramos nada de valor para poder hacer algo."
+
+    show freya angustiadahabla with dissolve
 
     fr "Ni siquiera sabemos cómo salir... ¿De qué nos sirve saber quién es si estamos encerrados aquí? Solo es cuestión de tiempo para que muramos."
 
@@ -338,13 +428,21 @@ label cap4true:
 
     "Pronto algo golpeó mi cabeza, no podía rendirme, ¿no es así?"
 
+    play music "audio/clue.mp3" volume 0.25
+
     a "Oigan... ¿y si... no somos los primeros aquí?"
+
+    show freya preocupada with dissolve
 
     fr "¿Te refieres a que... más personas pasaron por esto antes?"
 
     a "S...Sí...digo... si Felix estuvo con nosotros todo este tiempo y no nos pudo matar antes fue por algo... ¿no?"
 
+    show evan pensando with dissolve
+
     e "Si... quizás solo está jugando con su comida."
+
+    show freya pensarhabla with dissolve
 
     fr "Que tal si no puede..."
 
@@ -360,13 +458,19 @@ label cap4true:
 
     a "Tal vez... ese alguien estaba escondiendo pistas desde antes."
 
+    show evan normal with dissolve
+
     e "Eso tiene sentido."
 
     "Evan se acercó para tomar uno de los papeles."
 
+    show evan gimmeceja with dissolve
+
     e "Pero, ¿por qué no lo escribirían normal?"
 
     a "Porque quizás Felix puede alterar el contenido, como lo hizo con los libros."
+
+    show freya apunta2 with dissolve
 
     fr "¿Y las ilustraciones...?"
 
@@ -374,9 +478,15 @@ label cap4true:
 
     e "Sí... pero, si esas personas lo pusieron, ¿significa que salieron? ¿Cómo lograron ponerlo todo?"
 
+    show freya normalhabla with dissolve
+
     fr "¿Y si están muertas? Todas las ilustraciones hasta ahora han sido relacionadas con el inframundo... ¿Qué tal si esto es una especie de limbo o purgatorio? Quizás un..."
 
+    show evan pensando with dissolve
+
     e "Infierno personal."
+
+    show freya pensarhabla with dissolve
 
     fr "Sí...eso explicaría por qué el tiempo no se mueve..."
 
@@ -384,7 +494,11 @@ label cap4true:
 
     e "..."
 
+    show freya apuntaceja with dissolve
+
     fr "...Bueno, saber esto es de buena información, pero, ¿de qué nos sirve para salir de aquí?"
+
+    stop music fadeout 0.75
 
     a "Oh..."
 
@@ -398,15 +512,25 @@ label cap4true:
 
     a "Rápido, alguien pégueme."
 
+    show evan defensivo with dissolve
+
     e "¿Qué?"
 
     "Evan ladeó la cabeza, claro, tenía que explicarme más."
 
     a "Yo, ahh... esto es complicado."
 
+    show freya normalhabla with dissolve
+
     fr "¿Más complicado que estar en el inframundo? Lo dudo mucho."
 
     a "Desde pequeño tengo sueños con personas, con personas que nunca en mi vida había visto, pensé que estaba loco pero, puede que sean fantasmas o... entes que buscan cruzar a algún lado, ah, el punto es que solo los puedo ver si estoy inconsciente."
+
+    show freya normal
+
+    show evan ceja
+
+    with dissolve
 
     "Ambos me miraron desconcertados, como si hubiese dicho una locura, pero para ser honestos la situación ya era loca."
 
@@ -414,15 +538,27 @@ label cap4true:
 
     a "Es una posibilidad, no perdemos nada."
 
+    show freya caderaspreocupada with dissolve
+
     fr "Bueno... Tampoco es que tengamos más opciones."
+
+    show evan gimmeenojado with dissolve
 
     e "¿Qué? ¿En serio piensas noquearlo? Es riesgoso, deberíamos..."
 
     a "No tenemos mucho tiempo para que Felix nos vuelva a encontrar, vamos Evan."
 
+    show evan defensivo with dissolve
+
     e "No, no te golpearé."
 
+    show freya sonrisahabla with dissolve
+
     fr "Yo sí."
+
+    play sound "sfx/bookhit.mp3" volume 0.75
+
+    show freya sonrisahabla with vpunch
 
     "Freya tomó un anuario y golpeó mi cabeza."
 
@@ -432,7 +568,9 @@ label cap4true:
     
     #bg luzentunel
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg tunel with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/doortootherworld.mp3" volume 0.15
     
     extend "una luz."
 
@@ -440,9 +578,12 @@ label cap4true:
 
     "Se escucha a la distancia como un tintineo, necesitaba concentrarme, necesitaba poder comprenderlos."
 
-    "Un profundo respiro fue el que tomé cerrando sus ojos."
+    "Tomé un profundo respiro, cerrando mis ojos."
 
     #show kat, pero blurry
+
+    show katherine sonrisa at center with dissolve:
+        alpha 0.86 blur 10.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(0.47)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) blend None
 
     "{color=#ffffff}???{/color}" "A…𒈓𒈙…en Ar𒈓𒈙"
 
@@ -450,13 +591,34 @@ label cap4true:
 
     #kat less blurry
 
+    show katherine sonrisa2 with dissolve:
+        blur 5.0
+
     "{color=#ffffff}???{/color}" "¡Arden!"
+
+    stop music
 
     #ghost kat
 
+    show katherine sonrisahabla with dissolve:
+        blur 0.0
+
     k "¡Arden, Arden! Oh gracias al cielo, puedes escucharnos."
 
+    show katherine at left with move
+
     #show hanna ghost
+
+    show hanna sonrisa at right with dissolve:
+        alpha 0.86 blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(0.47)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) blend None
+
+    show alice normal at center with dissolve:
+        xpos 0.4 zoom 0.92 alpha 0.86 matrixcolor InvertMatrix(0.0)*ContrastMatrix(0.47)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+
+    show aeron normal at center with dissolve:
+        xpos 0.62 zoom 0.88 alpha 0.86 matrixcolor InvertMatrix(0.0)*ContrastMatrix(0.47)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+
+    play music "audio/dream.mp3" volume 0.25
 
     "Mis ojos se abrieron, podía ver a Katherine y a Hanna, junto a ellas otras personas que no reconocía."
 
@@ -464,7 +626,11 @@ label cap4true:
 
     "Quería abrazarlas, queria llorar a su lado, queria pedirles perdón, había muchas cosas que quería decir pero... aquellos pensamientos fueron interrumpidos por Hanna."
 
+    show hanna normal with dissolve
+
     h "No hay mucho tiempo."
+
+    show katherine uneasy with dissolve
 
     k "S...Sí, cierto, Arden, esta es gente que murió antes aquí."
 
@@ -474,13 +640,19 @@ label cap4true:
 
     a "¿Decías que... no hay tiempo?"
 
+    show katherine preocupadahabla with dissolve
+
     k "Sí, no podemos estar mucho tiempo aquí. Nuestras almas están encerradas en el edificio, están siendo consumidas por el demonio."
 
     a "¿El demonio?"
 
+    show hanna despair with dissolve
+
     h "Felix es un demonio, uno muy inteligente al parecer, ha estado alterando memorias por décadas haciéndose pasar por un estudiante."
 
     a "¿C...cómo saben todo esto?"
+
+    show hanna explicando with dissolve
 
     h "Bueno, las almas de aquí nos explicaron."
 
@@ -492,11 +664,17 @@ label cap4true:
     
     a "Ok... creo que esto no es relevante ahora, necesitamos saber cómo escapar."
 
-    k "Hay muchas formas... Si logran escapar sus memorias sobre esto se borraran y quizás tengan la mala suerte de volver aquí."
+    show katherine caderashabla with dissolve
+
+    k "Hay muchas formas... Si logran escapar, sus memorias sobre esto se borraran y quizás tengan la mala suerte de volver aquí."
+
+    show katherine dedohabla with dissolve
 
     k "Pero si acaban con el demonio, no solo serán libres, sino que también liberarán nuestras almas."
 
     a "¿Y cómo hacemos eso?"
+
+    show katherine preocupadahabla with dissolve
 
     k "Hay una daga, oculta en la oficina del rector, deben ser listos, pues solo la pueden utilizar una vez."
 
@@ -504,9 +682,23 @@ label cap4true:
 
     # "Algunas de las almas subieron la voz."
 
+    show katherine sonrisa
+
+    show hanna sonrisa
+
+    with dissolve
+
+    show alice hablar with dissolve
+
     "{color=#ffffff}???{/color}" "No, no mataran a la bestia, a ella solo hay que encerrarla."
 
     a "¿Y cómo?"
+
+    show alice normal
+
+    show aeron hablar
+    
+    with dissolve
 
     "{color=#ffffff}???{/color}" "En la biblioteca, hay un libro oculto entre la entrada principal y la alfombra, ahí hay un ritual que mantendrá sellada a la bestia, como un círculo mágico que evitará que escape mientras matan a Felix."
 
@@ -514,41 +706,75 @@ label cap4true:
 
     "No sabía si quería volver a la biblioteca, pero no tenía tiempo para cuestionarlo."
 
+    show alice caderasnormal with dissolve
+
     "{color=#ffffff}???{/color}" "Recuerden, solo tienen una oportunidad... no pueden fallar, Felix no sabe que esta daga existe, ni el libro con el ritual."
     
-    "{color=#ffffff}???{/color}" "El monstruo, el monstruo y Felix tienen que estar en el mismo lugar, si no lo están todo será en vano."
+    show aeron normal with dissolve
+
+    "{color=#ffffff}???{/color}" "El monstruo y Felix tienen que estar en el mismo lugar, si no lo están todo será en vano."
+
+    show aeron sonrisa
+
+    show alice sonrisa
+
+    with dissolve
 
     a "...Espero no decepcionarlos."
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    stop music fadeout 3.5
+
+    scene bg black with Fade(0.7, 0.1, 0.3)
 
     "Mi cuerpo temblaba y fue cuando lentamente comencé a acostumbrarme a la luz nuevamente, sintiendo una punzada horrible sobre mi cabeza justo donde había sido golpeado."
 
     #bg salon
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg salonclases with dissolve
 
     "Finalmente pude escuchar las voces de mis compañeros a la distancia."
 
     #show evan, freya
 
+    show evan defensivo at right
+
+    show freya angustiadahabla at left
+
+    with dissolve
+
     e "¿Cómo puedes ser tan insensible?"
 
     fr "¿Insensible? Fue lo que pidió, además, no le di tan duro, debería despertar en cualquier momento."
 
+    show evan gimmeenojado with dissolve
+
     e "Si tuviera fuerzas..."
+
+    show freya apunta with dissolve
 
     fr "¿Ajá...?"
 
+    show evan despair with dissolve
+
     e "No haría nada, de hecho."
+
+    show freya sonrisahabla with dissolve
 
     fr "Lo sabía."
 
     a "Hey..."
 
+    show evan normal
+
+    show freya preocupada
+
+    with dissolve
+
     e "¡Arden! ¿Te duele algo?"
 
     a "Solo la cabeza, pero estoy bien."
+
+    show freya apunta2 with dissolve
 
     fr "¿Y bien?"
 

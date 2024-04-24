@@ -1,11 +1,13 @@
 label cap2true:
-    $ config.rollback_enabled = True
+    scene bg cap2screen with Fade(1.0, 1.5, 1.0)
 
-    scene bg black with Fade(1.0, 1.0, 1.0)
+    pause 2.5
 
-    return #borrar cuando no sea versión demo
+    scene bg salonclases with Fade(1.0, 1.0, 1.0)
 
     #bg salonclasestrue?
+
+    play music "audio/longtwilight.mp3" volume 0.25
 
     "Desplazándonos para salir de la cafetería se sentía como si todos me siguieran, fui corriendo directo a un salón lejos de aquel lugar, entre todos bloqueamos la puerta una vez más."
 
@@ -20,7 +22,7 @@ label cap2true:
 
     a "N... no lo sé."
 
-    show freya ladohabla with dissolve
+    show freya apunta with dissolve
 
     fr "Bueno, esta fue tu elección, quizás tú deberías guiarnos, ¿no crees?"
 
@@ -31,13 +33,15 @@ label cap2true:
 
     h "F...Freya, creo que estás siendo un poco dura..."
 
-    show freya normalhabla with dissolve
+    show freya caderashabla with dissolve
 
     fr "¿Dura? Pudimos haber muerto por su indecisión."
 
     show hanna normal with dissolve
 
     h "Pero no estamos muertos, ¿o sí?"
+
+    show freya normal with dissolve
 
     "El hecho de que fue su amiga hablando hizo que la chica de cabello negro respirase profundamente para calmar su enojo."
 
@@ -51,6 +55,8 @@ label cap2true:
         zoom sprite_size
 
     e "Eso si es que Freya quiere cooperar."
+
+    show freya ladohabla with dissolve
 
     fr "Oh, ¿así como tú ayudaste con la barricada?"
 
@@ -87,6 +93,8 @@ label cap2true:
 
     a "Debe tener sus razones."
 
+    stop music fadeout 0.75
+
     #show freya
 
     show freya caderashabla at right with dissolve:
@@ -115,6 +123,8 @@ label cap2true:
 
     fr "¿Lo crees?"
 
+    play music "audio/flowerbloom.mp3" volume 0.19
+
     show felix sonrisahabla with dissolve
 
     f "Sí, tiene sentido. Si queremos saber más sobre el lugar, quizás deberíamos regresar a donde todo empezó."
@@ -125,11 +135,13 @@ label cap2true:
 
     fr "Sí... supongo que tienen razón, pero, quiero que sepas que te advertí sobre esto."
 
+    stop music fadeout 0.75
+
     label cap2true_sideselection:
 
         #bg bibliotecatwilight
 
-        scene bg black with Fade(0.3, 0.1, 0.3)
+        scene bg bibliotecatwilight with Fade(0.3, 0.1, 0.3)
 
         "Todos me siguieron en silencio hasta la biblioteca, Evan nos seguía desde atrás, quizás muy atrás, eso me preocupaba ligeramente pero tampoco podía obligarlo a que me siguiese."
 
@@ -137,14 +149,13 @@ label cap2true:
 
         #show freya, evan, felix
 
-        show freya normal at center with dissolve:
-            zoom sprite_size
+        show freya normal at center
 
-        show evan normal at right with dissolve:
-            zoom sprite_size
+        show evan normal at right
 
-        show felix pensando at left with dissolve:
-            zoom sprite_size
+        show felix pensando at left
+
+        with dissolve
 
         f "¿Qué estamos buscando?"
 
@@ -199,7 +210,9 @@ label cap2true:
 
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/dark.mp3" volume 0.25
 
     "Yo continué buscando entre los libros, quizás ya solo estaba moviéndolos entre ellos para ver si entendía alguno, pero nada, ninguno de los que movía parecía tener sentido alguno."
 
@@ -217,15 +230,21 @@ label cap2true:
 
     #bg bibliotecatwilight w vpunch
 
-    scene bg black with vpunch
+    stop music
+
+    scene bg bibliotecatwilight with vpunch
+
+    play sound "sfx/scratch.mp3" volume 0.25
 
     "Y como si fuese algo extremadamente importante, los chirridos de las ventanas comenzaron afuera, justo donde lo había visto la primera vez..."
     
     #bg bestia
     
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg beast with Fade(0.3, 0.1, 0.3)
 
     "Estaba el monstruo caminando con lentitud arañando las ventanas mirándome fijamente."
+
+    play music "<from 4>audio/chase.mp3" volume 0.45
 
     h "¡¡AAAAAAAH!!"
 
@@ -237,7 +256,7 @@ label cap2true:
 
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight with Fade(0.3, 0.1, 0.3)
 
     #show freya, hanna
 
@@ -309,13 +328,13 @@ label cap2true:
 
     show freya angustiadahablallora
 
-    fr "¡SUÉLTAME! ¡¡¡SUÉLTAME INUTIL!!!"
+    fr "¡SUÉLTAME! ¡¡¡SUÉLTAME INÚTIL!!!"
 
     e "Tienes que confiar en ella..."
 
     "Evan suplicó con la mirada."
 
-    "Freya, aterrada, negó con la cabeza varias veces intentando soltarse del agarre del chico, sus ojos voltearon a la biblioteca" 
+    "Freya, aterrada, negó con la cabeza varias veces intentando soltarse del agarre del chico, sus ojos voltearon a la biblioteca." 
     
     #show hanna (small)
 
@@ -334,7 +353,11 @@ label cap2true:
 
     "Felix caminó dentro de la biblioteca extendiendo sus manos para que los lanzase."
 
-    "Hanna no vio más opción y los lanzo haciendo que cayeran cerca de Felix, el cual comenzó a tomarlos"
+    "Hanna no vio más opción y los lanzo haciendo que cayeran cerca de Felix, el cual comenzó a tomarlos."
+
+    stop music
+
+    show bg bibliotecatwilight with vpunch
 
     "Pero uno, uno que Hanna agarraba con fuerza entre sus manos, quizás aquel objeto material la había cegado por completo, tanto que tropezó con un par de libros que estaban tirados por el suelo."
 
@@ -344,9 +367,15 @@ label cap2true:
 
     "Freya gritó una vez más."
 
+    scene bg black with dissolve
+
+    play music "audio/doortootherworld.mp3" fadein 1.5 volume 0.15
+
+    play sound "sfx/heartbeat.mp3" loop volume 0.40
+
     "No comprendo..."
 
-    "No comprendo por que mi cuerpo no se mueve..."
+    "No comprendo por qué mi cuerpo no se mueve..."
 
     "Estoy aquí, parado, viendo cómo ocurre todo sin poder hacer nada."
 
@@ -356,17 +385,41 @@ label cap2true:
 
     "Por qué... ¡¿por qué?! ¡¿POR QUÉ POR QUÉ POR QUÉ?!"
 
+    stop music
+
+    stop sound
+
     #bg hannamuertetrue
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
+    scene bg hannamuerte with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
 
     "Era tarde, el monstruo tomó el pie de Hanna y la arrastró por la librería."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
+    scene bg hannamuerte with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
     "Sus gritos y su miedo no pudieron despertar mi cuerpo paralizado, nada, nada de lo que intentaba estaba funcionando en absoluto."
+
+    play sound "sfx/1heartbeat.mp3" volume 1.0
+
+    scene bg hannamuerte2 with vpunch
 
     h "¡¡FREYA!!"
 
-    "Se escuchó a la distancia, como un eco que se alejaba de mí, luego un grito escalofriante, seguido de un festival de sangre frente a los ojos de los demás."
+    scene bg black with Dissolve(0.25)
+
+    "Se escuchó a la distancia, como un eco que se alejaba de mí, luego un grito escalofriante"
+    
+    play sound "sfx/blood.mp3" volume 0.5
+
+    extend", seguido de un festival de sangre frente a los ojos de los demás."
 
     "Evan cubrió los ojos de Freya y la arrastró con sus fuerzas lejos de la escena mientras la chica gritaba, Felix cubría su boca aterrado."
 

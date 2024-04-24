@@ -14,6 +14,8 @@ define f = Character("Felix", color="#ed819f")
 define k = Character("Katherine", color="#435f21")
 define fr = Character("Freya", color="#9a201b")
 
+define ef = Character("Felix?", color="#985065", what_font = "chiller.ttf", what_size = 45)
+
 define openeyes = ImageDissolve("trans/eyeopen.png", 0.2)
 define closeeyes = ImageDissolve("trans/eyeopen.png", 0.2, reverse=True)
 define portal = ImageDissolve("trans/portal.png", 1.5)
@@ -25,16 +27,21 @@ default sprite_size = 1
 
 default freya_counter = 0
 default evan_counter = 0
-default talk_hanna = False
 
-default demo = True
+default talk_hanna = False
+default freya_cap3_talk = False
+default evan_cap4_talk = False
+default codigo_real = 4869
+
+default canNormal = False
+default canBad = False
 
 label start:
     camera:
         perspective True
 
     #jump playtest
-    #Reenablea este jump cuando no sea la version demo y ocupes playtestear escenas
+    #Reenablea este ↑ jump cuando no sea la version demo y ocupes playtestear escenas
 
     jump prologo
 
@@ -43,7 +50,7 @@ label playtest:
 
     "Elige el capítulo al que quieras saltar:"
 
-    label seleccion:
+    label selection:
         menu:
             "Prologo":
                 jump prologo
@@ -54,6 +61,12 @@ label playtest:
             "Cap 1 Sides":
                 jump cap1_sideselection
 
+            "Ruta true ending":
+                jump true_selection
+
+
+    label true_selection:
+        menu:
             "Cap 2 True":
                 jump cap2true
 
@@ -71,3 +84,9 @@ label playtest:
 
             "Cap 4 True Sides":
                 jump cap4true_sideselection
+
+            "Cap 5 True":
+                jump cap5true
+
+            "{b}Regresar{/b}":
+                jump selection

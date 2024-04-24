@@ -3,7 +3,9 @@ label cap2true_evan:
 
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight2 with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/flowerbloom.mp3" volume 0.19
 
     "No confiaba en Evan, de hecho, era la última persona con la que iría, pero, teniendo en cuenta que no confío en él, tal vez es la mejor razón para seguirlo."
 
@@ -19,7 +21,7 @@ label cap2true_evan:
 
     e "¡MIERDA!"
 
-    "Evan tiro el libro que tenia en sus manos, parece que mi presencia lo asusto realmente, el chico solo volteo a verme fulminando con la mirada."
+    "Evan tiró el libro que tenia en sus manos, parece que mi presencia lo asusto realmente, el chico solo volteo a verme fulminando con la mirada."
 
     show evan ceja with dissolve
 
@@ -77,9 +79,11 @@ label cap2true_evan:
 
     "O quizas solo estaba abriendolos y cerrandolos al ver que tenian simbolos indescriptibles."
 
+    stop music fadeout 0.75
+
     #bg bibliotecatwilight (con un fade para simular que pasó tiempo)
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight2 with Fade(0.3, 0.1, 0.3)
 
     "Nada, no parecía haber nada entre la pila de libros que habían, pero mis ojos quizás no estaban centrados al cien porciento en los libros, si no en Evan."
 
@@ -92,6 +96,8 @@ label cap2true_evan:
     e "No, solo símbolos y cosas que no puedo comprender, parece que realmente no hay nada aquí..."
 
     a "Entonces... solo perdimos el tiempo..."
+
+    play music "audio/downtime.mp3" volume 0.25
 
     show evan normal with dissolve
 
@@ -132,6 +138,8 @@ label cap2true_evan:
     e "Deberíamos seguir buscando..."
 
     a "Sí, tienes razón..."
+
+    stop music fadeout 0.5
     
     return
 
@@ -140,7 +148,9 @@ label cap2true_freya:
 
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight2 with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/sad.mp3" volume 0.3
 
     "Claro que la chica se veía molesta, ¿tal vez deberia ir a disculparme?"
 
@@ -173,8 +183,8 @@ label cap2true_freya:
     fr "¿No tienes a nadie más a quien molestar?"
 
     menu:
-        "No quiero molestar, solo queria ver si necesitabas ayuda.":
-            a "No quiero molestar, solo queria ver si necesitabas ayuda."
+        "No quiero molestar, solo quería ver si necesitabas ayuda.":
+            a "No quiero molestar, solo quería ver si necesitabas ayuda."
 
             show freya ladohabla2 with dissolve
 
@@ -184,8 +194,8 @@ label cap2true_freya:
 
             fr "Ayúdame con los estantes de en frente."
 
-        "Fuiste la primera persona con quien me tope...":
-            a "Fuiste la primera persona con quien me tope..."
+        "Fuiste la primera persona con quien me topé...":
+            a "Fuiste la primera persona con quien me topé..."
 
             show freya caderaspreocupada with dissolve
 
@@ -208,7 +218,9 @@ label cap2true_freya:
 
     #hide freya
 
-    hide freya with dissolve
+    stop music fadeout 0.5
+
+    scene bg bibliotecatwilight3 with dissolve
 
     "Asintiendo con la cabeza caminé hacia el estante mencionado buscando entre las revistas que se encontraban ahí, solo habían ilustraciones y parecían ser una especie de simbolos o... runas, realmente no las comprendía."
 
@@ -219,6 +231,8 @@ label cap2true_freya:
     show freya normal at center with dissolve
 
     a "¿Encontraste algo?"
+
+    play music "audio/downtime.mp3" volume 0.25
 
     fr "Solo runas... símbolos, nada que no sepamos."
 
@@ -246,11 +260,15 @@ label cap2true_freya:
 
     fr "No, puedo llevarlo y en caso de necesitarlo lo tendre cerca."
 
+    play sound "sfx/paperrip.wav"
+
     "La chica rasgó la pagina de la revista que contenía el simbolo y luego la guardó en su bolsillo del pantalón."
 
     show freya normalhabla with dissolve
 
     fr "Sigamos buscando, tal vez encontramos algo más por aquí..."
+
+    stop music fadeout 0.5
 
     return
 
@@ -259,7 +277,9 @@ label cap2true_hanna:
 
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight3 with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Sentí que Hanna necesitaba compañía, así que fui con ella."
     
@@ -311,6 +331,8 @@ label cap2true_hanna:
 
     show hanna sonrisa with dissolve
 
+    stop music fadeout 0.5
+
     "Quizás Hanna conocía a otra persona, por que para mí esto no tenía nada de sentido."
 
     "Freya era muy grosera con todos y no podía justificar muchas de sus acciones."
@@ -318,6 +340,8 @@ label cap2true_hanna:
     "Aun así me causaba curiosidad cómo es que dos personalidades tan distintas se habían conocido."
 
     a "Y... ¿cómo la conociste tú?"
+
+    play music "audio/intimate.mp3" volume 0.5
 
     show hanna emocionada with dissolve
 
@@ -365,6 +389,8 @@ label cap2true_hanna:
 
     a "Sí, tiene sentido."
 
+    stop music fadeout 0.5
+
     show hanna normal with dissolve
 
     h "Mira."
@@ -379,7 +405,7 @@ label cap2true_hanna:
 
     "Ella apuntó el símbolo, abrió el libro y la primera página era una imagen del monstruo."
 
-    show hanna llorar with dissolve
+    show hanna llorar with vpunch
 
     "Hanna, aterrada, soltó el libro y se cubrió la boca nerviosa, mi cuerpo también se asustó y se movió hacia atrás por el mismo miedo que llenó a Hanna."
 
@@ -399,7 +425,7 @@ label cap2true_hanna:
 
     show hanna explicando with dissolve
 
-    h "No comprendo mucho... pero, quizás haya una clase de diccionario cerca de aquí. Segiré buscando, puede que encuentre algo de valor."
+    h "No comprendo mucho... pero, quizás haya una clase de diccionario cerca de aquí. Seguiré buscando, puede que encuentre algo de valor."
 
     "Los ojos de la chica se iluminaron por la emoción, no era una mala idea, de hecho aquella esperanza llenó mi corazón de emoción."
 
@@ -410,7 +436,9 @@ label cap2true_hanna:
 label cap2true_felix:
     #bg bibliotecatwilight
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg bibliotecatwilight with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     #show felix
 
@@ -424,7 +452,7 @@ label cap2true_felix:
 
     f "¡Oh! Arden."
 
-    "Volteo a verme ladeando la cabeza ligeramente."
+    "Volteó a verme ladeando la cabeza ligeramente."
 
     a "Ah, ¿qué haces?"
 
@@ -456,13 +484,19 @@ label cap2true_felix:
 
     f "Sí..."
 
+    stop music fadeout 0.5
+
     #hide felix
 
     hide felix with dissolve
 
     "Caminé por las mesas y me asomé debajo de ellas, ¿podía haber algo escondido ahí?"
 
-    "Sería poco usual, pero tendría sentido, este lugar está alterado... De repente sentí una respiración detrás de mí, o una presencia, mi cuerpo se tensó y lentamente voltee hacia atrás."
+    "Sería poco usual, pero tendría sentido, este lugar está alterado..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.6
+    
+    "De repente sentí una respiración detrás de mí, o una presencia, mi cuerpo se tensó y lentamente voltee hacia atrás."
 
     #show felix
 

@@ -2,9 +2,13 @@ label prologo:
     
     #bg prologo
 
+    scene bg prologoscreen with Fade(1.0, 1.5, 1.0)
+
+    pause 2.5
+
     scene bg dream with Fade(1.0, 1.0, 1.0)
 
-    play music "audio/nightmare.mp3" fadein 1.0 volume 0.25
+    play music "audio/nightmare.mp3" volume 0.25
 
     "Desde que recuerdo he tenido estos sueños extraños, sueños... sobre personas que vienen a visitarme, muchos me dan consejos de vida."
 
@@ -889,45 +893,57 @@ label prologo:
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
 
-    scene bg sangre with Fade(0.0, 0.0, 0.25)
+    scene bg sangre with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
 
     extend "... se volvió rojo."
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg katmuerte with Fade(0.0, 0.0, 0.25)
+    scene bg katmuerte with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0) #este es bg katmuerte
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5 #este es bg katmuerte
 
     "Los ojos dilatados de mi amiga pronto se tornaron grises al ser abatida con gran fuerza contra aquel monstruo quien ahora la tenía en su hocico, su cuerpo intentando reaccionar y moviéndose en forma de convulsiones."
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg katmuerte2 with Fade(0.0, 0.0, 0.25)
+    scene bg katmuerte2 with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
 
     "La sangre comenzaba a chorrear y lo único que podía hacer era mirarla atentamente. Sí, se veía débil, su cuerpo paralizado desde el cuello y lo último que soltó fue un escupitajo de sangre que llegó a empapar mis zapatos."
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
+    scene bg katmuerte3 with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
 
-    play sound "sfx/1heartbeat.mp3" volume 0.5
-    
-    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
-
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    pause 0.5
 
     play sound "sfx/1heartbeat.mp3" volume 0.5
     
-    scene bg katmuerte3 with Fade(0.0, 0.0, 0.25)
+    scene bg katmuerte3 with Dissolve(0.25)
 
-    scene bg black with Fade(0.25, 0.0, 1.0)
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg katmuerte3 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
     
     scene bg katmuerte3 with vpunch
 
