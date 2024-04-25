@@ -381,6 +381,8 @@ label cap1:
 
     menu:
         "Darle la razón a Evan":
+            $ evan_counter += 1
+
             a "Bueno, el universo tiene sentido, ¿quizás quedamos todos dentro por estar en la biblioteca al mismo tiempo?"
 
             show freya ladohabla2 with dissolve
@@ -394,6 +396,8 @@ label cap1:
             "Sus ojos se voltearon un poco para ignorarme una vez más, mientras que Evan parecía sonreír debajo del cubrebocas satisfactoriamente."
 
         "Darle la razón a Freya":
+            $ freya_counter += 1
+
             a "Bueno, el experimento tiene sentido, eso explicaría el por que solo somos nosotros, un grupo selectivo de personas ¿no?"
 
             show freya caderaspreocupada2 with dissolve
@@ -788,13 +792,13 @@ label cap1true:
 
     play sound "sfx/1doorbang.mp3" volume 0.75
 
+    scene bg collarroto with vpunch
+
     "Rápidamente aquella puerta activo la trampa y se destruyó una vez tomó el collar y destruyendo el mismo en el instante."
 
     "En ese instante la puerta de la barricada se rompió liberando al monstruo."
 
     a "¡CORRAN!"
-
-    stop music fadeout 1.5
 
     #fade to black
 

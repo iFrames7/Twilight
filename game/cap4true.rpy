@@ -77,13 +77,13 @@ label cap4true:
 
     #bg pistaloki
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaloki with Fade(0.3, 0.1, 0.3)
 
     extend ", la ilustración de Loki "
 
     #bg pistaolimpo
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaolimpo with Fade(0.3, 0.1, 0.3)
 
     extend "y la entrada al Olimpo."
 
@@ -230,7 +230,7 @@ label cap4true:
     
     extend "¿Él los había traído a esta trampa?"
 
-    play music "audio/beast1.mp3" volume 0.25
+    play music "audio/beast.mp3" volume 0.25
 
     "No tenía sentido, no, de hecho sus razones no tenían sentido en absoluto."
 

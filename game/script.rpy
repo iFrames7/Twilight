@@ -88,5 +88,8 @@ label playtest:
             "Cap 5 True":
                 jump cap5true
 
+            "Epilogo True":
+                jump epilogotrue
+
             "{b}Regresar{/b}":
                 jump selection

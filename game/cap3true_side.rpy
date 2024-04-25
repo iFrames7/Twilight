@@ -1,7 +1,7 @@
 label cap3true_evan:
     $ evan_counter += 1
 
-    $ evan_cap4_talk = true
+    $ evan_cap4_talk = True
 
     #bg salonclases
 
@@ -122,7 +122,11 @@ label cap3true_evan:
 
     menu:
         "Claro que sí, me aseguraré de que sea posible.":
+            $ evan_counter += 1
+
             a "Claro que sí, me aseguraré de que sea posible."
+
+            show evan feliz with dissolve
 
             e "Gracias... solo, no dejes que este enfermo sea una carga para ti."
 

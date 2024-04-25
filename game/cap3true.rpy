@@ -390,7 +390,7 @@ label cap3true:
 
     show evan gimmeenojado with vpunch
 
-    play music "audio/beast1.mp3" volume 0.25
+    play music "audio/beast.mp3" volume 0.25
 
     e "¡¡Estamos jodidos!!"
 
@@ -677,7 +677,7 @@ label cap3true:
 
     #bg binarioypista
 
-    scene bg pistabinario with dissolve
+    scene bg pistabinario2 with dissolve
 
     $ binario_fail_counter = 0
 
@@ -710,7 +710,7 @@ label cap3true:
     
     #bg pistaolimpo
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaolimpo with Fade(0.3, 0.1, 0.3)
     
     extend "Era una imagen de una entrada, un cuadrado y líneas de perspectiva."
 
@@ -736,17 +736,19 @@ label cap3true:
 
     #bg salonalineado
 
-    scene bg salonclases3
+    scene bg salonolimpo
     
     show humoverde zorder 2
     
-    with Fade(0.3, 0.1, 0.3)
+    with dissolve
 
     "Poniéndolo en varias posiciones alrededor de la habitación, finalmente lo alineó con el pizarrón, revelando que la entrada del olimpo quedaba en un cuadro del techo."
 
     a "Hey... esa pieza..."
 
     #show freya
+
+    show bg salonclases3 with dissolve
 
     show freya angustiadahabla at center with dissolve
 

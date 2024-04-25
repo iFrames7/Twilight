@@ -186,6 +186,8 @@ label cap1_freya:
             "Freya bufó molesta al escuchar aquella acción."
 
         "Checar almacén":
+            $ freya_counter += 1
+
             "Abrí una de las alacenas de metal que tenían al final de la cocina; ahí encontré muchas latas de comida."
 
             "Todas parecían intactas, o al menos la mayoría: atún, verduras; quizás lo suficiente para alimentar a una sola persona por un par de semanas."

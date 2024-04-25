@@ -222,7 +222,7 @@ label cap2true:
 
     #bg pistaloki
 
-    scene bg black with Fade(0.3, 0.1, 0.3)
+    scene bg pistaloki with Fade(0.3, 0.1, 0.3)
 
     "Era una ilustración de Loki, el dios nordico, encerrado por varios círculos y siendo apuntado por varias flechas."
 

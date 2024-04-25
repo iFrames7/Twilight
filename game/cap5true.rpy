@@ -1269,6 +1269,4 @@ label cap5true:
 
     pause 1.5
 
-    "Fin."
-
     jump epilogotrue

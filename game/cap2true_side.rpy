@@ -29,6 +29,8 @@ label cap2true_evan:
 
     menu:
         "No puedo confiar en dejarte solo...":
+            $ evan_counter -= 1
+
             a "No puedo confiar en dejarte solo..."
 
             "Evan chasqueo con la lengua al escucharme, quizas mi respuesta fue un poco agresiva, solo volteo los ojos molesto y suspiro."
@@ -258,9 +260,9 @@ label cap2true_freya:
 
     show freya angustiada with dissolve
 
-    fr "No, puedo llevarlo y en caso de necesitarlo lo tendre cerca."
+    fr "No, puedo llevarlo y en caso de necesitarlo lo tendré cerca."
 
-    play sound "sfx/paperrip.wav"
+    play sound "sfx/paperrip.wav" volume 0.5
 
     "La chica rasgó la pagina de la revista que contenía el simbolo y luego la guardó en su bolsillo del pantalón."
 
