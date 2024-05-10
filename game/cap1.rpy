@@ -6,7 +6,11 @@ label cap1:
 
     scene bg cap1screen with Fade(1.0, 1.5, 1.0)
 
-    pause 2.5
+    pause 1.0
+
+    "La historia puede cambiar drástricamente a partir de este capítulo."
+
+    "Recomendamos guardar el progreso antes de continuar."
 
     scene bg black with Fade(1.0, 1.0, 1.0)
 
@@ -807,7 +811,97 @@ label cap1true:
     jump cap2true
 
 label cap1bad:
-    return
+    scene bg cafeteria with Fade(0.3, 0.1, 0.3)
+
+    "Mi cuerpo temblaba de terror."
+
+    "No podía manejar tanta presión, así que decidí ir con la idea de Felix."
+
+    a "¡FELIX, ELIGE TÚ!"
+
+    "Felix inmediatamente tomó mi mano e hizo un leve corte sobre la misma."
+
+    play sound "sfx/guillotine.mp3" volume 0.25
+
+    scene bg transbad with vpunch
+
+    "La sangre comenzó a brotar a pequeñas cantidades y el marco de la puerta se iluminó."
+
+    "Comencé a correr al instante no sin antes voltear para asegurarme de que todos vinieran."
+    
+    "Y ahí"
+    
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+
+    extend ", ahí fue cuando el horror ocurrió..."
+
+    play sound "sfx/beast1.mp3" volume 0.5
+
+    scene bg freyamuerte1 with vpunch
+
+    "Freya, la chica que antes podíamos llamar una líder nata, fue tomada del tobillo por el monstruo el cual comenzó a arrastrarla."
+
+    "Un grito sonoro se escuchó desde el fondo de la habitación y fue entonces cuando Hanna corrió a ayudarla."
+
+    fr "¡¡¡HANNA!!!"
+
+    scene bg freyamuerte2 with dissolve
+
+    h "¡¡¡FREYA!!!"
+
+    "La chica gritó de regreso, alzando su mano para alcanzar la de su amiga tomándola con fuerza."
+
+    "Evan corrió detrás de Hanna para tomar la mano de Freya de la misma manera."
+
+    scene bg freyamuerte2 with vpunch
+
+    fr "¡¡AAAAAAAHHHHHHHHHHHHHHHH!!"
+
+    "En un momento los tendones de Freya comenzaron a separarse hasta que..."
+
+    scene bg black with dissolve
+
+    play sound "sfx/blood.mp3" volume 0.25
+
+    "El monstruo jalo con tanta fuerza su cuerpo que este acabó separándose de su base dejando a Hanna únicamente con la mano de Freya."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    fr "Due... "
+
+    extend "le..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.5
+    
+    scene bg sangre with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    play music "audio/doortootherworld.mp3" volume 0.15
+
+    "{i}Biiiiiiiiiiiiiiiiiiiip{/i}"
+
+    "Eso fue lo último que escuché después de aquella escena."
+
+    scene bg sangre with dissolve
+
+    "Usualmente, durante los silencios, aquellos se llenaban de voces, quizás de personas del pasado, almas que no conocía por completo..."
+
+    "...Esta vez no hubo nada..."
+
+    "Vacío"
+    
+    extend ", era incómodo"
+    
+    extend ", tan incómodo que mi piel se erizaba mientras veía el oscuro vacío."
+
+    stop music fadeout 0.5
+
+    jump cap2bad
 
 label cap1normal:
     return
@@ -987,6 +1081,6 @@ label cap1_took_too_long:
 
     scene bg black with Dissolve(1.5)
 
-    "Bad end." #reemplazar con bg badend cuando exista
+    "Game over." #bg gameover?
 
     return

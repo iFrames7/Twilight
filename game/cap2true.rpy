@@ -51,7 +51,7 @@ label cap2true:
 
     #show evan
 
-    show evan ladobrazoenojado at left with dissolve:
+    show evan ladobrazoenojado at right with dissolve:
         zoom sprite_size
 
     e "Eso si es que Freya quiere cooperar."

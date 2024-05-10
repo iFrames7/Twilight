@@ -682,7 +682,7 @@ label cap3true:
     $ binario_fail_counter = 0
 
     label cap3true_binario:
-        if binario_fail_counter > 5:
+        if binario_fail_counter > 3:
             jump cap3true_binario_fail
 
         $ codigo_input = int(renpy.input("Introduce el código:", "", allow="0123456789", length=4))
@@ -819,7 +819,7 @@ label cap3true_badend1:
 
     "..."
 
-    #bg badend
+    "Game over." #bg gameover?
 
     return
 
@@ -931,5 +931,7 @@ label cap3true_binario_fail:
     "..."
 
     "..."
+
+    "Game over." #bg gameover?
 
     return

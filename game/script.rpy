@@ -7,6 +7,7 @@
 
     config.menu_include_disabled = True
 
+#Characters
 define a = Character("Arden", color="#846aca")
 define h = Character("Hanna", color="#3f467e")
 define e = Character("Evan", color="#f0eee8")
@@ -16,15 +17,18 @@ define fr = Character("Freya", color="#9a201b")
 
 define ef = Character("Felix?", color="#985065", what_font = "chiller.ttf", what_size = 45)
 
+#Transitions
 define openeyes = ImageDissolve("trans/eyeopen.png", 0.2)
 define closeeyes = ImageDissolve("trans/eyeopen.png", 0.2, reverse=True)
 define portal = ImageDissolve("trans/portal.png", 1.5)
 
+#Choice timer
 default timer_range = 0
 default timer_jump = 0
 
 default sprite_size = 1
 
+#True ending variables
 default freya_counter = 0
 default evan_counter = 0
 
@@ -33,8 +37,17 @@ default freya_cap3_talk = False
 default evan_cap4_talk = False
 default codigo_real = 4869
 
+#Can you choose the route? variables
 default canNormal = False
-default canBad = False
+default canBad = True
+
+#Bad ending variables
+default hasTalked_Hanna = False
+default hasTalked_Felix = False
+default hasTalked_Evan = False
+default canKeepTalk_Evan = True
+
+default repeticion = 0
 
 label start:
     camera:
@@ -64,6 +77,9 @@ label playtest:
             "Ruta true ending":
                 jump true_selection
 
+            "Ruta bad ending":
+                jump bad_selection
+
 
     label true_selection:
         menu:
@@ -90,6 +106,26 @@ label playtest:
 
             "Epilogo True":
                 jump epilogotrue
+
+            "{b}Regresar{/b}":
+                jump selection
+
+    label bad_selection:
+        menu:
+            "Cap 2 Bad":
+                jump cap2bad
+
+            "Cap 2 Bad Sides":
+                jump cap2bad_sideselection
+
+            "Cap 3 Bad":
+                jump cap3bad
+
+            "Cap 3 Bad Sides":
+                jump cap3bad_sideselection
+
+            "Cap 4 Bad":
+                jump cap4bad
 
             "{b}Regresar{/b}":
                 jump selection

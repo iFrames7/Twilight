@@ -548,7 +548,7 @@ label cap1_felix:
 
     show felix caderashabla with dissolve
 
-    f "¿Ves? Soy una buenas persona."
+    f "¿Ves? Soy una buena persona."
 
     "El chico se encogió de hombros soltando una pequeña risa"
 

@@ -391,7 +391,7 @@ label prologo:
 
     scene bg beastfrente with Dissolve(1.5)
 
-    "Ojos negros con un destello rojo observanome como si yo fuera su presa."
+    "Ojos negros con un destello rojo observándome como si yo fuera su presa."
 
     #show hanna
 
