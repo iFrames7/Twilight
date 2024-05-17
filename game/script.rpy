@@ -53,7 +53,7 @@ label start:
     camera:
         perspective True
 
-    jump playtest
+    #jump playtest
     #Reenablea este ↑ jump cuando no sea la version demo y ocupes playtestear escenas
 
     jump prologo
