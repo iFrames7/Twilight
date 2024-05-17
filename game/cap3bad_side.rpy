@@ -220,7 +220,7 @@ label cap3bad_hanna:
 
     show hanna sonrisa with dissolve
 
-    "Hanna guardo su celular volteando a verme sonriente."
+    "Hanna guardó su celular volteando a verme sonriente."
 
     h "Hey, a pesar de todo, me alegra haber sido encerrada con alguien como tú."
 

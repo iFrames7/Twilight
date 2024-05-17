@@ -286,7 +286,7 @@ label cap5true:
 
     show efelix normal with dissolve
 
-    "Felix comenzaba a retroceedr lentamente, su expresión me decía que había dado en el blanco."
+    "Felix comenzaba a retroceder lentamente, su expresión me decía que había dado en el blanco."
 
     a "Es por eso que usas a la bestia... está conectada a ti..."
 

@@ -99,7 +99,7 @@ label cap3bad:
 
     a "Si pero... ¿cómo hacemos eso?"
 
-    "Voltee a la puerta donde estaba Evan, quien observaba la puerta de vez en cuando para evitar que el monstruo se acercas."
+    "Voltee a la puerta donde estaba Evan, quien observaba la puerta de vez en cuando para evitar que el monstruo se acercase."
     
     "Quizás hasta ahora solo estábamos teniendo una suerte increíble para que el monstruo no nos encontrase."
 
@@ -160,7 +160,7 @@ label cap3bad:
 
     #bg shiva/kali?
 
-    scene bg black with dissolve
+    scene bg pistashiva with dissolve
 
     "Era una imagen, una imagen de un dios azul con cuatro brazos."
 

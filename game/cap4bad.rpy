@@ -445,11 +445,21 @@ label cap4bad:
 
     "Los pies de Hanna por la velocidad tropezaron entre ellos, Hanna cayó sobre el suelo derrotada."
 
+    $ time = 7
+    $ timer_range = 7
+    $ timer_jump = "cap4bad_took_too_long1"
+
+    show screen countdown
+
     menu:
         "Ayudar a Hanna":
+            hide screen countdown
+
             jump cap4bad_hanna
 
         "Seguir corriendo":
+            hide screen countdown
+
             jump cap4bad_run
 
 label cap4bad_hanna:
@@ -471,8 +481,16 @@ label cap4bad_hanna:
 
     "Tomando valor corrí hacia la bestia."
 
+    $ time = 7
+    $ timer_range = 7
+    $ timer_jump = "cap4bad_took_too_long2"
+
+    show screen countdown
+
     menu:
         "Usar jeringa":
+            hide screen countdown
+
             scene bg beastfrente with vpunch
 
             a "¡AHHHHHHHHHHHHH!"
@@ -580,6 +598,8 @@ label cap4bad_hanna:
             jump epilogobad
 
         "Usar daga":
+            hide screen countdown
+
             scene bg beastfrente with vpunch
 
             a "¡AHHHHHHHHHHHHH!"
@@ -714,4 +734,10 @@ label cap4bad_giveup:
 
     "Game over."
 
+    return
+
+label cap4bad_took_too_long1:
+    return
+
+label cap4bad_took_too_long2:
     return

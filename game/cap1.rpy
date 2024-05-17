@@ -767,8 +767,6 @@ label cap1:
     menu:
         "Sacrificar un secreto" if canNormal:
             hide screen countdown
-            
-            stop music fadeout 0.75
 
             jump cap1normal
 
@@ -803,10 +801,6 @@ label cap1true:
     "En ese instante la puerta de la barricada se rompió liberando al monstruo."
 
     a "¡CORRAN!"
-
-    #fade to black
-
-    # scene bg black with Fade(1.0, 1.0, 1.0)
 
     jump cap2true
 
@@ -904,7 +898,117 @@ label cap1bad:
     jump cap2bad
 
 label cap1normal:
-    return
+    scene bg cafeteria with fade
+
+    "Tras pensarlo un poco, la lógica de Freya hacía más sentido."
+
+    "Un secreto no es nada materia o algo que pueda ser peligroso."
+
+    a "...Bien, un secreto puede funcionar."
+
+    stop music fadeout 0.75
+
+    scene bg black with dissolve
+
+    "Me arrodillé, acercándome a la manija de la puerta."
+
+    "Y silenciosamente, susurré mi intimidad..."
+
+    "..."
+
+    "..."
+
+    "..."
+
+    "...Nada."
+
+    scene bg cafeteria with dissolve
+
+    play music "audio/beast.mp3" volume 0.25
+
+    show freya apunta at center with dissolve
+
+    fr "¡¿Y bien?! ¡¿Qué ocurrió?!"
+
+    a "Umm... no lo sé, dije el secreto y nada ocurrió..."
+
+    show freya ladohabla with dissolve
+
+    fr "¡Ugh, inútil! "
+    
+    show freya angustiadahabla with dissolve
+
+    extend "Si nadie te escuchó decirlo no estás sacrificando nada."
+
+    a "¿Q...qué quieres decir con eso?"
+
+    show freya apunta with dissolve
+
+    fr "Que debes exponer tu secreto."
+
+    a "¿HUH? P-p-pero no puedo decirlo... n-no sé si pu-"
+
+    show freya angustiada with vpunch
+
+    fr "¡NO TENEMOS TIEMPO PARA ESTO!"
+
+    fr "¡SOLO DILO, NO PUEDES ACOBARDARTE AHORA!"
+
+    "Mi rostro se sentía caliente, el sudor comenzaba a caer de mi frente."
+
+    "Miré hacia ambos lados repetidamente buscando alguna otra alternativa..."
+
+    "¿Realmente esta era la única salida?"
+
+    "No, no, no, no, no. "
+    
+    "Debe de haber algo más que se pueda hacer. "
+    
+    extend "Algo más, alguna salida, alg-"
+
+    play sound "sfx/1doorbang.mp3" volume 0.75
+
+    show freya angustiada with vpunch
+
+    "...Cierto."
+
+    "Realmente no tenemos tiempo..."
+
+    "Respiré hondo antes de dejarlo salir."
+
+    a "{size=-15}...Veo personas y fantasmas que no son reales... y me asusta mucho cuando ocurre...{/size}"
+
+    fr "¡HABLA MÁS FUERTE!"
+
+    stop music
+
+    show freya preocupada with vpunch
+
+    a "{size=+5}¡VEO PERSONAS FANTASMAS QUE NO SON REALES Y ME ASUSTA MUCHO!{/size}"
+
+    scene bg transnormal with dissolve
+
+    "En ese instante, todos en la habitación voltearon hacia mí tras haber gritado."
+
+    "Se hizo un silencio, quizás más incómodo de lo normal."
+
+    "No pude evitar notarlo."
+
+    "Las caras de todos contaban una historia diferente."
+
+    play sound "sfx/1doorbang.mp3" volume 0.75
+
+    show bg cafeteria with vpunch
+
+    "Afortunadamente, el sonido de la puerta abriéndose interrumpió el silencio."
+
+    show hanna muyasustadahabla at center with dissolve
+
+    h "¡La puerta!"
+
+    a "¡CORRAN!"
+
+    jump cap2normal
 
 label cap1_took_too_long:
     stop music fadeout 0.75

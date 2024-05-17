@@ -38,7 +38,7 @@ default evan_cap4_talk = False
 default codigo_real = 4869
 
 #Can you choose the route? variables
-default canNormal = False
+default canNormal = True
 default canBad = True
 
 #Bad ending variables
@@ -53,7 +53,7 @@ label start:
     camera:
         perspective True
 
-    #jump playtest
+    jump playtest
     #Reenablea este ↑ jump cuando no sea la version demo y ocupes playtestear escenas
 
     jump prologo
@@ -74,11 +74,14 @@ label playtest:
             "Cap 1 Sides":
                 jump cap1_sideselection
 
-            "Ruta true ending":
+            "Ruta True ending":
                 jump true_selection
 
-            "Ruta bad ending":
+            "Ruta Bad ending":
                 jump bad_selection
+
+            "Ruta Normal ending":
+                jump normal_selection
 
 
     label true_selection:
@@ -126,6 +129,23 @@ label playtest:
 
             "Cap 4 Bad":
                 jump cap4bad
+
+            "{b}Regresar{/b}":
+                jump selection
+
+    label normal_selection:
+        menu:
+            "Cap 2 Normal":
+                jump cap2normal
+
+            "Cap 2 Normal Sides":
+                jump cap2normal_sideselection
+
+            "Cap 3 Normal":
+                jump cap3normal
+
+            "Cap 3 Normal Sides":
+                jump cap3normal_sideselection
 
             "{b}Regresar{/b}":
                 jump selection

@@ -233,7 +233,7 @@ label cap2bad_hanna:
 
     h "¿Qué quieres?"
 
-    "Me acerqué y me senté a su lao deslizándome un poco lejos para no hostigarla con contacto físico."
+    "Me acerqué y me senté a su lado deslizándome un poco lejos para no hostigarla con contacto físico."
 
     a "Perdón... no pude hacer nada."
 
