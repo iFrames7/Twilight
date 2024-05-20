@@ -81,7 +81,7 @@ label cap2bad_evan1:
 
     show evan normal with dissolve
 
-    e "¿Y cuál es el plano ahora?"
+    e "¿Y cuál es el plan ahora?"
 
     a "Supongo que sobrevivir..."
 

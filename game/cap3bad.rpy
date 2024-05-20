@@ -83,7 +83,7 @@ label cap3bad:
 
     scene bg oficina2 with fade
 
-    "Nos dirigimos rápidamente al salón de maestros y nos gastamos tiempo en comenzar a buscar."
+    "Nos dirigimos rápidamente al salón de maestros y no gastamos tiempo en comenzar a buscar."
 
     show hanna normal at center with dissolve
 
@@ -156,7 +156,7 @@ label cap3bad:
 
     "¿En serio no podemos encontrar nada?"
 
-    "Finalmente éste alcé un par de hojas y de ahí una de ellas cayó al suelo."
+    "Finalmente alcé un par de hojas y de ahí una de ellas cayó al suelo."
 
     #bg shiva/kali?
 
@@ -240,7 +240,7 @@ label cap3bad:
 
     scene bg pasillo3twilight with dissolve
 
-    "Sin más, Evan se soltó para ir hacia la dirección del monstruo, el resto de nosotros comenzó a correr, ni siquiera sabíamos la dirección a la que iban, no teníamos ni idea."
+    "Sin más, Evan se soltó para ir hacia la dirección del monstruo, el resto de nosotros comenzó a correr, ni siquiera sabíamos la dirección a la que íbamos, no teníamos ni idea."
 
     f "¡Por aquí!"
 

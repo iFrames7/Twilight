@@ -392,7 +392,7 @@ label cap3normal_felix:
 
     f "No, supongo que no..."
 
-    a "¿Y cómo te sients?"
+    a "¿Y cómo te sientes?"
 
     show felix manofrenteceja with dissolve
 

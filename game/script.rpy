@@ -21,6 +21,7 @@ define ef = Character("Felix?", color="#985065", what_font = "chiller.ttf", what
 define openeyes = ImageDissolve("trans/eyeopen.png", 0.2)
 define closeeyes = ImageDissolve("trans/eyeopen.png", 0.2, reverse=True)
 define portal = ImageDissolve("trans/portal.png", 1.5)
+define rportal = ImageDissolve("trans/portal.png", 0.75, reverse=True)
 
 #Choice timer
 default timer_range = 0
@@ -129,6 +130,9 @@ label playtest:
 
             "Cap 4 Bad":
                 jump cap4bad
+                
+            "Epilogo Bad":
+                jump epilogobad
 
             "{b}Regresar{/b}":
                 jump selection
@@ -146,6 +150,9 @@ label playtest:
 
             "Cap 3 Normal Sides":
                 jump cap3normal_sideselection
+
+            "Cap 4 Normal":
+                jump cap4normal
 
             "{b}Regresar{/b}":
                 jump selection

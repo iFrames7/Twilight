@@ -833,9 +833,9 @@ label cap1bad:
 
     scene bg freyamuerte1 with vpunch
 
-    "Freya, la chica que antes podíamos llamar una líder nata, fue tomada del tobillo por el monstruo el cual comenzó a arrastrarla."
+    "Freya, la chica que antes podíamos llamar una líder nata, fue tomada por el monstruo el cual comenzó a arrastrarla."
 
-    "Un grito sonoro se escuchó desde el fondo de la habitación y fue entonces cuando Hanna corrió a ayudarla."
+    "Fue entonces cuando Hanna corrió a ayudarla."
 
     fr "¡¡¡HANNA!!!"
 

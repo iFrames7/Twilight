@@ -737,7 +737,11 @@ label cap4bad_giveup:
     return
 
 label cap4bad_took_too_long1:
+    "a"
+
     return
 
 label cap4bad_took_too_long2:
+    "b"
+
     return
