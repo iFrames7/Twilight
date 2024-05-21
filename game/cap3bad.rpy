@@ -13,6 +13,8 @@ label cap3bad:
 
     with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/mysterious.mp3" volume 0.25
+
     "Cuando finalmente nos incorporamos todos, parecíamos tener la misma idea: acercarnos a Felix."
 
     "Después de todo ahora lo veíamos a él como un líder, o eso es lo que creíamos."
@@ -81,6 +83,8 @@ label cap3bad:
 
     f "Sí, quizás sea una buena opción."
 
+    stop music fadeout 0.5
+
     scene bg oficina2 with fade
 
     "Nos dirigimos rápidamente al salón de maestros y no gastamos tiempo en comenzar a buscar."
@@ -89,17 +93,21 @@ label cap3bad:
 
     "Decidí buscar con Hanna, quizás necesitaba compañía."
 
+    play music "audio/flowerbloom.mp3" volume 0.15
+
     a "¿Cómo sabemos que el monstruo no sabe que estamos aquí?"
 
     show hanna explicando with dissolve
 
     h "Sería buena idea saber cuando se acerca, ¿no lo crees?"
 
+    play sound "sfx/papers.mp3" volume 0.75
+
     "Ella buscó entre los papeles algo de utilidad, su cuerpo se notaba un poco débil, quizás por el miedo y por el largo tiempo que llevábamos caminando casi que en círculos."
 
-    a "Si pero... ¿cómo hacemos eso?"
+    a "Sí pero... ¿cómo hacemos eso?"
 
-    "Voltee a la puerta donde estaba Evan, quien observaba la puerta de vez en cuando para evitar que el monstruo se acercase."
+    "Volteé a la puerta donde estaba Evan, quien observaba la puerta de vez en cuando para evitar que el monstruo se acercase."
     
     "Quizás hasta ahora solo estábamos teniendo una suerte increíble para que el monstruo no nos encontrase."
 
@@ -129,6 +137,8 @@ label cap3bad:
 
     "La chica tomó el celular y lo guardó para seguir con su investigación."
 
+    stop music fadeout 0.5
+
     label cap3bad_sideselection:
         scene bg oficina2 with fade
 
@@ -151,6 +161,10 @@ label cap3bad:
                 call cap3bad_felix from _call_cap3bad_felix
 
     scene bg oficina2 with fade
+
+    play music "audio/creepingdevil.mp3" volume 0.25
+
+    play sound "sfx/papers.mp3" volume 0.75
 
     "Regresé a buscar entre los papeles, solo símbolos y documentos que no podía comprender."
 
@@ -200,9 +214,13 @@ label cap3bad:
 
     a "¿Shiva? ¿Kali? Ah... no lo sé con certeza."
 
+    stop music
+
     show hanna muyasustadahabla at center with vpunch
 
     h "¡Chicos, el monstruo se acerca!"
+
+    play music "<from 4>audio/chase.mp3" volume 0.45
 
     show evan gimmeenojado with dissolve
 
@@ -244,6 +262,8 @@ label cap3bad:
 
     f "¡Por aquí!"
 
+    stop music fadeout 0.75
+
     scene bg oficina with dissolve
 
     "Finalmente llegamos a una oficina, parecía ser... la oficina del director..."
@@ -280,11 +300,15 @@ label cap3bad:
 
     show evan nmlastimadonormal at center with dissolve
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     "Pude ver a Evan, caminando lentamente por el pasillo."
 
     show evan nmlastimadoangustiado with vpunch
 
     a "¡EVAN!"
+
+    play sound "sfx/heartbeat.mp3" volume 0.6 loop
 
     "Salí corriendo para ver que Evan tenía un brazo lesionado, sangraba terriblemente, su caminar era lento y su cuerpo entero se deslizaba con cuidado."
 
@@ -298,9 +322,15 @@ label cap3bad:
 
     e "Arden..."
 
+    stop sound
+
     scene bg evanmuerte with dissolve
 
+    play sound "sfx/fall.ogg" volume 0.75
+
     "Susurró cayendo al suelo no sin antes ser agarrado por mis brazos."
+
+    play music "audio/death.mp3" volume 0.25
 
     e "¿Lo ves? Te dije que volvería."
 
@@ -350,6 +380,6 @@ label cap3bad:
 
     "Silencio... hubo un enorme silencio..."
 
-    jump cap4bad
+    stop music fadeout 0.75
 
-    return
+    jump cap4bad

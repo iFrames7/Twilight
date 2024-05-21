@@ -530,6 +530,64 @@ label cap4normal:
     jump epilogonormal
 
 label cap4normal_fast:
-    "Ded."
+    "Comencé a correr más rápido."
+
+    "Ya podía sentirlo."
+
+    "Estábamos tan cerca de la salida."
+
+    scene bg black with dissolve
+
+    "Abrí la puerta con rapidez."
+
+    scene bg ardenmuerte1 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    "Ah..."
+
+    "Por supuesto..."
+
+    scene bg ardenmuerte1 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    "¿Cómo pude ser tan iluso?"
+
+    scene bg ardenmuerte1 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    "Lo que sea que nos mantiene aquí no quiere que salgamos."
+
+    scene bg ardenmuerte1 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    "{color=#ffffff}???{/color}" "¡¡ARDEN!!"
+
+    "..."
+
+    "..."
+
+    "..."
+
+    scene bg ardenmuerte1 with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    "Ya no puedo sentir nada..."
+
+    "Mi consiencia se desvanece lentamente..."
+
+    "..."
+
+    "..."
+
+    "..."
+
+    "..."
+
+    pause 1.5
 
     return

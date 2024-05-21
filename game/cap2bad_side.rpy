@@ -3,6 +3,8 @@ label cap2bad_evan1:
 
     scene bg salonclases2 with fade
 
+    play music "audio/plan.mp3" volume 0.25
+
     "Evan veía la ventana y decidí acercarme lentamente."
 
     show evan normal at center with dissolve
@@ -77,6 +79,8 @@ label cap2bad_evan1:
 
             "El chico se dio la vuelta y caminó a la otra esquina."
 
+            stop music fadeout 0.5
+
             return
 
     show evan normal with dissolve
@@ -109,10 +113,14 @@ label cap2bad_evan1:
 
     a "Normal que la tengas..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2bad_evan2:
     scene bg salonclases2 with fade
+
+    play music "audio/downtime.mp3" volume 0.25
 
     show evan ladobrazo2 at center with dissolve
 
@@ -220,6 +228,8 @@ label cap2bad_evan2:
 
     "Dios, debo controlarme, no es momento para pensar en estas cosas."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2bad_hanna:
@@ -227,9 +237,11 @@ label cap2bad_hanna:
 
     scene bg salonclases2 with fade
 
+    play music "audio/intimate.mp3" volume 0.5
+
     show hanna llorar at center with dissolve
 
-    "Me acerque a Hanna sabiendo que necesitaba compañia, sus ojos se llenaron de lagrimas al verme cayendo en llanto una vez más"
+    "Me acerque a Hanna sabiendo que necesitaba compañia, sus ojos se llenaron de lágrimas al verme, cayendo en llanto una vez más."
 
     h "¿Qué quieres?"
 
@@ -351,12 +363,16 @@ label cap2bad_hanna:
             
             h "Deberíamos encontrar una forma de salir..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2bad_felix:
     $ hasTalked_Felix = True
 
     scene bg salonclases2 with fade
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Felix jugaba con una especie de pluma en su mano, quizás la traia en su bolso o algo parecido, miraba atentamente al techo con un tono juguetón."
 
@@ -418,15 +434,15 @@ label cap2bad_felix:
 
     show felix manofrentepreocupadohabla with dissolve
 
-    f "No sé como explicarlo, es como una especie de mecanismo de defensa."
+    f "No sé cómo explicarlo, es como una especie de mecanismo de defensa."
 
     a "Ah..."
 
     show felix sonrisahabla with dissolve
 
-    f "Pero, es mejor no pensar en eso"
+    f "Pero, es mejor no pensar en eso."
     
-    show felix manofrentepreocupadohabla2
+    show felix manofrentepreocupadohabla2 with dissolve
 
     f "La verdad es que... a pesar de todo, Katherine era una excelente chica."
 
@@ -445,5 +461,7 @@ label cap2bad_felix:
     a "Supongo que sí..."
 
     "Realmente no sé si el la conoce más o yo, es imposible decir con certeza."
+
+    stop music fadeout 0.5
 
     return

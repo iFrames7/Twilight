@@ -5,6 +5,8 @@ label cap2bad:
 
     scene bg salonclases2 with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/mysterious.mp3" volume 0.25
+
     "Mis ojos se abrieron lentamente y enfocaron la habitacion en la que me encontraba."
 
     "Es verdad"
@@ -34,6 +36,8 @@ label cap2bad:
     extend "ahora estamos... "
 
     extend "solos..."
+
+    stop music fadeout 0.5
 
     label cap2bad_sideselection:
         scene bg salonclases2 with fade

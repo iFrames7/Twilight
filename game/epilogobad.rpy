@@ -5,6 +5,8 @@ label epilogobad:
 
     scene bg techo2azul with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/ending.mp3" volume 0.5
+
     "Millones de papeles de \"Se busca.\""
 
     "Días, semanas y meses de familiares intentando recuperar lo que aquel día habían perdido."
@@ -32,6 +34,8 @@ label epilogobad:
     extend "eterno... "
     
     extend "vacío..."
+
+    stop music fadeout 1.75
 
     scene bg black with Dissolve(3.5)
 

@@ -47,6 +47,8 @@ label cap3bad_evan:
 
     "Sacó nuevamente su cigarro antes de continuar."
 
+    play music "audio/sad.mp3" volume 0.4
+
     e "Mis padres no me querían del todo, si no fuera por las leyes del país quizás yo no existiría, y añádele el odio que le tendrían los familiares..."
 
     show evan nmcigarladohabla with dissolve
@@ -103,7 +105,7 @@ label cap3bad_evan:
 
     show evan nmcigarladosonrisa with dissolve
 
-    e "Sí, es lo mejor que me ha pasado"
+    e "Sí, es lo mejor que me ha pasado."
 
     show evan nmcigarladohabla2 with dissolve
     
@@ -137,12 +139,16 @@ label cap3bad_evan:
 
     a "Yo... Lo tendré en cuenta... gracias..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap3bad_hanna:
     scene bg oficina2 with Fade(0.3, 0.1, 0.3)
 
-    "Caminé hacia Hanna quien parecia sacar su celulares constaantemente para ver la localizacion del monstruo y tambien parecía tomar fotos de algunas cosas."
+    play music "audio/downtime.mp3" volume 0.25
+
+    "Caminé hacia Hanna quien parecia sacar su celular constantemente para ver la localización del monstruo y también parecía tomar fotos de algunas cosas."
 
     show hanna normal at center with dissolve
 
@@ -158,7 +164,7 @@ label cap3bad_hanna:
 
     h "Sí... supongo que sí... pero, en serio me gusta..."
 
-    "Hanna se vio un poco triste al ver que le negue tomar fotos de alguna manera, quizas deberia arreglarlo."
+    "Hanna se vio un poco triste al ver que le negué tomar fotos de alguna manera, quizas debería arreglarlo."
 
     menu:
         "¿Y... a qué le tomas fotos?":
@@ -187,15 +193,15 @@ label cap3bad_hanna:
 
             show hanna explicando with dissolve
 
-            h "Oh, bueno, cuando veo algo que me gusta, como... flores... o quizás solo cosas bonitas, como... ah, como estas flores"
+            h "Oh, bueno, cuando veo algo que me gusta, como... flores... o quizás solo cosas bonitas, como... ah, como estas flores."
 
             show hanna emocionada with dissolve
 
             extend ", mira."
 
-            "Hanna me mostró su celular y las fotos que tenía en él"
+            "Hanna me mostró su celular y las fotos que tenía en él."
             
-            "Tenía muchas fotos de ella y de Freya juntas, las cuales pareció pasar rapiamente antes de mostrarme fotos de flores y de pequeños conejos, todo muy adecuado a la temática de bonito."
+            "Tenía muchas fotos de ella y de Freya juntas, las cuales pareció pasar rápidamente antes de mostrarme fotos de flores y de pequeños conejos, todo muy adecuado a la temática de bonito."
 
             a "Son realmente bonitas."
 
@@ -206,7 +212,7 @@ label cap3bad_hanna:
 
             "Pareció que los ojos de hanna se iluminaron al escucharme y asintió con la cabeza."
 
-            "Me mostro su celular y las fotos que tenia en él, tenía muchas fotos de ella y de Freya juntas, las cuales pareció pasar rapiamente antes de mostrarme fotos de flores y de pequeños conejos."
+            "Me mostró su celular y las fotos que tenia en él, tenía muchas fotos de ella y de Freya juntas, las cuales pareció pasar rápidamente antes de mostrarme fotos de flores y de pequeños conejos."
             
             "Todo muy adecuado a la temática de bonito."
 
@@ -240,7 +246,7 @@ label cap3bad_hanna:
 
     show hanna explicando with dissolve
 
-    h "Ah... no se como explicarlo... pero cuando estoy contigo al menos la preocupación se va un poco."
+    h "Ah... no sé cómo explicarlo... pero cuando estoy contigo al menos la preocupación se va un poco."
     
     show hanna emocionada with dissolve
 
@@ -254,10 +260,14 @@ label cap3bad_hanna:
 
     a "Me parece bien..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap3bad_felix:
     scene bg oficina2 with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Me acerqué a Felix quien tenía un libro entre sus manos, uno pequeño, pero eso no evitó que lo cerrase con fuerza al momento."
 
@@ -329,8 +339,10 @@ label cap3bad_felix:
 
     a "Bueno, eso es genial."
 
-    a "Si en algún momento te cansas seria bueno que te sientes un rato, con eso de que la enfermería está cerrada no sé si sea bueno que sigas corriendo si estás lastimado."
+    a "Si en algún momento te cansas, sería bueno que te sientes un rato, con eso de que la enfermería está cerrada no sé si sea bueno que sigas corriendo si estás lastimado."
 
     f "Lo haré, no te preocupes."
+
+    stop music fadeout 0.5
 
     return

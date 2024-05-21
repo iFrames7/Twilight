@@ -5,6 +5,8 @@ label cap4bad:
 
     scene bg oficina with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/death.mp3" volume 0.25
+
     "..."
 
     "..."
@@ -78,7 +80,7 @@ label cap4bad:
         "No rendirse":
             scene bg collarfull with fade
 
-    "Voltee a ver hacia abajo."
+    "Volteé a ver hacia abajo."
     
     "El collar que Katherine me había dado se encontraba ahí."
 
@@ -129,7 +131,11 @@ label cap4bad:
 
     a "Sí..."
 
+    stop music fadeout 0.95
+
     scene bg oficina with fade
+
+    play music "audio/flowerbloom.mp3" volume 0.15
 
     "Comencé a moverme entre las estanterías y el espacio en general."
 
@@ -163,6 +169,8 @@ label cap4bad:
 
     "Puede que sea útil después."
 
+    stop music fadeout 0.5
+
     scene bg oficina with fade
 
     "Creo que no podía hacer nada, de hecho mi cuerpo se sentía increíblemente cansado con todo lo que habia ocurrido..."
@@ -170,6 +178,8 @@ label cap4bad:
     "Mis ojos se perdieron en el vacío antes de buscar qué hacer... "
 
     show hanna normal at center with dissolve
+
+    play music "audio/downtime.mp3" volume 0.25
 
     extend "fue cuando Hanna se acercó a mí."
 
@@ -277,7 +287,11 @@ label cap4bad:
 
     hide hanna with dissolve
 
+    stop music fadeout 0.5
+
     "Hanna se dio la vuelta y comenzó a caminar un poco más optimista."
+
+    play sound "sfx/fall.ogg" volume 0.75
     
     show bg oficina with vpunch
 
@@ -292,6 +306,8 @@ label cap4bad:
     a "¿Estás bien?"
 
     h "S...sí, había visto la viga antes pero como estaba concentrada esta vez no la salté."
+
+    play music "audio/clue.mp3" volume 0.25
 
     "Curioso, me acerqué a levantar ligeramente la viga, viendo un pequeño libro."
 
@@ -353,11 +369,11 @@ label cap4bad:
 
     show felix sonrisahabla with dissolve
 
-    "Hanna se veía desilucionada, contrario a Felix quien le entrego el libro de regreso a la chica."
+    "Hanna se veía desilucionada, contrario a Felix quien le entregó el libro de regreso a la chica."
 
     f "Pero no son entradas de salones, son como salidas de emergencia y salidas que dan al patio."
 
-    "Ahora que lo pienso, quizás tenía un poco de verdad en sus palabras"
+    "Ahora que lo pienso, quizás tenía un poco de verdad en sus palabras."
     
     "Después de lo de Katherine, ninguno quería salir por la entrada principal pero tampoco intentamos otras salidas por miedo a acabar como ella."
 
@@ -371,11 +387,13 @@ label cap4bad:
     
     with dissolve
 
-    "Hanna se acercó a agarrar nuestras manos, pero Felix se apartó antes de que pudiera hacerlo haciendo que ella solo lo mirara un poco desconcertada, pero ignorándolo poco después."
+    "Hanna se acercó a agarrar nuestras manos, pero Felix se apartó antes de que pudiera hacerlo, haciendo que ella solo lo mirara un poco desconcertada, pero ignorándolo poco después."
 
     h "¡Vamos!"
 
     "Ambos asentimos con la cabeza y salimos al pasillo."
+
+    stop music fadeout 0.5
 
     scene bg pasillo3twilight with fade
 
@@ -385,6 +403,8 @@ label cap4bad:
 
     scene bg pasillo2twilight with dissolve
 
+    play sound "sfx/heartbeat.mp3" volume 0.75 loop
+
     "Mis pies temblaban mientras más nos acercabamos a la salida, todo parecía ir bien, de hecho demasiado bien, tanto que empezaba a sospechar."
 
     "¿Y si realmente este es el final? "
@@ -392,7 +412,11 @@ label cap4bad:
     extend "¿Por qué tengo tanto miedo?"
 
     "El viento sopló nuevamente y ahí fue cuando el peor de mis temores se asomó."
+
+    stop sound
     
+    play music "audio/murderer.mp3" volume 0.25
+
     scene bg beast2 with dissolve
     
     "Frente a nosotros estaba el monstruo, quien se encontraba recostado del otro lado del pasillo, desmembrando el cuerpo de Evan."
@@ -414,6 +438,8 @@ label cap4bad:
     a "¿Qué hacemos?"
 
     "Hanna intentó sacar el libro, mas éste cayó al suelo por su nerviosismo."
+
+    play sound "sfx/bookhit.mp3" volume 1.0
 
     show hanna despair 
     
@@ -439,17 +465,19 @@ label cap4bad:
 
     "Felix nos había abandonado quedándose atrás del muro protegido, no daba tiempo de ir por él, no con el monstruo pasando de largo de Felix corriendo hacia nosotros dos."
 
+    play sound "sfx/fall.ogg" volume 0.75
+
     hide hanna with vpunch
 
     h "¡Ahhh!"
 
     "Los pies de Hanna por la velocidad tropezaron entre ellos, Hanna cayó sobre el suelo derrotada."
 
-    $ time = 7
-    $ timer_range = 7
-    $ timer_jump = "cap4bad_took_too_long1"
+    # $ time = 7
+    # $ timer_range = 7
+    # $ timer_jump = "cap4bad_took_too_long1"
 
-    show screen countdown
+    # show screen countdown
 
     menu:
         "Ayudar a Hanna":
@@ -481,11 +509,11 @@ label cap4bad_hanna:
 
     "Tomando valor corrí hacia la bestia."
 
-    $ time = 7
-    $ timer_range = 7
-    $ timer_jump = "cap4bad_took_too_long2"
+    # $ time = 7
+    # $ timer_range = 7
+    # $ timer_jump = "cap4bad_took_too_long2"
 
-    show screen countdown
+    # show screen countdown
 
     menu:
         "Usar jeringa":
@@ -497,11 +525,15 @@ label cap4bad_hanna:
 
             "Lanzando un grito de guerra, tomé la jeringa en ambas manos, clavando así la esperanza de Evan sobre el cuello del monstruo."
 
+            play sound "sfx/beast1.mp3" volume 0.5
+
             scene bg beastfrente with vpunch
 
             "Presioné con fuerza el final y el líquido del mismo entró dentro del monstruo deteniéndolo casi al instante."
 
             scene bg pasillo2twilight with dissolve
+
+            stop music fadeout 0.95
 
             "Paralizado, lo había logrado, definitivamente lo había logrado."
 
@@ -517,6 +549,10 @@ label cap4bad_hanna:
 
             "Fue entonces cuando..."
 
+            play sound "sfx/guillotine.mp3" volume 0.5
+
+            play audio "sfx/blood.mp3" volume 0.5
+
             scene bg hannamuertebad with vpunch
 
             "¡¡SLASH!!"
@@ -527,17 +563,23 @@ label cap4bad_hanna:
 
             a "Ha...nna."
 
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
             scene bg hannamuertebad with Dissolve(0.25)
 
             scene bg black with Dissolve(0.25)
 
             "Lanzas o al menos estacas de metal se enterraron en el cuerpo de Hanna deteniéndola en seco, su cuerpo convulsionando por la pérdida de sangre y el shock que aquello generaba."
 
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
             scene bg hannamuertebad with Dissolve(0.25)
 
             scene bg black with Dissolve(0.25)
 
             "Lágrimas comenzaban a caer de sus ojos mientras intentaba respirar."
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             scene bg sangre with Dissolve(0.25)
 
@@ -546,6 +588,8 @@ label cap4bad_hanna:
             "Rojo..."
 
             "Todo se volió... "
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             scene bg sangre with Dissolve(0.25)
 
@@ -569,17 +613,23 @@ label cap4bad_hanna:
 
             "El tiempo se había acabado, en lo que observaba el sin fin de sangre caer, el monstruo recuperaba su compostura."
 
-            scene bg beastclose with Dissolve(0.25)
-
-            scene bg black with Dissolve(0.25)
-
-            "..."
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             scene bg beastclose with Dissolve(0.25)
 
             scene bg black with Dissolve(0.25)
 
             "..."
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
+            scene bg beastclose with Dissolve(0.25)
+
+            scene bg black with Dissolve(0.25)
+
+            "..."
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             scene bg sangre with Dissolve(0.25)
 
@@ -587,11 +637,15 @@ label cap4bad_hanna:
 
             "Rojo..."
 
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
             scene bg sangre with Dissolve(0.25)
 
             scene bg black with Dissolve(0.25)
 
             "Todo se volvió... "
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             extend "rojo..."
 
@@ -606,15 +660,23 @@ label cap4bad_hanna:
 
             "Lanzando un grito de guerra, sujeté con fuerza la daga y busqué clavarla en el monstruo."
 
+            stop music
+
+            play sound "sfx/blood.mp3" volume 0.5
+
             scene bg sangre with vpunch
 
             "Rojo, todo se volvió rojo cuando aquel monstruo arrancó de mi piel mi propio brazo."
 
-            "Sangre salia de todas partes y todo se volvió rojo."
+            "Sangre salía de todas partes y todo se volvió rojo."
 
             scene bg pasillo2twilight with dissolve
 
+            play sound "sfx/metaldrop.mp3" volume 0.25
+
             "La daga cayó al suelo junto conmigo."
+
+            play sound "sfx/fall.ogg" volume 0.75
             
             "Mi cuerpo intentó correr mas se resbaló con la sangre el suelo."
 
@@ -622,11 +684,15 @@ label cap4bad_hanna:
 
             h "¡NO! ¡¡ARDEN!!"
 
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
             scene bg sangre with Dissolve(0.25)
 
             scene bg pasillo2twilight with Dissolve(0.25)
 
             a "N...no, sal... de aquí..."
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
 
             scene bg sangre with Dissolve(0.25)
 
@@ -634,16 +700,30 @@ label cap4bad_hanna:
 
             "Con mi vista borrosa, pude ver a Hanna salir por la puerta."
 
-            "..."
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
+            scene bg sangre with Dissolve(0.25)
+
+            scene bg black with Dissolve(0.25)
 
             "..."
+
+            play sound "sfx/1heartbeat.mp3" volume 0.75
+
+            scene bg sangre with Dissolve(0.25)
+
+            scene bg black with Dissolve(0.25)
+
+            "..."
+
+            pause 1.5
 
             "Game over." #bg gameover?
 
             return
 
 label cap4bad_run:
-    "No podía detenerme, mi cuerpo queria detenerse y correr a ayudar a Hanna pero no podía, algo me lo impedia."
+    "No podía detenerme, mi cuerpo quería detenerse y correr a ayudar a Hanna pero no podía, algo me lo impedia."
 
     h "¡TÚ CORRE!"
 
@@ -655,7 +735,13 @@ label cap4bad_run:
 
     scene bg black with dissolve
 
+    stop music fadeout 0.95
+
     extend "Una esperanza de vida..."
+
+    play sound "sfx/guillotine.mp3" volume 0.5
+
+    play audio "sfx/blood.mp3" volume 0.5
 
     scene bg sangre with vpunch
 
@@ -665,6 +751,8 @@ label cap4bad_run:
 
     a "¿Qué? "
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg ardenmuerte1 with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
@@ -672,6 +760,8 @@ label cap4bad_run:
     a "¿Por qué...? "
     
     extend "¿Por qué no puedo moverme?"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg ardenmuerte1 with Dissolve(0.25)
 
@@ -682,6 +772,8 @@ label cap4bad_run:
     scene bg ardenmuerte1 with Dissolve(0.5)
 
     "Mis ojos se llenaron de sangre y mi cuerpo empezo a buscar aire desesperadamente..."
+
+    play sound "sfx/guillotine.mp3" volume 0.5
 
     scene bg ardenmuerte2 with vpunch
 
@@ -694,9 +786,11 @@ label cap4bad_run:
     jump epilogobad
 
 label cap4bad_giveup:
+    stop music fadeout 0.75
+
     scene bg black with dissolve
 
-    "Estoy cansado, no entiendo por que debo seguirlo intentando... no quiero seguirlo intentando."
+    "Estoy cansado, no entiendo por que debo seguir intentando... no quiero seguir intentando."
 
     "Mis ojos buscaron entre el lugar y mi cuerpo se movió lentamente hacia la ventana..."
 
@@ -711,6 +805,8 @@ label cap4bad_giveup:
     extend "no lo hará... "
     
     extend "no lo logrará."
+
+    play sound "sfx/glass.mp3" volume 0.5
 
     scene bg ventanarota with vpunch
 
