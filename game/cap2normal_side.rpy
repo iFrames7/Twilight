@@ -1,6 +1,8 @@
 label cap2normal_evan:
     scene bg salonclases with Fade(0.3, 0.1, 0.3)
 
+    play music "audio/downtime.mp3" volume 0.25
+
     "Evan se veía mal después de aquello, seguía en el suelo acostado."
 
     "Me agaché para estar a su nivel, se veía extremadamente cansado."
@@ -99,10 +101,14 @@ label cap2normal_evan:
 
     e "Gracias, Arden."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2normal_freya:
     scene bg salonclases with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "La chica se veía con una sonrisa en su rostro, una muy pequeña que logré notar."
 
@@ -196,10 +202,14 @@ label cap2normal_freya:
 
     a "Claro."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2normal_hanna:
     scene bg salonclases with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Sentí que Hanna necesitaba compañía, así que fui con ella."
     
@@ -307,10 +317,14 @@ label cap2normal_hanna:
 
     "Después de la pequeña platica me aleje de ella para seguir investigando."
 
+    stop music fadeout 0.5
+
     return
 
 label cap2normal_felix:
     scene bg salonclases with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     #show felix
 
@@ -379,5 +393,7 @@ label cap2normal_felix:
     f "Quizás no hay nada por aquí después de todo... bueno, será mejor buscar en otro lado, no hay que perder el tiempo aquí."
 
     a "Sí, tienes razón."
+
+    stop music fadeout 0.5
 
     return

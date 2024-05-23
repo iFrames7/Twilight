@@ -51,10 +51,12 @@ default canKeepTalk_Evan = True
 default repeticion = 0
 
 label start:
+    stop music
+
     camera:
         perspective True
 
-    jump playtest
+    #jump playtest
     #Reenablea este ↑ jump cuando no sea la version demo y ocupes playtestear escenas
 
     jump prologo

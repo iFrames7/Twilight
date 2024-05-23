@@ -63,6 +63,8 @@ label cap3normal:
 
     hide hanna with dissolve
 
+    play music "audio/dark.mp3" volume 0.25
+
     show evan gimmeenojado at right with dissolve
 
     e "Oye, no sé si estuviste aquí hace unos minutos, pero pudimos haber muerto."
@@ -146,6 +148,8 @@ label cap3normal:
     f "Pues, no sé si encontremos algo así, pero haré lo que pueda."
     
     a "Sí, yo también."
+
+    stop music fadeout 0.5
 
     show freya normal 
     
@@ -245,6 +249,8 @@ label cap3normal:
 
     hide felix with dissolve
 
+    play music "audio/mysterious.mp3" volume 0.25
+
     "Me di la vuelta para contemplar la habitación un momento."
 
     show felix pensando2 at center with dissolve
@@ -319,6 +325,8 @@ label cap3normal:
 
     fr "Arden."
 
+    stop music fadeout 0.5
+
     scene bg oficina
 
     show freya preocupada at left
@@ -330,6 +338,8 @@ label cap3normal:
     a "¡AHHH!"
 
     #sfx metaldrop
+
+    play sound "sfx/metaldrop.mp3" volume 0.15
 
     "Tiré la daga al suelo."
 
@@ -352,6 +362,8 @@ label cap3normal:
     "Había un pedazo de suelo desnivelado donde cayó la daga."
 
     "Detrás de este se encontraba un papel doblado."
+
+    play music "audio/plan.mp3" volume 0.25
 
     scene bg pistallave with dissolve #bg pistallave
 
@@ -397,7 +409,7 @@ label cap3normal:
 
     show felix preocupado with dissolve
 
-    f "UUUGH, no acerca eso a mí, ni de broma. ¿De dónde salió eso?"
+    f "UUUGH, no acerquen eso a mí, ni de broma. ¿De dónde salió eso?"
 
     show freya angustiadahabla 
     
@@ -435,6 +447,8 @@ label cap3normal:
 
     a "..."
 
+    stop music fadeout 0.75
+
     "Lo único que podemos hacer en esta situación es apegarse a la esperanza, ¿no es así?"
 
     "Nada garantizaba que estaremos seguros, lo único que podemos hacer era creer que lo estaremos."
@@ -458,6 +472,8 @@ label cap3normal:
     with dissolve
 
     show freya at center with move
+
+    play music "audio/dream.mp3" volume 0.25
 
     fr "Deja de dudar."
 
@@ -483,6 +499,8 @@ label cap3normal:
 
     a "Confiaré en lo que dices."
 
+    stop music fadeout 0.5
+
     show hanna normal at right with dissolve
 
     h "Oigan, ¿no es esa la forma de la escuela?"
@@ -490,6 +508,8 @@ label cap3normal:
     show freya preocupada with dissolve
 
     fr "¿Qué?"
+
+    play music "audio/clue.mp3" volume 0.25
 
     scene bg pistallave with dissolve #bg pistallave
 
@@ -538,5 +558,7 @@ label cap3normal:
     show freya caderaspreocupada with dissolve
 
     fr "De acerdo, ¡vámonos!"
+
+    stop music fadeout 0.75
 
     jump cap4normal

@@ -5,6 +5,8 @@ label cap4normal:
 
     scene bg pasillo2twilight with Fade(1.0, 1.0, 1.0)
 
+    play music "<from 4>audio/chase.mp3" volume 0.45
+
     "Salimos corriendo lo más rápido que pudimos hacia el lado opuesto del monstruo."
 
     scene bg corriendoarden with dissolve
@@ -23,7 +25,7 @@ label cap4normal:
 
     a "Freya, ¿por dónde?"
 
-    fr "Derecha"
+    fr "Derecha."
 
     fr "Será el camino más largo, tendremos más opciones para alentarlo en los pasillos."
 
@@ -39,6 +41,8 @@ label cap4normal:
     
     h "¡HAAAAAAH!"
 
+    play sound "sfx/bookhit.mp3" volume 0.75
+
     "Hanna arrojó el bote de basura hacia el monstruo para bloquear su camino."
 
     fr "¡Vamos!"
@@ -46,6 +50,8 @@ label cap4normal:
     "Aceleré el paso, di todo de mí, tanto que me adelanté a Freya y a Felix, yendo casi a la par con Hanna."
 
     "Iba más rápido que de costumbre, y en mi deseperación por sobrevivir..."
+
+    play sound "sfx/fall.ogg" volume 0.75
 
     scene bg escaleras with vpunch
 
@@ -59,15 +65,23 @@ label cap4normal:
 
     "Mi cuerpo entero dolía, tanto el frente como mi espalda golpeaban con los escalones."
 
+    stop music fadeout 0.5
+
+    play sound "sfx/bookhit.mp3" volume 0.75
+
     scene bg escaleras with vpunch
 
     "Hasta que finalmente choqué con la pared."
 
     #sfx metaldrop
 
+    play sound "sfx/metaldrop.mp3" volume 0.1
+
     "En ese momnto escuché un sonido familiar de metal golpeando el suelo."
 
     "La daga que debía estar en mi bolsillo se encontraba frente a mí en el suelo."
+
+    play sound "sfx/heartbeat.mp3" volume 0.75 loop
 
     scene bg beast2 with dissolve #sfx heartbeat
 
@@ -101,11 +115,15 @@ label cap4normal:
 
     "..."
 
+    stop sound
+
     #stop heartbeat
 
     "...pero no llegaba."
 
     a "¿Eh?"
+
+    play music "audio/creepingdevil.mp3" volume 0.25
 
     scene bg beastfrente with openeyes
 
@@ -117,6 +135,8 @@ label cap4normal:
     
     extend ", observarme."
 
+    play sound "sfx/earringing.mp3" volume 0.1
+
     "Parecía como si hubiera una barrera invisible entre yo y la bestia, pues se rehusaba a dar un paso más."
     
     "Solamente salivaba y gruñía, pero no se movía."
@@ -127,9 +147,13 @@ label cap4normal:
 
     #sfx monstruo
 
+    play sound "sfx/beast1.mp3" volume 0.5
+
     "El monstruo escuchó el grito de Hanna, volteó hacia ellos y comenzó a perseguirlos."
 
     "Los demás ya corrían hacia otro lado, dejándome a mí solo en las escaleras."
+
+    stop music fadeout 0.5
 
     a "..."
 
@@ -150,6 +174,10 @@ label cap4normal:
     "Sin más, me levanté y tomé la daga."
 
     scene bg corriendo with Fade(0.4, 0.3, 0.4)
+
+    play music "<from 4>audio/chase.mp3" volume 0.45
+
+    play sound "sfx/bookhit.mp3" volume 0.75
 
     "Hanna tiró un bote de basura hacia el monstruo, intentando bloquear su camino."
 
@@ -189,9 +217,15 @@ label cap4normal:
 
     hide evan with dissolve
 
+    play sound "sfx/bookhit.mp3" volume 0.75
+
     "Evan tomó un bote de basura y lo arrojó detrás de nosotros."
 
     "A la vez, tomó un extintor de fuego que se encontraba en la puerta de uno de los salones."
+
+    play sound "sfx/extintor.mp3" volume 0.5
+
+    show humoblanco zorder 2 with dissolve
 
     "Y comenzó a rociarlo en la dirección de la bestia."
 
@@ -202,6 +236,14 @@ label cap4normal:
     with dissolve
 
     "El humo bloqueó la vista de la bestia "
+
+    play sound "sfx/bookhit.mp3" volume 1.0
+
+    play audio "sfx/fall.ogg" volume 0.75
+
+    play audio "sfx/1doorbang.mp3" volume 1.0
+
+    play sound "sfx/beast2.mp3" volume 0.5
 
     show bg beast2 
     
@@ -226,6 +268,8 @@ label cap4normal:
     "La bestia ya se recuperaba y corría detrás de nosotros nuevamente."
 
     fr "¡Hanna!"
+
+    play sound "sfx/bookhit.mp3" volume 0.75
 
     "Hanna siguió tirando botes de basura."
 
@@ -253,6 +297,8 @@ label cap4normal:
 
     a "¡¡GAAAAAAAHHHHHHHH!!"
 
+    stop music fadeout 0.5
+
     scene bg beast2 with Fade(0.4, 0.3, 0.4)
 
     "Salté hacia la bestia y logré rasgar la daga en su cuello."
@@ -262,6 +308,10 @@ label cap4normal:
     a "¡¡GAAAAAAAHHHHHHHH!!"
 
     #sfx beast
+
+    play sound "sfx/beast2.mp3" volume 0.5
+
+    play audio "sfx/guillotine.mp3" volume 0.75
 
     "Su fuerte rugido resonó en todo el pasillo."
 
@@ -274,6 +324,8 @@ label cap4normal:
     e "¡Arden, estás bien!"
 
     a "¡Vámonos, hay que llegar a la salida!"
+
+    play music "audio/plan.mp3" volume 0.25
 
     scene bg corriendoarden with dissolve
 
@@ -296,6 +348,8 @@ label cap4normal:
 
     a "Claro."
 
+    stop music fadeout 0.5
+
     scene bg puerta with fade
 
     "Tras correr un rato, nos acercábamos más a la salida del ala derecha."
@@ -313,6 +367,8 @@ label cap4normal:
 
     "Corrí hacia uno de los extintores de los salones y lo tomé en mis manos."
 
+    play sound "sfx/glass.mp3" volume 0.75
+
     scene bg ventanarota with vpunch
 
     "Lo lancé hacia la ventana, rompiéndola en mil pedazos."
@@ -322,6 +378,8 @@ label cap4normal:
     scene bg afuera2 with dissolve
 
     "Corrimos hacia la ubicación que la imagen indicaba y una vez llegaron allí mis ojos no lo registraban como realidad..."
+
+    play music "audio/doortootherworld.mp3" volume 0.25
 
     scene bg entradaportal with Dissolve(1.0)
 
@@ -343,6 +401,8 @@ label cap4normal:
 
     "Miré el hoyo y supe exactamente qué hacer."
 
+    play sound "sfx/earringing.mp3" volume 0.1
+
     scene bg portalarden1 with dissolve
 
     "Saqué la daga de mis bolsillos, la tomé en ambas manos y la inserté en el hoyo."
@@ -350,6 +410,8 @@ label cap4normal:
     a "¡¡AAAHHHHH!!"
 
     "Sentí algo de resistencia, pero no me rendí, mantuve las manos en la daga y empujé con más fuerza."
+
+    play sound "sfx/earringing.mp3" volume 0.25
 
     scene bg portalarden2 with dissolve
 
@@ -359,11 +421,17 @@ label cap4normal:
 
     "Hasta que finalmente..."
 
+    play sound "sfx/earringing.mp3" volume 0.5
+
+    stop music fadeout 1.5
+
     scene bg white with Dissolve(2.0)
 
     "La luz se volvió demasiado fuerte y la presión muy alta."
 
     "Caí al suelo, cubriendo mi cara del cegante destello."
+
+    play music "audio/doortootherworld.mp3" volume 0.25 fadein 1.0
 
     scene bg portalabierto with Dissolve(2.0)
 
@@ -383,11 +451,15 @@ label cap4normal:
 
     "Una ligera sensación de tranquilidad me llenó; por fin había terminado, por fin acabaría este infierno, por fin sería libres"
 
-    "Mientras yo me para, el resto comenzaba a caminar hacia el portal."
+    "Mientras yo me paraba, el resto comenzaba a caminar hacia el portal."
 
     "Realmente este era el fin..."
 
     "Realment-"
+
+    stop music
+
+    play sound "<from 1>sfx/blood.mp3" volume 0.75
 
     scene bg sangre with vpunch
 
@@ -399,6 +471,8 @@ label cap4normal:
 
     "Un dolor inmenso en mi pierna..."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg sangre with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
@@ -406,6 +480,8 @@ label cap4normal:
     "¿Qué...?"
 
     "¿Qué fue eso...?"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
@@ -423,11 +499,15 @@ label cap4normal:
 
     extend "qué...?"
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg beastclose with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     "..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg beastclose with Dissolve(0.25)
 
@@ -435,11 +515,17 @@ label cap4normal:
 
     "¿...Cómo?"
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg beastclose with Dissolve(0.25)
 
     "Estoy seguro que le corté el cuello..."
 
     "¿Cómo es que...?"
+
+    play sound "<from 1>sfx/blood.mp3" volume 0.1
+
+    play audio "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
@@ -450,6 +536,10 @@ label cap4normal:
     a "¡¡GAAAAAAAAH!!"
 
     "{color=#ffffff}Todos{/color}" "¡ARDEN!"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75 loop
+
+    play music "audio/doortootherworld.mp3" volume 0.25
 
     scene bg portalabierto with dissolve
 
@@ -473,6 +563,8 @@ label cap4normal:
 
     "..."
 
+    stop music fadeout 0.5
+
     fr "Arden."
 
     scene bg portalabierto
@@ -480,6 +572,10 @@ label cap4normal:
     show freya angustiada at center
 
     with openeyes
+
+    stop sound
+
+    play music "audio/ending.mp3" volume 0.75
 
     fr "No digas tonterías..."
 
@@ -491,9 +587,13 @@ label cap4normal:
 
     "Hanna tomó la daga en frente de mí..."
 
+    play sound "sfx/guillotine.mp3" volume 0.5
+
     scene bg beast2 with vpunch
 
     "Y rápidamente la enterró en el craneo de la bestia."
+
+    play sound "sfx/beast2.mp3" volume 0.75
 
     scene bg beast2 with vpunch
 
@@ -513,6 +613,8 @@ label cap4normal:
 
     e "Puedes contar con nosotros, Arden."
 
+    play sound "sfx/earringing.mp3" volume 0.25
+
     scene bg white with Dissolve(1.5)
 
     "Comenzaba a perder la consciencia."
@@ -524,6 +626,8 @@ label cap4normal:
     a "Gra..."
 
     extend "cias..."
+
+    stop music fadeout 2.0
 
     scene bg black with Dissolve(2.0)
 
@@ -540,6 +644,10 @@ label cap4normal_fast:
 
     "Abrí la puerta con rapidez."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+    
+    play audio "sfx/guillotine.mp3" volume 0.75
+
     scene bg ardenmuerte1 with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
@@ -548,17 +656,23 @@ label cap4normal_fast:
 
     "Por supuesto..."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg ardenmuerte1 with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     "¿Cómo pude ser tan iluso?"
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg ardenmuerte1 with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     "Lo que sea que nos mantiene aquí no quiere que salgamos."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg ardenmuerte1 with Dissolve(0.25)
 
@@ -571,6 +685,8 @@ label cap4normal_fast:
     "..."
 
     "..."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg ardenmuerte1 with Dissolve(0.25)
 
@@ -589,5 +705,7 @@ label cap4normal_fast:
     "..."
 
     pause 1.5
+
+    "Game over."
 
     return

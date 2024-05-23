@@ -559,7 +559,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Hecho con {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]\n\nNuestro sitio: {a=https://confusedracoons.wixsite.com/confusedracoons}Confused Racoons{/a}")
+            text _("Hecho con {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]\n\nSOBRE NOSOTROS:\n\nDirección, Producción, Escritura, Concepto/Diseño de personaje, Assets, Sprites, UI, Redes sociales:\n{b}Flynn Barragán Verdín{/b}\n\nProgramación, Edición, Conceptualización, Escritura, Ingeniero de Audio, VFX:\n{b}Iván Ladino Cea{/b}\n\nNuestro sitio: {a=https://confusedracoons.wixsite.com/confusedracoons}Confused Racoons{/a}")
 
 
 style about_label is gui_label

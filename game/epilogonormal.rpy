@@ -5,11 +5,15 @@ label epilogonormal:
 
     scene bg entradaescuela with Fade(1.0, 1.0, 1.0)
 
+    play music "audio/death.mp3" volume 0.25
+
     "Desde hace semanas que mi cuerpo duele, duele bastante, no puedo explicar con certeza por qué..."
     
-    "Como si hubiese corrido un maraton y hubiese caido del sendero o algo parecido."
+    "Como si hubiese corrido un maratón y hubiese caído del sendero o algo parecido."
 
     "Es raro..."
+
+    play sound "sfx/earringing.mp3" volume 0.1
     
     "Mi cabeza intenta recordar algo pero, por alguna razón no puede, como si me estuviese jalando al pasado pero no logra distinguirlo."
 
@@ -35,9 +39,11 @@ label epilogonormal:
 
     "¿Dónde se había metido?"
 
-    "Su familia la estaba buscando y de hecho me cuestionaron si sabia en donde estaba pero, para ser honestos, no recuerdo haber salido con ella en mucho tiempo."
+    "Su familia la estaba buscando y de hecho me cuestionaron si sabía en dónde estaba pero, para ser honestos, no recuerdo haber salido con ella en mucho tiempo."
 
     a "Si, soy él..."
+
+    play sound "sfx/earringing.mp3" volume 0.1
     
     a "Tú eres..."
     
@@ -60,6 +66,8 @@ label epilogonormal:
     show evan pensando with dissolve
 
     e "Sonará algo extraño pero... "
+
+    play sound "sfx/earringing.mp3" volume 0.1
     
     extend "siento que ya te conozco... "
     
@@ -83,7 +91,7 @@ label epilogonormal:
 
     show evan normal with dissolve
 
-    "Ambos sacamos el celular pero por alguna razón ya nos teniamos agregados"
+    "Ambos sacamos el celular pero por alguna razón ya nos teníamos agregados."
     
     "¿Por qué... no lo recuerdo?"
 
@@ -101,7 +109,7 @@ label epilogonormal:
 
     "Es como si tuviera un agujero en mi memoria..."
 
-    "Hay algo que me falta y no sé que es..."
+    "Hay algo que me falta y no sé qué es..."
 
     "Me desespera..."
 
@@ -109,9 +117,13 @@ label epilogonormal:
 
     "Iré a la biblioteca... "
     
-    extend "quizas... "
+    extend "quizás... "
+
+    play sound "sfx/earringing.mp3" volume 0.1
 
     extend "quizás ahí recuerde algo."
+
+    stop music fadeout 1.5
 
     scene bg black with Dissolve(3.5)
 

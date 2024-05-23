@@ -43,6 +43,8 @@ label cap3normal_evan:
 
     e "Es complicado hablar de esto... pero no es que pueda ocultarlo para toda mi vida."
 
+    play music "audio/repentance.mp3" volume 0.25
+
     show evan nmcigarhabla with dissolve
 
     "Sacó nuevamente su cigarro antes de continuar."
@@ -137,10 +139,14 @@ label cap3normal_evan:
 
     a "Yo... Lo tendré en cuenta... gracias..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap3normal_freya:
     scene bg oficina with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     #show freya
 
@@ -227,11 +233,15 @@ label cap3normal_freya:
     extend "seguiré buscado por acá."
 
     a "Sí, yo también."
+
+    stop music fadeout 0.5
     
     return
 
 label cap3normal_hanna:
     scene bg oficina with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
 
     "Caminé hacia Hanna quien parecia sacar su celulares constaantemente para ver la localizacion del monstruo y tambien parecía tomar fotos de algunas cosas."
 
@@ -345,10 +355,16 @@ label cap3normal_hanna:
 
     a "Me parece bien..."
 
+    stop music fadeout 0.5
+
     return
 
 label cap3normal_felix:
     scene bg oficina with Fade(0.3, 0.1, 0.3)
+
+    play music "audio/downtime.mp3" volume 0.25
+
+    play sound "sfx/bookclose.wav" volume 0.5
 
     "Me acerqué a Felix quien tenía un libro entre sus manos, uno pequeño, pero eso no evitó que lo cerrase con fuerza al momento."
 
@@ -423,5 +439,7 @@ label cap3normal_felix:
     a "Si en algún momento te cansas seria bueno que te sientes un rato, con eso de que la enfermería está cerrada no sé si sea bueno que sigas corriendo si estás lastimado."
 
     f "Lo haré, no te preocupes."
+
+    stop music fadeout 0.5
 
     return

@@ -23,6 +23,8 @@ label cap2normal:
     
     with dissolve
 
+    play music "audio/longtwilight.mp3" volume 0.25
+
     "Todos estaban recargados en la pared o sobre una mesa recuperando el aliento, incluido yo."
 
     "Evan se veía exhausto, pues era el único que se recostó totalmente sobre el suelo."
@@ -135,6 +137,8 @@ label cap2normal:
 
     fr "Hmm, bueno... podemos empezar por este lugar."
 
+    stop music fadeout 0.5
+
     label cap2normal_sideselection:
         scene bg salonclases with dissolve
 
@@ -184,6 +188,8 @@ label cap2normal:
                 call cap2normal_felix from _call_cap2normal_felix
 
     scene bg salonclases with fade
+
+    play music "audio/dark.mp3" volume 0.25
 
     "Comcené a buscar por mi propia cuenta."
 
@@ -245,6 +251,8 @@ label cap2normal:
 
     show evan ladobrazo with dissolve
 
+    stop music fadeout 0.75
+
     e "De hecho, sí."
 
     show freya preocupada with dissolve
@@ -287,6 +295,10 @@ label cap2normal:
 
     with fade
 
+    play sound "sfx/metaldrop.mp3" volume 0.25
+
+    play audio "sfx/1doorbang.mp3" volume 0.75
+
     show freya angustiada
 
     show evan defensivo
@@ -294,6 +306,8 @@ label cap2normal:
     show hanna despair
 
     with vpunch #metaldrop maybe?
+
+    play music "<from 4>audio/chase.mp3" volume 0.25
 
     "Antes de que pudiera consultar a los demás, un fuerte sonido nos interrumpió a todos."
 
@@ -307,7 +321,7 @@ label cap2normal:
 
     show humoblanco zorder 2 with dissolve
 
-    "Voltee a ver a los demás pero algo andaba mal."
+    "Volteé a ver a los demás pero algo andaba mal."
 
     "Mi visión estaba siendo nublada, mi respiración acelerada y mi espalda mojada en sudor."
 
@@ -363,6 +377,8 @@ label cap2normal:
 
     "Hanna intentó tomar la vara de metal que había encontrado para destruir la puerta..."
 
+    play sound "sfx/metaldrop.mp3" volume 0.25
+
     show hanna llorar with vpunch
 
     h "¡AHHH!" #metal drop sfx
@@ -398,6 +414,8 @@ label cap2normal:
             "Sacudí mi cabeza y recordé la ilustración que había encontrado Evan."
 
         "Romper las ventanas":
+            stop music fadeout 0.75
+
             jump cap2normal_window
 
     a "Ah... Ahhhh, ¡Freya!"
@@ -420,6 +438,8 @@ label cap2normal:
     
     extend ", ahhh... "
 
+    stop music fadeout 0.75
+
     show freya angustiadahabla with vpunch
 
     extend "¡Mira, MIRA!"
@@ -431,6 +451,8 @@ label cap2normal:
     a "Evan encontró esto hace un momento. Ah, es parecida a la que vimos en la cafetería."
     
     a "Qui... quizás sea una pista para salir..."
+
+    play music "audio/clue.mp3" volume 0.25
 
     scene bg pistaizanagi with dissolve #bg pistaizanagi
 
@@ -484,6 +506,8 @@ label cap2normal:
 
     "Todos acomodamos las sillas con rapidez, pero el calor de la habitación nos impedía acelerar cada vez más."
 
+    stop music fadeout 1.5
+
     scene bg salonclases
 
     show hanna miedohabla at right
@@ -510,6 +534,8 @@ label cap2normal:
 
     with dissolve
 
+    play sound "sfx/heartbeat.mp3" volume 0.75 loop
+
     "Comencé a caminar hacia Evan."
 
     scene bg black with closeeyes
@@ -530,11 +556,15 @@ label cap2normal:
 
     a "Aggh... no."
 
+    stop sound
+
     show evan gimmeenojado at center with vpunch
 
     e "¡HAHHHHHHHHH!"
 
     "Evan reunió todas sus energías y soltó una fuerte patada hacia la silla."
+
+    play sound "sfx/1dorband.mp3" volume 0.75
 
     hide evan with dissolve
 
@@ -549,6 +579,8 @@ label cap2normal:
     h "Te tengo."
 
     "Tomé la silla y la coloqué donde correspondía."
+
+    play sound "sfx/1doorbang.mp3" volume 0.75
 
     #doorbang
 
@@ -598,6 +630,8 @@ label cap2normal:
 
     "Todos voltearon para ver lo que ocurría..."
 
+    play sound "sfx/fire.mp3" volume 1.0
+
     scene bg salonclases
 
     show humoblanco zorder 2
@@ -622,6 +656,8 @@ label cap2normal:
 
     fr "Sí, suena a un buen plan..."
 
+    stop sound fadeout 0.5
+
     jump cap3normal
 
 label cap2normal_window:
@@ -637,9 +673,11 @@ label cap2normal_window:
 
     "No haía mucho tiempo para considerar opciones."
 
-    "Así qe solamente seguí mis instintos... "
+    "Así que solamente seguí mis instintos... "
 
-    scene bg ventana with vpunch
+    play sound "sfx/glass.mp3" volume 0.75
+
+    scene bg ventanarota with vpunch
 
     extend "y rompí las ventanas."
 
@@ -649,11 +687,15 @@ label cap2normal_window:
 
     scene bg afuera2 with dissolve
 
+    play sound "sfx/fall.ogg" volume 0.75
+
     "A pesar de todo logré salir."
 
     a "Heh, lo hice..."
 
     "Sin embargo... "
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg beast2 with dissolve
 
@@ -669,11 +711,15 @@ label cap2normal_window:
 
     "Se acercó hacia mí a toda velocidad."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg beastfrente with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     "No tenía escapatoria."
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
@@ -681,11 +727,15 @@ label cap2normal_window:
 
     "No había nada que podría haber hecho."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg sangre with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     fr "¡ARDEEEEEEEN!"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
@@ -693,11 +743,15 @@ label cap2normal_window:
 
     h "No, no de nuevo..."
 
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
     scene bg sangre with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
 
     e "¡¡ARDEN, NOOOOO!!"
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
@@ -705,18 +759,30 @@ label cap2normal_window:
 
     f "Oh por Dios..."
 
-    scene bg sangre with Dissolve(0.25)
-
-    scene bg black with Dissolve(0.25)
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
     scene bg black with Dissolve(0.25)
+
+    pause 0.5
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
+
+    scene bg sangre with Dissolve(0.25)
+
+    scene bg black with Dissolve(0.25)
+
+    pause 0.5
+
+    play sound "sfx/1heartbeat.mp3" volume 0.75
 
     scene bg sangre with Dissolve(0.25)
 
     scene bg black with Dissolve(1.5)
 
     pause 1.0
+
+    "Game over."
 
     return
